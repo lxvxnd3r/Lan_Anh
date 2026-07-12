@@ -1,37 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-<style>
-body{
-    margin:0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan Anh 🌙</title>
 
-video{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    z-index:-1;
-}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-h1{
-    color:white;
-    text-align:center;
-    margin-top:300px;
-    font-size:60px;
-}
-</style>
+        body{
+            overflow:hidden;
+            font-family:Arial, sans-serif;
+            color:white;
+        }
+
+        /* Video nền */
+        #bg-video{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            z-index:-2;
+        }
+
+        /* Lớp tối nhẹ */
+        .overlay{
+            position:fixed;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.35);
+            z-index:-1;
+        }
+
+        /* Khung kính mờ */
+        .container{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+
+            width:650px;
+            padding:45px;
+
+            text-align:center;
+
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+
+            border-radius:25px;
+        }
+
+        h1{
+            font-size:55px;
+            margin-bottom:15px;
+        }
+
+        h2{
+            font-size:32px;
+            margin-bottom:20px;
+        }
+
+        p{
+            font-size:20px;
+            margin-top:10px;
+        }
+    </style>
 </head>
 
 <body>
 
-<video autoplay muted loop playsinline>
-    <source src="./night.mp4" type="video/mp4">
-</video>
+    <!-- Video nền -->
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="./night.mp4" type="video/mp4">
+    </video>
 
-<h1>Lan Anh 🌙</h1>
+    <div class="overlay"></div>
+
+    <!-- Nội dung -->
+    <div class="container">
+        <h1>🌙 Lan Anh</h1>
+
+        <h2>"Somewhere between rain and dreams."</h2>
+
+        <p>✨ Aesthetic • Anime • Night lover ✨</p>
+
+        <p>Website cá nhân đầu tiên của mình.</p>
+    </div>
 
 </body>
 </html>
