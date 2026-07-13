@@ -13,15 +13,19 @@
     box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
     width:100%;
     height:100%;
     overflow:hidden;
+
     font-family:Arial,sans-serif;
     color:white;
+
+    background:black;
 }
 
-/* VIDEO NỀN */
+/* VIDEO */
 
 #bg-video{
     position:fixed;
@@ -34,13 +38,13 @@ html,body{
 
     object-fit:cover;
 
-    /* Kéo video lên để thấy ngọn cây */
+    /* Ưu tiên hiện phần trên */
     object-position:center top;
 
     z-index:0;
 }
 
-/* Lớp tối */
+/* LỚP TỐI */
 
 .overlay{
     position:fixed;
@@ -51,9 +55,10 @@ html,body{
     z-index:1;
 }
 
-/* Khung kính */
+/* KHUNG THÔNG TIN */
 
 .container{
+
     position:fixed;
 
     top:50%;
@@ -91,7 +96,9 @@ html,body{
 }
 
 .container h1{
+
     font-size:72px;
+
     margin-bottom:20px;
 
     text-shadow:
@@ -100,26 +107,33 @@ html,body{
 }
 
 .container h2{
+
     font-size:28px;
+
     font-weight:normal;
 
     margin-bottom:25px;
 }
 
 .container p{
+
     font-size:20px;
+
     margin-top:12px;
 }
 
-/* Màn hình mở */
+/* WELCOME */
 
 #welcome{
+
     position:fixed;
+
     inset:0;
 
     background:black;
 
     display:flex;
+
     flex-direction:column;
 
     justify-content:center;
@@ -133,12 +147,16 @@ html,body{
 }
 
 #welcome h1{
+
     font-size:80px;
+
     margin-bottom:20px;
 }
 
 #welcome p{
+
     font-size:22px;
+
     opacity:0.8;
 }
 
@@ -149,8 +167,17 @@ html,body{
 
 <!-- VIDEO -->
 
-<video id="bg-video" autoplay muted loop playsinline>
-    <source src="tree1.mp4" type="video/mp4">
+<video
+    id="bg-video"
+    autoplay
+    muted
+    loop
+    playsinline>
+
+    <source
+        src="tree1.mp4"
+        type="video/mp4">
+
 </video>
 
 <div class="overlay"></div>
@@ -175,7 +202,7 @@ html,body{
 
 </div>
 
-<!-- WELCOME -->
+<!-- MÀN HÌNH MỞ -->
 
 <div id="welcome">
 
@@ -187,9 +214,15 @@ html,body{
 
 <!-- NHẠC -->
 
-<audio id="music" loop>
-    <source src="spider%20thread%20monopoly.mp3"
-            type="audio/mpeg">
+<audio
+    id="music"
+    loop
+    preload="auto">
+
+    <source
+        src="spider%20thread%20monopoly.mp3"
+        type="audio/mpeg">
+
 </audio>
 
 <script>
@@ -200,15 +233,26 @@ document.getElementById("welcome");
 const music =
 document.getElementById("music");
 
-welcome.addEventListener("click", ()=>{
+welcome.addEventListener("click", async ()=>{
 
-    music.play();
+    try{
 
-    welcome.style.opacity="0";
+        music.volume = 0.5;
+
+        await music.play();
+
+    }
+    catch(error){
+
+        console.log(error);
+
+    }
+
+    welcome.style.opacity = "0";
 
     setTimeout(()=>{
 
-        welcome.style.display="none";
+        welcome.style.display = "none";
 
     },1000);
 
