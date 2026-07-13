@@ -1,186 +1,30 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lan Anh 🌙</title>
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 html,body{
+    margin:0;
     width:100%;
     height:100%;
-    overflow:hidden;
-    font-family:Arial, sans-serif;
-    color:white;
 }
 
-/* Video nền */
 #bg-video{
     position:fixed;
     top:0;
     left:0;
-
     width:100%;
     height:100%;
-
     object-fit:cover;
-    object-position:center 12%;
-
-    z-index:0;
-}
-
-/* Lớp phủ tối */
-.overlay{
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.35);
-
-    z-index:1;
-}
-
-/* Khung thông tin */
-.container{
-    position:fixed;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:700px;
-    max-width:90%;
-
-    padding:50px;
-
-    text-align:center;
-
-    background:rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:30px;
-
-    box-shadow:0 0 40px rgba(0,0,0,0.4);
-
-    z-index:2;
-}
-
-.container h1{
-    font-size:55px;
-    margin-bottom:20px;
-}
-
-.container h2{
-    font-size:28px;
-    font-weight:normal;
-    margin-bottom:25px;
-}
-
-.container p{
-    font-size:20px;
-    margin-top:12px;
-}
-
-/* Welcome */
-#welcome{
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:black;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    cursor:pointer;
-
-    z-index:999;
-    transition:1s;
-}
-
-#welcome h1{
-    font-size:70px;
-    margin-bottom:20px;
-}
-
-#welcome p{
-    opacity:0.8;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Video nền -->
 <video id="bg-video" autoplay muted loop playsinline>
-    <source src="tree1.mp4" type="video/mp4">
+    <source src="./tree1.mp4" type="video/mp4">
 </video>
-
-<div class="overlay"></div>
-
-<!-- Nội dung -->
-<div class="container">
-
-    <h1>🌙 Lan Anh</h1>
-
-    <h2>
-        "Somewhere between rain and dreams."
-    </h2>
-
-    <p>✨ Aesthetic • Anime • Night lover ✨</p>
-
-    <p>Website cá nhân đầu tiên của mình.</p>
-
-</div>
-
-<!-- Welcome -->
-<div id="welcome">
-
-    <h1>🌙</h1>
-
-    <p>Click anywhere to enter</p>
-
-</div>
-
-<!-- Nhạc -->
-<audio id="music" loop>
-    <source src="spider thread monopoly.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-const welcome = document.getElementById("welcome");
-const music = document.getElementById("music");
-
-welcome.addEventListener("click", () => {
-
-    music.play();
-
-    welcome.style.opacity = "0";
-
-    setTimeout(() => {
-        welcome.style.display = "none";
-    }, 1000);
-
-});
-</script>
 
 </body>
 </html>
