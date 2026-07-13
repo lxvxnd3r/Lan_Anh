@@ -1,167 +1,148 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lan Anh 🌙</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lan Anh 🌙</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<style>
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+    color:white;
+}
 
-        body{
-            font-family:Arial, sans-serif;
-            overflow:hidden;
-            color:white;
-        }
+/* Video nền */
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
 
-        /* Màn hình mở đầu */
-        #enter-screen{
-            position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            background:black;
+/* Lớp tối */
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+    z-index:-1;
+}
 
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
+/* Màn hình enter */
+#enter-screen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
 
-            z-index:9999;
-            cursor:pointer;
-            transition:1s;
-        }
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-        #enter-screen h1{
-            font-size:60px;
-            margin-bottom:20px;
-        }
+    z-index:9999;
+    cursor:pointer;
+    transition:1s;
+}
 
-        #enter-screen p{
-            font-size:22px;
-            opacity:0.8;
-        }
+#enter-screen h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
 
-        /* Video nền */
-        #bg-video{
-            position:fixed;
-            top:0;
-            left:0;
+/* Khung thông tin */
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
 
-            width:100%;
-            height:100%;
+    width:700px;
+    max-width:90%;
 
-            object-fit:cover;
+    padding:50px;
 
-            z-index:-2;
-        }
+    text-align:center;
 
-        /* Lớp tối */
-        .overlay{
-            position:fixed;
-            top:0;
-            left:0;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
 
-            width:100%;
-            height:100%;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.15);
+}
 
-            background:rgba(0,0,0,0.35);
+.container h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
 
-            z-index:-1;
-        }
+.container h2{
+    font-size:28px;
+    font-weight:normal;
+    margin-bottom:20px;
+}
 
-        /* Khung kính */
-        .container{
-            position:absolute;
-            top:50%;
-            left:50%;
-
-            transform:translate(-50%,-50%);
-
-            width:700px;
-            max-width:90%;
-
-            text-align:center;
-
-            padding:50px;
-
-            background:rgba(255,255,255,0.08);
-            backdrop-filter:blur(12px);
-
-            border-radius:25px;
-            border:1px solid rgba(255,255,255,0.15);
-        }
-
-        h1{
-            font-size:55px;
-            margin-bottom:20px;
-        }
-
-        h2{
-            font-size:28px;
-            font-weight:normal;
-            margin-bottom:20px;
-        }
-
-        p{
-            font-size:20px;
-            margin-top:10px;
-        }
-    </style>
+.container p{
+    font-size:20px;
+    margin-top:10px;
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Welcome -->
-    <div id="enter-screen">
-        <h1>🌙 Welcome</h1>
-        <p>Click anywhere to enter</p>
-    </div>
+<div id="enter-screen">
+    <h1>🌙 Welcome</h1>
+    <p>Click anywhere to enter</p>
+</div>
 
-    <!-- Nhạc -->
-    <audio id="bg-music" loop>
-        <source src="spider%20thread%20monopoly.mp3" type="audio/mpeg">
-    </audio>
+<audio id="bg-music" loop>
+    <source src="spider%20thread%20monopoly.mp3" type="audio/mpeg">
+</audio>
 
-    <!-- Video nền -->
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="tree1.mp4" type="video/mp4">
-    </video>
+<video id="bg-video" autoplay muted loop playsinline>
+    <source src="tree1.mp4" type="video/mp4">
+</video>
 
-    <div class="overlay"></div>
+<div class="overlay"></div>
 
-    <!-- Nội dung -->
-    <div class="container">
-        <h1>🌙 Lan Anh</h1>
+<div class="container">
+    <h1>🌙 Lan Anh</h1>
 
-        <h2>"Somewhere between rain and dreams."</h2>
+    <h2>"Somewhere between rain and dreams."</h2>
 
-        <p>✨ Aesthetic • Anime • Night lover ✨</p>
+    <p>✨ Aesthetic • Anime • Night lover ✨</p>
 
-        <p>Website cá nhân đầu tiên của mình.</p>
-    </div>
+    <p>Website cá nhân đầu tiên của mình.</p>
+</div>
 
-    <script>
-        const enter = document.getElementById("enter-screen");
-        const music = document.getElementById("bg-music");
+<script>
+const enter = document.getElementById("enter-screen");
+const music = document.getElementById("bg-music");
 
-        enter.addEventListener("click", () => {
+enter.onclick = function(){
 
-            music.play();
+    music.play();
 
-            enter.style.opacity = "0";
+    enter.style.opacity = "0";
 
-            setTimeout(() => {
-                enter.style.display = "none";
-            },1000);
-
-        });
-    </script>
+    setTimeout(()=>{
+        enter.style.display="none";
+    },1000);
+}
+</script>
 
 </body>
 </html>
