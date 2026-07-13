@@ -6,6 +6,7 @@
 <title>Lan Anh 🌙</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -24,6 +25,7 @@ html,body{
 
 #bg-video{
     position:fixed;
+
     top:0;
     left:0;
 
@@ -32,13 +34,13 @@ html,body{
 
     object-fit:cover;
 
-    /* Ưu tiên hiện ngọn cây */
+    /* Kéo video lên để thấy ngọn cây */
     object-position:center top;
 
     z-index:0;
 }
 
-/* LỚP TỐI */
+/* Lớp tối */
 
 .overlay{
     position:fixed;
@@ -49,7 +51,7 @@ html,body{
     z-index:1;
 }
 
-/* KHUNG THÔNG TIN */
+/* Khung kính */
 
 .container{
     position:fixed;
@@ -57,7 +59,7 @@ html,body{
     top:50%;
     left:50%;
 
-    transform:translate(-50%, -50%);
+    transform:translate(-50%,-50%);
 
     width:700px;
     max-width:90%;
@@ -85,7 +87,9 @@ html,body{
 }
 
 .container:hover{
-    transform:translate(-50%, -52%);
+    transform:translate(-50%,-52%);
+}
+
 .container h1{
     font-size:72px;
     margin-bottom:20px;
@@ -98,6 +102,7 @@ html,body{
 .container h2{
     font-size:28px;
     font-weight:normal;
+
     margin-bottom:25px;
 }
 
@@ -106,7 +111,7 @@ html,body{
     margin-top:12px;
 }
 
-/* MÀN HÌNH CHÀO */
+/* Màn hình mở */
 
 #welcome{
     position:fixed;
@@ -116,25 +121,27 @@ html,body{
 
     display:flex;
     flex-direction:column;
+
     justify-content:center;
     align-items:center;
 
     cursor:pointer;
 
-    transition:1s;
-
     z-index:9999;
+
+    transition:1s;
 }
 
 #welcome h1{
-    font-size:70px;
+    font-size:80px;
     margin-bottom:20px;
 }
 
 #welcome p{
     font-size:22px;
-    opacity:0.75;
+    opacity:0.8;
 }
+
 </style>
 </head>
 
@@ -148,7 +155,7 @@ html,body{
 
 <div class="overlay"></div>
 
-<!-- KHUNG GIỚI THIỆU -->
+<!-- THÔNG TIN -->
 
 <div class="container">
 
@@ -181,7 +188,7 @@ html,body{
 <!-- NHẠC -->
 
 <audio id="music" loop>
-    <source src="spider thread monopoly.mp3"
+    <source src="spider%20thread%20monopoly.mp3"
             type="audio/mpeg">
 </audio>
 
@@ -193,17 +200,17 @@ document.getElementById("welcome");
 const music =
 document.getElementById("music");
 
-welcome.addEventListener("click", () => {
+welcome.addEventListener("click", ()=>{
 
     music.play();
 
-    welcome.style.opacity = "0";
+    welcome.style.opacity="0";
 
-    setTimeout(() => {
+    setTimeout(()=>{
 
-        welcome.style.display = "none";
+        welcome.style.display="none";
 
-    }, 1000);
+    },1000);
 
 });
 
