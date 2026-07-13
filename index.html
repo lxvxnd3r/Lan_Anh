@@ -26,16 +26,21 @@ body{
 /* VIDEO NỀN */
 
 #bg-video{
-    position:fixed;
-    top:-1000px;
-    left:0;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    width:100%;
-    height:calc(100% + 1000px);
+    width: 100%;
+    height: 100%;
 
-    object-fit:cover;
+    object-fit: cover;
+
+    /* Ưu tiên hiện phần trên của video (ngọn cây) */
+    object-position: center top;
+
+    z-index: -2;
 }
-
+    
 /* LỚP TỐI */
 
 .overlay{
