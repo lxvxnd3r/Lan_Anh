@@ -6,7 +6,6 @@
 <title>Lan Anh 🌙</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -17,11 +16,11 @@ html,body{
     width:100%;
     height:100%;
     overflow:hidden;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
+    color:white;
 }
 
-/* VIDEO NỀN */
-
+/* Video nền */
 #bg-video{
     position:fixed;
     top:0;
@@ -31,29 +30,28 @@ html,body{
     height:100%;
 
     object-fit:cover;
-
-    /* kéo lên để thấy ngọn cây */
     object-position:center 12%;
 
-    z-index:-3;
+    z-index:0;
 }
 
-/* lớp tối */
-
+/* Lớp phủ tối */
 .overlay{
     position:fixed;
-    inset:0;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
 
     background:rgba(0,0,0,0.35);
 
-    z-index:-2;
+    z-index:1;
 }
 
-/* khung thông tin */
-
+/* Khung thông tin */
 .container{
-
-    position:absolute;
+    position:fixed;
 
     top:50%;
     left:50%;
@@ -67,45 +65,43 @@ html,body{
 
     text-align:center;
 
-    color:white;
-
     background:rgba(255,255,255,0.08);
 
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
 
     border:1px solid rgba(255,255,255,0.15);
-
     border-radius:30px;
 
-    box-shadow:
-    0 0 50px rgba(0,0,0,0.4);
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
 
-    z-index:10;
+    z-index:2;
 }
 
-h1{
+.container h1{
     font-size:55px;
     margin-bottom:20px;
 }
 
-h2{
+.container h2{
     font-size:28px;
     font-weight:normal;
     margin-bottom:25px;
 }
 
-p{
+.container p{
     font-size:20px;
     margin-top:12px;
 }
 
-/* welcome */
-
+/* Welcome */
 #welcome{
-
     position:fixed;
-    inset:0;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
 
     background:black;
 
@@ -114,38 +110,33 @@ p{
     justify-content:center;
     align-items:center;
 
-    color:white;
-
-    z-index:999;
-
     cursor:pointer;
 
+    z-index:999;
     transition:1s;
 }
 
 #welcome h1{
     font-size:70px;
+    margin-bottom:20px;
 }
 
 #welcome p{
-    opacity:0.7;
+    opacity:0.8;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- VIDEO -->
-
+<!-- Video nền -->
 <video id="bg-video" autoplay muted loop playsinline>
     <source src="tree1.mp4" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
 
-<!-- NỘI DUNG -->
-
+<!-- Nội dung -->
 <div class="container">
 
     <h1>🌙 Lan Anh</h1>
@@ -156,14 +147,11 @@ p{
 
     <p>✨ Aesthetic • Anime • Night lover ✨</p>
 
-    <p>
-        Website cá nhân đầu tiên của mình.
-    </p>
+    <p>Website cá nhân đầu tiên của mình.</p>
 
 </div>
 
-<!-- MÀN HÌNH CHÀO -->
-
+<!-- Welcome -->
 <div id="welcome">
 
     <h1>🌙</h1>
@@ -172,35 +160,26 @@ p{
 
 </div>
 
-<!-- NHẠC -->
-
+<!-- Nhạc -->
 <audio id="music" loop>
-    <source src="spider thread monopoly.mp3"
-            type="audio/mpeg">
+    <source src="spider thread monopoly.mp3" type="audio/mpeg">
 </audio>
 
 <script>
+const welcome = document.getElementById("welcome");
+const music = document.getElementById("music");
 
-const welcome =
-document.getElementById("welcome");
-
-const music =
-document.getElementById("music");
-
-welcome.addEventListener("click",()=>{
+welcome.addEventListener("click", () => {
 
     music.play();
 
-    welcome.style.opacity="0";
+    welcome.style.opacity = "0";
 
-    setTimeout(()=>{
-
-        welcome.style.display="none";
-
-    },1000);
+    setTimeout(() => {
+        welcome.style.display = "none";
+    }, 1000);
 
 });
-
 </script>
 
 </body>
