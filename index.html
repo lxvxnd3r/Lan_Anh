@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 
     <meta charset="UTF-8">
@@ -37,28 +38,87 @@
 
     <div class="overlay"></div>
 
-<div id="welcome">
 
-    <h1>🌙</h1>
+    <!-- KHUNG CHÍNH -->
 
-    <p>Click anywhere to enter</p>
+    <div class="container">
 
-</div>
+        <div class="moon-system">
 
-<audio
-id="music"
-loop
-preload="auto">
+            <!-- QUỸ ĐẠO -->
 
-    <source
-        src="spider thread monopoly.mp3"
-        type="audio/mpeg">
+            <div class="orbit-container">
 
-</audio>
+                <div class="orbit-ring"></div>
 
-    <!-- JS -->
+                <div class="planet p1"></div>
+                <div class="planet p2"></div>
+                <div class="planet p3"></div>
+                <div class="planet p4"></div>
+
+            </div>
+
+            <!-- MẶT TRĂNG -->
+
+            <div id="moon">
+
+                🌙
+
+            </div>
+
+            <!-- SAO -->
+
+            <div class="star s1"></div>
+            <div class="star s2"></div>
+            <div class="star s3"></div>
+            <div class="star s4"></div>
+            <div class="star s5"></div>
+            <div class="star s6"></div>
+            <div class="star s7"></div>
+            <div class="star s8"></div>
+
+            <!-- CHỮ -->
+
+            <p class="search-text">
+
+                Đang tìm kiếm thứ gì à?
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WELCOME -->
+
+    <div id="welcome">
+
+        <h1>🌙</h1>
+
+        <p>Click anywhere to enter</p>
+
+    </div>
+
+
+    <!-- NHẠC -->
+
+    <audio
+        id="music"
+        loop
+        preload="auto">
+
+        <source
+            src="spider thread monopoly.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+    <!-- JAVASCRIPT -->
 
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
