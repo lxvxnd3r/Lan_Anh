@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
 <title>Lan Anh 🌙</title>
 
 <style>
@@ -15,19 +19,23 @@
 
 html,
 body{
+
     width:100%;
     height:100%;
+
     overflow:hidden;
 
     font-family:Arial,sans-serif;
-    color:white;
 
     background:black;
+
+    color:white;
 }
 
 /* VIDEO */
 
 #bg-video{
+
     position:fixed;
 
     top:0;
@@ -38,7 +46,6 @@ body{
 
     object-fit:cover;
 
-    /* Hiện phần trên của cây */
     object-position:center top;
 
     z-index:0;
@@ -47,17 +54,20 @@ body{
 /* LỚP TỐI */
 
 .overlay{
+
     position:fixed;
+
     inset:0;
 
-    background:rgba(0,0,0,0.05);
+    background:
+        rgba(0,0,0,.08);
 
     z-index:1;
 }
 
-/* ========================= */
-/* KHUNG LIQUID GLASS */
-/* ========================= */
+/* ======================= */
+/* CONTAINER */
+/* ======================= */
 
 .container{
 
@@ -66,309 +76,259 @@ body{
     top:50%;
     left:50%;
 
-    transform:translate(-50%,-50%);
+    transform:
+        translate(-50%,-50%);
 
-    width:700px;
-    max-width:90%;
+    width:800px;
+    height:550px;
 
-    padding:55px;
+    max-width:95%;
 
-    text-align:center;
+    display:flex;
 
-    background:rgba(255,255,255,0.03);
-
-    backdrop-filter:
-        blur(8px)
-        saturate(180%);
-
-    -webkit-backdrop-filter:
-        blur(8px)
-        saturate(180%);
-
-    border:1.5px solid transparent;
-
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,0.03),
-            rgba(255,255,255,0.03)
-        ),
-
-        linear-gradient(
-            135deg,
-            rgba(255,190,230,0.8),
-            rgba(180,245,255,0.8)
-        );
-
-    background-origin:border-box;
-    background-clip:
-        padding-box,
-        border-box;
-
-    border-radius:40px;
-
-    box-shadow:
-        inset 0 1px 1px rgba(255,255,255,0.20),
-        0 0 25px rgba(255,190,230,0.18),
-        0 0 35px rgba(180,245,255,0.18),
-        0 15px 40px rgba(0,0,0,0.25);
+    justify-content:center;
+    align-items:center;
 
     overflow:visible;
 
     z-index:2;
-
-    transition:0.5s;
 }
 
-/* PHẢN CHIẾU GIỐNG GƯƠNG */
+/* ======================= */
+/* MOON SYSTEM */
+/* ======================= */
 
-.container::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    border-radius:40px;
-
-    background:
-
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,0.18) 0%,
-            rgba(255,255,255,0.05) 12%,
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 15% 10%,
-            rgba(255,255,255,0.12),
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 85% 15%,
-            rgba(255,255,255,0.08),
-            transparent 30%
-        );
-
-    pointer-events:none;
-
-    z-index:2;
-}
-
-/* CHỮ NẰM TRÊN LỚP PHẢN CHIẾU */
-
-.container h1,
-.container h2,
-.container p{
+.moon-system{
 
     position:relative;
 
-    z-index:5;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
 }
 
-/* hover */
+/* ======================= */
+/* MOON */
+/* ======================= */
 
-.container:hover{
+#moon{
+
+    font-size:170px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    position:relative;
+
+    z-index:20;
+
+    animation:
+        moonFloat 5s
+        ease-in-out infinite;
+
+    transition:1s;
+
+    filter:
+
+        drop-shadow(
+            0 0 35px
+            rgba(255,225,130,.8)
+        )
+
+        drop-shadow(
+            0 0 90px
+            rgba(255,230,170,.45)
+        );
+}
+
+#moon:hover{
+
+    scale:1.08;
+
+    filter:
+
+        drop-shadow(
+            0 0 50px
+            rgba(255,240,180,1)
+        )
+
+        drop-shadow(
+            0 0 130px
+            rgba(255,240,180,.6)
+        );
+}
+
+/* ======================= */
+/* TEXT */
+/* ======================= */
+
+.search-text{
+
+    margin-top:20px;
+
+    font-size:34px;
+
+    text-shadow:
+
+        0 0 12px white,
+
+        0 0 30px #8be8ff,
+
+        0 0 60px #8be8ff;
+
+    animation:
+        glowText
+        3s ease-in-out infinite;
+}
+
+/* ======================= */
+/* STARS */
+/* ======================= */
+
+.star{
+
+    position:absolute;
+
+    width:12px;
+    height:12px;
+
+    background:white;
+
+    border-radius:2px;
 
     transform:
-        translate(-50%,-52%);
+        rotate(45deg);
 
     box-shadow:
 
-        0 0 35px rgba(255,190,230,0.25),
+        0 0 10px white,
 
-        0 0 60px rgba(190,240,255,0.25),
+        0 0 25px #8be8ff,
 
-        0 20px 55px rgba(0,0,0,0.28);
+        0 0 45px #8be8ff;
+
+    animation:
+        twinkle 3s infinite;
 }
 
-/* ========================= */
-/* CHỮ */
-/* ========================= */
+.s1{top:15%;left:15%;}
+.s2{top:18%;right:18%;}
+.s3{top:65%;left:20%;}
+.s4{bottom:20%;right:20%;}
+.s5{bottom:30%;left:30%;}
+.s6{top:35%;right:10%;}
+.s7{top:28%;left:8%;}
+.s8{bottom:35%;right:35%;}
 
-.container h1,
-.container h2,
-.container p{
+/* ======================= */
+/* ORBIT */
+/* ======================= */
 
-    position:relative;
-
-    z-index:5;
-}
-
-.container h1{
-
-    font-size:72px;
-
-    margin-bottom:20px;
-
-    text-shadow:
-        0 0 20px rgba(255,255,255,0.35);
-}
-
-.container h2{
-
-    font-size:28px;
-
-    font-weight:normal;
-
-    margin-bottom:25px;
-}
-
-.container p{
-
-    font-size:20px;
-
-    margin-top:12px;
-}
-
-/* ========================= */
-/* BONG BÓNG */
-/* ========================= */
-
-.bubble{
+.orbit-container{
 
     position:absolute;
+
+    width:650px;
+    height:650px;
+
+    opacity:0;
+
+    scale:0;
+
+    transition:
+
+        opacity 1.5s,
+        scale 1.5s;
+
+    pointer-events:none;
+}
+
+.orbit-container.active{
+
+    opacity:1;
+
+    scale:1;
+
+    pointer-events:auto;
+
+    animation:
+
+        rotateOrbit
+        35s linear infinite;
+}
+
+.orbit-container:hover{
+
+    animation-play-state:
+        paused;
+}
+
+/* ======================= */
+/* PLANETS */
+/* ======================= */
+
+.planet{
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
 
     border-radius:50%;
 
     background:
-        radial-gradient(
-            circle at 30% 30%,
-            rgba(255,255,255,0.45),
-            rgba(255,255,255,0.08) 45%,
-            rgba(255,255,255,0.01)
-        );
 
-    border:
-        1px solid rgba(255,255,255,0.18);
+        rgba(255,255,255,.08);
 
     backdrop-filter:
-        blur(12px)
-        saturate(180%);
+
+        blur(15px);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.20);
 
     box-shadow:
 
         inset
-        0 3px 8px rgba(255,255,255,0.30),
+        0 2px 12px
+        rgba(255,255,255,.35),
 
-        inset
-        0 -5px 12px rgba(255,255,255,0.05),
-
-        0 0 20px rgba(255,255,255,0.08);
-
-    pointer-events:none;
-
-    z-index:1;
+        0 0 30px
+        rgba(255,255,255,.18);
 }
 
-/* vị trí */
+.p1{
 
-.b1{
-    width:55px;
-    height:55px;
-    top:-20px;
-    left:-15px;
-    animation:float1 9s ease-in-out infinite;
+    top:-45px;
+    left:280px;
 }
 
-.b2{
-    width:40px;
-    height:40px;
-    top:70px;
-    right:-15px;
-    animation:float2 7s ease-in-out infinite;
+.p2{
+
+    top:280px;
+    right:-45px;
 }
 
-.b3{
-    width:70px;
-    height:70px;
-    bottom:-30px;
-    left:120px;
-    animation:float1 11s ease-in-out infinite;
+.p3{
+
+    bottom:-45px;
+    left:280px;
 }
 
-.b4{
-    width:35px;
-    height:35px;
-    right:170px;
-    bottom:-10px;
-    animation:float2 8s ease-in-out infinite;
+.p4{
+
+    top:280px;
+    left:-45px;
 }
 
-.b5{
-    width:28px;
-    height:28px;
-    top:25px;
-    left:260px;
-    animation:float1 6s ease-in-out infinite;
-}
-
-.b6{
-    width:32px;
-    height:32px;
-    top:-15px;
-    right:220px;
-    animation:float2 9s ease-in-out infinite;
-}
-
-.b7{
-    width:22px;
-    height:22px;
-    left:70px;
-    bottom:40px;
-    animation:float1 7s ease-in-out infinite;
-}
-
-.b8{
-    width:45px;
-    height:45px;
-    right:80px;
-    top:180px;
-    animation:float2 10s ease-in-out infinite;
-}
-
-.b9{
-    width:18px;
-    height:18px;
-    left:330px;
-    top:-10px;
-    animation:float1 5s ease-in-out infinite;
-}
-
-.b10{
-    width:35px;
-    height:35px;
-    right:40px;
-    bottom:-10px;
-    animation:float2 8s ease-in-out infinite;
-}
-
-/* animation */
-
-@keyframes float1{
-
-    0%,100%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-14px);
-    }
-}
-
-@keyframes float2{
-
-    0%,100%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(14px);
-    }
-}
+/* ======================= */
 /* WELCOME */
+/* ======================= */
 
 #welcome{
 
@@ -394,16 +354,86 @@ body{
 
 #welcome h1{
 
-    font-size:85px;
+    font-size:90px;
 
     margin-bottom:20px;
 }
 
 #welcome p{
 
-    font-size:22px;
+    font-size:24px;
 
-    opacity:0.8;
+    opacity:.8;
+}
+
+/* ======================= */
+/* ANIMATION */
+/* ======================= */
+
+@keyframes moonFloat{
+
+    0%,100%{
+
+        transform:
+            translateY(0px);
+    }
+
+    50%{
+
+        transform:
+            translateY(-18px);
+    }
+}
+
+@keyframes glowText{
+
+    0%,100%{
+
+        opacity:.7;
+    }
+
+    50%{
+
+        opacity:1;
+    }
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.3;
+
+        transform:
+
+            scale(.7)
+            rotate(45deg);
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+
+            scale(1.4)
+            rotate(45deg);
+    }
+}
+
+@keyframes rotateOrbit{
+
+    from{
+
+        transform:
+            rotate(0deg);
+    }
+
+    to{
+
+        transform:
+            rotate(360deg);
+    }
 }
 
 </style>
@@ -428,35 +458,41 @@ playsinline>
 
 <div class="overlay"></div>
 
-<!-- KHUNG THÔNG TIN -->
 
 <div class="container">
-    <div class="bubble b1"></div>
-    <div class="bubble b2"></div>
-    <div class="bubble b3"></div>
-    <div class="bubble b4"></div>
-    <div class="bubble b5"></div>
-    <div class="bubble b6"></div>
-    <div class="bubble b7"></div>
-    <div class="bubble b8"></div>
-    <div class="bubble b9"></div>
-    <div class="bubble b10"></div>
 
-    <h1>🌙 Lan Anh</h1>
+    <div class="star s1"></div>
+    <div class="star s2"></div>
+    <div class="star s3"></div>
+    <div class="star s4"></div>
+    <div class="star s5"></div>
+    <div class="star s6"></div>
+    <div class="star s7"></div>
+    <div class="star s8"></div>
 
-    <h2>
-        "Somewhere between rain and dreams."
-    </h2>
+    <div class="moon-system">
 
-    <p>
-        ✨ Aesthetic • Anime • Night lover ✨
-    </p>
+        <div id="moon">
+            🌙
+        </div>
 
-    <p>
-        Website cá nhân đầu tiên của mình.
-    </p>
+        <p class="search-text">
+            Đang tìm kiếm thứ gì à?
+        </p>
+
+        <div class="orbit-container">
+
+            <div class="planet p1"></div>
+            <div class="planet p2"></div>
+            <div class="planet p3"></div>
+            <div class="planet p4"></div>
+
+        </div>
+
+    </div>
 
 </div>
+
 
 <!-- WELCOME -->
 
@@ -468,7 +504,8 @@ playsinline>
 
 </div>
 
-<!-- NHẠC -->
+
+<!-- MUSIC -->
 
 <audio
 id="music"
@@ -476,10 +513,11 @@ loop
 preload="auto">
 
     <source
-        src="spider%20thread%20monopoly.mp3"
+        src="spider thread monopoly.mp3"
         type="audio/mpeg">
 
 </audio>
+
 
 <script>
 
@@ -489,7 +527,16 @@ document.getElementById("welcome");
 const music =
 document.getElementById("music");
 
-welcome.addEventListener("click", async ()=>{
+const moon =
+document.getElementById("moon");
+
+const orbit =
+document.querySelector(".orbit-container");
+
+
+welcome.addEventListener(
+"click",
+async ()=>{
 
     try{
 
@@ -497,20 +544,29 @@ welcome.addEventListener("click", async ()=>{
 
         await music.play();
 
-    }
-    catch(e){
+    }catch(e){
 
         console.log(e);
-
     }
 
-    welcome.style.opacity = "0";
+    welcome.style.opacity="0";
 
     setTimeout(()=>{
 
-        welcome.style.display = "none";
+        welcome.style.display="none";
 
     },1000);
+
+});
+
+
+moon.addEventListener(
+"click",
+()=>{
+
+    orbit.classList.toggle(
+        "active"
+    );
 
 });
 
