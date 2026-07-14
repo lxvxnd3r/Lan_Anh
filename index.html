@@ -73,34 +73,50 @@ body{
 
     text-align:center;
 
-    background:rgba(255,255,255,0.015);
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.02),
+            rgba(255,255,255,0.02)
+        ) padding-box,
+
+        linear-gradient(
+            135deg,
+            rgba(255,190,230,0.75),
+            rgba(190,240,255,0.75)
+        ) border-box;
 
     backdrop-filter:
-        blur(0.5px)
+        blur(4px)
         saturate(180%)
         brightness(1.1);
 
     -webkit-backdrop-filter:
-        blur(0.5px)
+        blur(4px)
         saturate(180%)
         brightness(1.1);
 
-    border:1px solid rgba(255,255,255,0.30);
+    border:1.5px solid transparent;
 
-    border-radius:38px;
+    border-radius:40px;
 
     box-shadow:
-        inset 0 1px 1px rgba(255,255,255,0.15),
-        0 15px 40px rgba(0,0,0,0.20);
 
-    overflow:hidden;
+        inset 0 1px 1px rgba(255,255,255,0.20),
+
+        0 0 25px rgba(255,190,230,0.18),
+
+        0 0 45px rgba(190,240,255,0.18),
+
+        0 15px 40px rgba(0,0,0,0.18);
+
+    overflow:visible;
 
     z-index:2;
 
     transition:0.5s;
 }
 
-/* Phản chiếu kính */
+/* PHẢN CHIẾU KÍNH */
 
 .container::before{
 
@@ -110,21 +126,33 @@ body{
 
     inset:0;
 
+    border-radius:40px;
+
     background:
+
         linear-gradient(
             to bottom,
-            rgba(255,255,255,0.18),
-            transparent 45%
+            rgba(255,255,255,0.22),
+            transparent 35%
         ),
+
         radial-gradient(
             circle at top left,
-            rgba(255,255,255,0.25),
+            rgba(255,220,240,0.25),
+            transparent 55%
+        ),
+
+        radial-gradient(
+            circle at top right,
+            rgba(210,245,255,0.25),
             transparent 55%
         );
 
     pointer-events:none;
 }
-    
+
+/* VỆT SÁNG */
+
 .container::after{
 
     content:"";
@@ -132,10 +160,10 @@ body{
     position:absolute;
 
     top:-40%;
-    left:-20%;
+    left:-25%;
 
     width:60%;
-    height:200%;
+    height:220%;
 
     background:
         linear-gradient(
@@ -149,17 +177,21 @@ body{
 
     pointer-events:none;
 }
-    
+
+/* HOVER */
+
 .container:hover{
 
     transform:
         translate(-50%,-52%);
 
     box-shadow:
-        inset 0 1px 1px rgba(255,255,255,0.20),
-        0 15px 40px rgba(0,0,0,0.18),
-        0 0 35px rgba(255,255,255,0.08),
-        0 0 80px rgba(180,220,255,0.12);
+
+        0 0 35px rgba(255,190,230,0.28),
+
+        0 0 60px rgba(190,240,255,0.28),
+
+        0 20px 55px rgba(0,0,0,0.22);
 }
 
 /* CHỮ */
@@ -167,8 +199,10 @@ body{
 .container h1,
 .container h2,
 .container p{
+
     position:relative;
-    z-index:3;
+
+    z-index:5;
 }
 
 .container h1{
@@ -197,6 +231,120 @@ body{
     margin-top:12px;
 }
 
+/* BONG BÓNG */
+
+.bubble{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(255,255,255,0.40),
+            rgba(255,255,255,0.05)
+        );
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    border:
+        1px solid rgba(255,255,255,0.20);
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+.b1{
+
+    width:130px;
+    height:130px;
+
+    top:-50px;
+    left:-45px;
+
+    animation:
+        float1 10s ease-in-out infinite;
+}
+
+.b2{
+
+    width:90px;
+    height:90px;
+
+    top:70px;
+    right:-25px;
+
+    animation:
+        float2 8s ease-in-out infinite;
+}
+
+.b3{
+
+    width:150px;
+    height:150px;
+
+    bottom:-80px;
+    left:140px;
+
+    animation:
+        float1 12s ease-in-out infinite;
+}
+
+.b4{
+
+    width:70px;
+    height:70px;
+
+    right:160px;
+    bottom:-20px;
+
+    animation:
+        float2 9s ease-in-out infinite;
+}
+
+.b5{
+
+    width:55px;
+    height:55px;
+
+    top:20px;
+    left:240px;
+
+    animation:
+        float1 7s ease-in-out infinite;
+}
+
+/* ANIMATION */
+
+@keyframes float1{
+
+    0%,100%{
+        transform:
+            translateY(0px);
+    }
+
+    50%{
+        transform:
+            translateY(-14px);
+    }
+}
+
+@keyframes float2{
+
+    0%,100%{
+        transform:
+            translateY(0px);
+    }
+
+    50%{
+        transform:
+            translateY(14px);
+    }
+}
 /* WELCOME */
 
 #welcome{
@@ -260,6 +408,11 @@ playsinline>
 <!-- KHUNG THÔNG TIN -->
 
 <div class="container">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
 
     <h1>🌙 Lan Anh</h1>
 
