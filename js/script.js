@@ -31,3 +31,15 @@ welcome.addEventListener(
 
     }
 );
+
+const moon =
+document.getElementById("moon");
+
+const orbit =
+document.querySelector(".orbit-container");
+
+moon.addEventListener("click",()=>{
+
+    orbit.classList.toggle("active");
+
+});
