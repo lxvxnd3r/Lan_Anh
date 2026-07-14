@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lxvxnd3r🌙</title>
+<title>Lan Anh 🌙</title>
 
 <style>
 
@@ -13,16 +13,19 @@
     box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
     width:100%;
     height:100%;
     overflow:hidden;
+
     font-family:Arial,sans-serif;
     color:white;
+
     background:black;
 }
 
-/* VIDEO NỀN */
+/* VIDEO */
 
 #bg-video{
     position:fixed;
@@ -35,12 +38,10 @@ html,body{
 
     object-fit:cover;
 
-    /* Ưu tiên hiện phần trên của cây */
+    /* Hiện phần trên của cây */
     object-position:center top;
 
     z-index:0;
-
-    background:black;
 }
 
 /* LỚP TỐI */
@@ -54,43 +55,43 @@ html,body{
     z-index:1;
 }
 
-/* KHUNG THÔNG TIN */
+/* KHUNG KÍNH */
 
 .container{
+
     position:fixed;
 
     top:50%;
     left:50%;
+
     transform:translate(-50%,-50%);
 
     width:700px;
     max-width:90%;
 
-    padding:50px;
+    padding:55px;
 
     text-align:center;
 
-    /* Liquid Glass */
-    background:rgba(255,255,255,0.04);
+    background:rgba(255,255,255,0.03);
 
     backdrop-filter:
-        blur(22px)
+        blur(14px)
         saturate(180%)
         brightness(1.1);
 
     -webkit-backdrop-filter:
-        blur(22px)
+        blur(14px)
         saturate(180%)
         brightness(1.1);
 
-    border:1px solid rgba(255,255,255,0.22);
+    border:1px solid rgba(255,255,255,0.18);
 
-    border-radius:35px;
+    border-radius:38px;
 
     box-shadow:
-        inset 0 1px 1px rgba(255,255,255,0.35),
-        inset 0 -8px 20px rgba(255,255,255,0.04),
-        0 20px 50px rgba(0,0,0,0.30);
+        inset 0 1px 1px rgba(255,255,255,0.25),
+        0 15px 40px rgba(0,0,0,0.20);
 
     overflow:hidden;
 
@@ -99,30 +100,30 @@ html,body{
     transition:0.5s;
 }
 
-/* Hiệu ứng phản chiếu kính */
+/* Phản chiếu kính */
 
 .container::before{
+
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(255,255,255,0.28),
-            rgba(255,255,255,0) 45%
+            rgba(255,255,255,0.18),
+            transparent 45%
         ),
         radial-gradient(
             circle at top left,
-            rgba(255,255,255,0.30),
+            rgba(255,255,255,0.25),
             transparent 55%
         );
 
     pointer-events:none;
 }
-
-/* Hover */
 
 .container:hover{
 
@@ -130,12 +131,11 @@ html,body{
         translate(-50%,-52%);
 
     box-shadow:
-        inset 0 1px 2px rgba(255,255,255,0.45),
-        inset 0 -8px 25px rgba(255,255,255,0.06),
-        0 28px 60px rgba(0,0,0,0.35);
+        inset 0 1px 2px rgba(255,255,255,0.35),
+        0 20px 50px rgba(0,0,0,0.25);
 }
 
-/* Chữ nằm trên lớp kính */
+/* CHỮ */
 
 .container h1,
 .container h2,
@@ -151,7 +151,7 @@ html,body{
     margin-bottom:20px;
 
     text-shadow:
-        0 0 18px rgba(255,255,255,0.25);
+        0 0 15px rgba(255,255,255,0.25);
 }
 
 .container h2{
@@ -170,6 +170,44 @@ html,body{
     margin-top:12px;
 }
 
+/* WELCOME */
+
+#welcome{
+
+    position:fixed;
+
+    inset:0;
+
+    background:black;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    transition:1s;
+}
+
+#welcome h1{
+
+    font-size:85px;
+
+    margin-bottom:20px;
+}
+
+#welcome p{
+
+    font-size:22px;
+
+    opacity:0.8;
+}
+
 </style>
 </head>
 
@@ -184,31 +222,31 @@ muted
 loop
 playsinline>
 
-<source
-src="tree1.mp4"
-type="video/mp4">
+    <source
+        src="tree1.mp4"
+        type="video/mp4">
 
 </video>
 
 <div class="overlay"></div>
 
-<!-- THÔNG TIN -->
+<!-- KHUNG THÔNG TIN -->
 
 <div class="container">
 
-<h1>🌙 Lxvxnd3r</h1>
+    <h1>🌙 Lan Anh</h1>
 
-<h2>
-"Somewhere between rain and dreams."
-</h2>
+    <h2>
+        "Somewhere between rain and dreams."
+    </h2>
 
-<p>
-✨ Aesthetic • Anime • Night lover ✨
-</p>
+    <p>
+        ✨ Aesthetic • Anime • Night lover ✨
+    </p>
 
-<p>
-Website cá nhân đầu tiên của mình.
-</p>
+    <p>
+        Website cá nhân đầu tiên của mình.
+    </p>
 
 </div>
 
@@ -216,9 +254,9 @@ Website cá nhân đầu tiên của mình.
 
 <div id="welcome">
 
-<h1>🌙</h1>
+    <h1>🌙</h1>
 
-<p>Click anywhere to enter</p>
+    <p>Click anywhere to enter</p>
 
 </div>
 
@@ -229,9 +267,9 @@ id="music"
 loop
 preload="auto">
 
-<source
-src="spider%20thread%20monopoly.mp3"
-type="audio/mpeg">
+    <source
+        src="spider%20thread%20monopoly.mp3"
+        type="audio/mpeg">
 
 </audio>
 
@@ -253,14 +291,16 @@ welcome.addEventListener("click", async ()=>{
 
     }
     catch(e){
+
         console.log(e);
+
     }
 
-    welcome.style.opacity="0";
+    welcome.style.opacity = "0";
 
     setTimeout(()=>{
 
-        welcome.style.display="none";
+        welcome.style.display = "none";
 
     },1000);
 
