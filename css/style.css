@@ -137,18 +137,7 @@ body{
     justify-content:center;
     align-items:center;
 }
-.moon-system{
 
-    position:relative;
-
-    width:700px;
-    height:700px;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-}
 #moon{
 
     position:absolute;
@@ -168,21 +157,21 @@ body{
 
     z-index:20;
 
-    background:
+background:
 
-        radial-gradient(
-            circle at 35% 30%,
-            rgba(255,255,255,.95),
-            rgba(255,255,255,.30) 25%,
-            transparent 45%
-        ),
+    radial-gradient(
+        circle at 35% 30%,
+        rgba(255,255,255,.9),
+        rgba(255,255,255,.25) 25%,
+        transparent 45%
+    ),
 
-        linear-gradient(
-            135deg,
-            #ffd6f5,
-            #e6dcff,
-            #c2f6ff
-        );
+    linear-gradient(
+        135deg,
+        #ffd6f6 0%,
+        #e6d7ff 45%,
+        #c4f8ff 100%
+    );
 
     box-shadow:
 
@@ -264,8 +253,17 @@ body{
     position:absolute;
 
     width:700px;
+    
     height:700px;
-
+    
+    left:50%;
+    
+    top:50%;
+    
+    margin-left:-350px;
+    
+    margin-top:-350px;
+    
     opacity:0;
 
     transform:
@@ -317,7 +315,17 @@ body{
         0 0 25px #ffd4ff,
 
         0 0 55px #8be8ff;
+        animation:
+            
+        ringGlow
+            
+        5s
+            
+        ease-in-out
+            
+        infinite;
 }
+
 .planet{
 
     position:absolute;
@@ -438,5 +446,25 @@ body{
 
             scale(1.4)
             rotate(45deg);
+    }
+}
+@keyframes ringGlow{
+
+    0%,100%{
+
+        opacity:.6;
+    }
+
+    50%{
+
+        opacity:1;
+
+        box-shadow:
+
+            0 0 40px #ffd4ff,
+
+            0 0 90px #8be8ff,
+
+            0 0 150px rgba(255,255,255,.3);
     }
 }
