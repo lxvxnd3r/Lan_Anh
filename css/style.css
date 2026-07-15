@@ -149,7 +149,7 @@ body{
     transform:
         translate(-50%,-50%);
 
-    font-size:190px;
+    font-size:170px;
 
     z-index:20;
 
@@ -215,56 +215,43 @@ body{
 }
 
 .star{
-    
+
     position:absolute;
-
-    overflow:visible;
-
-    isolation:isolate;
-
 
     background:
 
         radial-gradient(
-
             circle,
-
-            #ffffff 0%,
-
-            #ffc8ef 20%,
-
-            #ff7fd8 55%,
-
-            #73f7ff 100%
+            #ff8fe6 0%,
+            #d7a6ff 55%,
+            #8be8ff 100%
         );
 
     clip-path:
-
         polygon(
             50% 0%,
-            62% 38%,
+            60% 40%,
             100% 50%,
-            62% 62%,
+            60% 60%,
             50% 100%,
-            38% 62%,
+            40% 60%,
             0% 50%,
-            38% 38%
+            40% 40%
         );
 
     box-shadow:
 
-        0 0 15px #ffd8f5,
+        0 0 15px #ff8fe6,
 
-        0 0 40px #ff8ddd,
+        0 0 40px #d7a6ff,
 
-        0 0 80px #73f7ff,
-
-        0 0 150px rgba(115,247,255,.95),
-
-        0 0 220px rgba(255,120,220,.7);
+        0 0 80px #8be8ff;
 
     animation:
         twinkle 4s ease-in-out infinite;
+filter:
+    brightness(1.5)
+    saturate(1.5);
 }
 
 .star::before{
@@ -473,8 +460,8 @@ body{
 
     position:absolute;
 
-    width:140px;
-    height:140px;
+    width:125px;
+    height:125px;
 
     border-radius:50%;
 
@@ -509,39 +496,27 @@ body{
 }
 
 .p1{
-
-    top:-10px;
+    top:110px;
     left:50%;
-
-    transform:
-        translate(-50%,-50%);
+    transform:translate(-50%,-50%);
 }
 
 .p2{
-
     top:50%;
-    right:-10px;
-
-    transform:
-        translate(50%,-50%);
+    right:110px;
+    transform:translate(50%,-50%);
 }
 
 .p3{
-
-    bottom:-10px;
+    bottom:110px;
     left:50%;
-
-    transform:
-        translate(-50%,50%);
+    transform:translate(-50%,50%);
 }
 
 .p4{
-
     top:50%;
-    left:-10px;
-
-    transform:
-        translate(-50%,-50%);
+    left:110px;
+    transform:translate(-50%,-50%);
 }
 
 @keyframes moonFloat{
