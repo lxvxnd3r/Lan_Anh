@@ -519,8 +519,8 @@ body{
 
     position:absolute;
 
-    width:400px;
-    height:400px;
+    width:500px;
+    height:500px;
 
     left:50%;
     top:50%;
@@ -548,8 +548,8 @@ body{
 
     position:absolute;
 
-    width:125px;
-    height:125px;
+    width:145px;
+    height:145px;
 
     border-radius:50%;
 
@@ -593,7 +593,7 @@ body{
     top:50%;
 
     transform:
-        translate(-50%,-260px);
+        translate(-50%,-310px);
 }
 
 .p2{
@@ -602,7 +602,7 @@ body{
     top:50%;
 
     transform:
-        translate(135px,-50%);
+        translate(190px,-50%);
 }
 
 .p3{
@@ -611,7 +611,7 @@ body{
     top:50%;
 
     transform:
-        translate(-50%,135px);
+        translate(-50%,190px);
 }
 
 .p4{
@@ -620,7 +620,7 @@ body{
     top:50%;
 
     transform:
-        translate(-260px,-50%);
+        translate(-310px,-50%);
 }
 
 @keyframes moonFloat{
