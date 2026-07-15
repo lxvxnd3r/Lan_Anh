@@ -197,9 +197,9 @@ body{
 
     position:absolute;
 
-    top:520px;
+    top:480px;
 
-    font-size:50px;
+    font-size:34px;
 
     color:white;
 
@@ -359,12 +359,47 @@ body{
     right:360px;
 }
 
+.s9{
+    width:18px;
+    height:18px;
+    top:180px;
+    left:330px;
+}
+
+.s10{
+    width:10px;
+    height:10px;
+    top:300px;
+    left:350px;
+}
+
+.s11{
+    width:22px;
+    height:22px;
+    top:280px;
+    right:260px;
+}
+
+.s12{
+    width:12px;
+    height:12px;
+    bottom:240px;
+    left:360px;
+}
+
+.s13{
+    width:18px;
+    height:18px;
+    bottom:280px;
+    right:330px;
+}
+
 .orbit-container{
 
     position:absolute;
 
-    width:700px;
-    height:700px;
+    width:720px;
+    height:720px;
 
     left:50%;
     top:50%;
@@ -406,8 +441,8 @@ body{
 
     position:absolute;
 
-    width:600px;
-    height:600px;
+    width:720px;
+    height:720px;
 
     left:50%;
     top:50%;
@@ -438,49 +473,76 @@ body{
 
     position:absolute;
 
-    width:170px;
-    height:170px;
+    width:140px;
+    height:140px;
 
     border-radius:50%;
 
     background:
 
         radial-gradient(
-
             circle at 35% 25%,
-
-            rgba(255,255,255,.8),
-
-            rgba(255,255,255,.15) 35%,
-
+            rgba(255,255,255,.95),
+            rgba(255,255,255,.15) 45%,
             rgba(255,255,255,.05)
         );
 
-    backdrop-filter:
-        blur(25px);
-
     border:
+        2px solid rgba(255,255,255,.25);
 
-        2px solid
-        rgba(255,255,255,.35);
+    backdrop-filter:
+        blur(18px);
 
     box-shadow:
 
         inset
-        0 0 25px rgba(255,255,255,.45),
+        -20px -20px 40px
+        rgba(255,170,255,.15),
 
-        0 0 40px rgba(255,210,255,.35),
+        inset
+        20px 20px 40px
+        rgba(180,255,255,.15),
 
-        0 0 80px rgba(150,255,255,.25);
+        0 0 40px rgba(255,180,255,.35),
+
+        0 0 90px rgba(150,255,255,.3);
 }
 
-.p1{ top:-85px; left:50%; transform:translateX(-50%); }
+.p1{
 
-.p2{ right:-85px; top:50%; transform:translateY(-50%); }
+    top:-10px;
+    left:50%;
 
-.p3{ bottom:-85px; left:50%; transform:translateX(-50%); }
+    transform:
+        translate(-50%,-50%);
+}
 
-.p4{ left:-85px; top:50%; transform:translateY(-50%); }
+.p2{
+
+    top:50%;
+    right:-10px;
+
+    transform:
+        translate(50%,-50%);
+}
+
+.p3{
+
+    bottom:-10px;
+    left:50%;
+
+    transform:
+        translate(-50%,50%);
+}
+
+.p4{
+
+    top:50%;
+    left:-10px;
+
+    transform:
+        translate(-50%,-50%);
+}
 
 @keyframes moonFloat{
 
