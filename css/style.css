@@ -20,7 +20,6 @@ body{
 #bg-video{
 
     position:fixed;
-
     inset:0;
 
     width:100%;
@@ -28,7 +27,8 @@ body{
 
     object-fit:cover;
 
-    object-position:center top;
+    filter:
+        brightness(.6);
 
     z-index:0;
 }
