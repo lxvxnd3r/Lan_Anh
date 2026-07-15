@@ -583,27 +583,35 @@ body{
 }
 
 .p1{
-    top:110px;
     left:50%;
-    transform:translate(-50%,-50%);
+    top:110px;
+
+    transform:
+        translate(-50%,-50%);
 }
 
 .p2{
     top:50%;
     right:110px;
-    transform:translate(50%,-50%);
+
+    transform:
+        translate(50%,-50%);
 }
 
 .p3{
-    bottom:110px;
     left:50%;
-    transform:translate(-50%,50%);
+    bottom:110px;
+
+    transform:
+        translate(-50%,50%);
 }
 
 .p4{
     top:50%;
     left:110px;
-    transform:translate(-50%,-50%);
+
+    transform:
+        translate(-50%,-50%);
 }
 
 @keyframes moonFloat{
