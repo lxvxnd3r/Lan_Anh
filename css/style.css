@@ -142,51 +142,48 @@ body{
 
     position:absolute;
 
-    width:240px;
-    height:240px;
-
     left:50%;
     top:50%;
 
     transform:
         translate(-50%,-50%);
 
-    border-radius:50%;
-
-    cursor:pointer;
+    font-size:230px;
 
     z-index:20;
 
-background:
-
-    radial-gradient(
-        circle at 35% 30%,
-        rgba(255,255,255,.9),
-        rgba(255,255,255,.25) 25%,
-        transparent 45%
-    ),
-
-    linear-gradient(
-        135deg,
-        #ffd6f6 0%,
-        #e6d7ff 45%,
-        #c4f8ff 100%
-    );
-
-    box-shadow:
-
-        0 0 50px rgba(255,190,255,.5),
-
-        0 0 120px rgba(170,255,255,.35),
-
-        inset
-        0 0 35px rgba(255,255,255,.45);
+    cursor:pointer;
 
     animation:
         moonFloat 6s ease-in-out infinite;
 
-    transition:1s;
+    filter:
+
+        drop-shadow(
+            0 0 25px
+            rgba(255,180,255,.7)
+        )
+
+        drop-shadow(
+            0 0 60px
+            rgba(180,255,255,.6)
+        );
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffd4ff,
+            #dcd6ff,
+            #bffcff
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
 }
+
 #moon:hover{
 
     transform:
@@ -248,29 +245,26 @@ background:
 .s6{bottom:250px;right:260px;}
 .s7{top:230px;left:340px;}
 .s8{top:230px;right:340px;}
+
 .orbit-container{
 
     position:absolute;
 
     width:700px;
-    
     height:700px;
-    
+
     left:50%;
-    
     top:50%;
-    
-    margin-left:-350px;
-    
-    margin-top:-350px;
-    
-    opacity:0;
 
     transform:
+        translate(-50%,-50%)
         scale(.3);
 
-    transition:
-        1.5s;
+    transform-origin:center center;
+
+    opacity:0;
+
+    transition:1.5s;
 
     pointer-events:none;
 }
@@ -280,17 +274,17 @@ background:
     opacity:1;
 
     transform:
-        scale(1);
 
-    pointer-events:auto;
+        translate(-50%,-50%)
+
+        scale(1);
 
     animation:
 
         rotateOrbit
-        35s
-        linear
-        infinite;
+        35s linear infinite;
 }
+
 .orbit-container:hover{
 
     animation-play-state:
@@ -365,29 +359,43 @@ background:
 
         0 0 80px rgba(150,255,255,.25);
 }
+
 .p1{
 
     top:-85px;
-    left:265px;
+    left:50%;
+
+    transform:
+        translateX(-50%);
 }
 
 .p2{
 
-    top:265px;
     right:-85px;
+    top:50%;
+
+    transform:
+        translateY(-50%);
 }
 
 .p3{
 
     bottom:-85px;
-    left:265px;
+    left:50%;
+
+    transform:
+        translateX(-50%);
 }
 
 .p4{
 
-    top:265px;
     left:-85px;
+    top:50%;
+
+    transform:
+        translateY(-50%);
 }
+
 @keyframes moonFloat{
 
     0%,100%{
