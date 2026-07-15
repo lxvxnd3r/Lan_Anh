@@ -37,14 +37,11 @@ body{
 
 .overlay{
 
-    position:fixed;
-
-    inset:0;
-
     background:
-        rgba(0,0,0,.16);
+        rgba(0,0,0,.35);
 
-    z-index:1;
+    backdrop-filter:
+        brightness(.75);
 }
 
 #welcome{
@@ -217,40 +214,47 @@ body{
 .star{
 
     position:absolute;
+
     overflow:visible;
+
     isolation:isolate;
 
     background:
 
         linear-gradient(
+
             135deg,
-            #ff68d2 0%,
-            #d89cff 45%,
-            #67f5ff 100%
+
+            #ff9fe6,
+
+            #d4b0ff,
+
+            #8ff8ff
+        );
+
+    clip-path:
+
+        polygon(
+            50% 0%,
+            60% 40%,
+            100% 50%,
+            60% 60%,
+            50% 100%,
+            40% 60%,
+            0% 50%,
+            40% 40%
         );
 
     box-shadow:
 
-    0 0 18px #ff6bd5,
+        0 0 8px #ff9fe6,
 
-    0 0 45px #ff6bd5,
+        0 0 18px #d4b0ff,
 
-    0 0 90px #d09cff,
-
-    0 0 150px #6ef5ff,
-
-    0 0 230px rgba(110,245,255,.95);
-
-    filter:
-
-        brightness(1.8)
-
-        saturate(1.8);
+        0 0 35px #8ff8ff;
 
     animation:
         twinkle 4s ease-in-out infinite;
-
-    z-index:30;
 }
 
 .star::before{
@@ -259,7 +263,7 @@ body{
 
     position:absolute;
 
-    inset:-140%;
+    inset:-55%;
 
     border-radius:50%;
 
@@ -269,21 +273,18 @@ body{
 
             circle,
 
-            rgba(255,90,210,.95) 0%,
+            rgba(255,150,230,.55),
 
-            rgba(210,140,255,.9) 40%,
+            rgba(180,170,255,.35),
 
-            rgba(110,245,255,.9) 70%,
+            rgba(120,255,255,.25),
 
-            transparent 100%
+            transparent
         );
 
-    filter:
-        blur(22px);
+    filter:blur(10px);
 
     z-index:-1;
-
-    pointer-events:none;
 }
 
 .s1{
