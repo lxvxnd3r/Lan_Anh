@@ -517,8 +517,8 @@ body{
 
     position:absolute;
 
-    width:360px;
-    height:360px;
+    width:400px;
+    height:400px;
 
     left:50%;
     top:50%;
@@ -590,39 +590,35 @@ body{
 */
 
 .p1{
-
     left:50%;
     top:50%;
 
     transform:
-        translate(-50%,-242px);
+        translate(-50%,-200px);
 }
 
 .p2{
-
     left:50%;
     top:50%;
 
     transform:
-        translate(242px,-50%);
+        translate(200px,-50%);
 }
 
 .p3{
-
     left:50%;
     top:50%;
 
     transform:
-        translate(-50%,242px);
+        translate(-50%,200px);
 }
 
 .p4{
-
     left:50%;
     top:50%;
 
     transform:
-        translate(-242px,-50%);
+        translate(-200px,-50%);
 }
 
 @keyframes moonFloat{
