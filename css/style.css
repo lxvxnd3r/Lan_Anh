@@ -472,11 +472,11 @@ body{
 
     position:absolute;
 
-    width:720px;
-    height:720px;
+    width:650px;
+    height:650px;
 
     left:50%;
-    top:50%;
+    top:50%;   
 
     transform:
         translate(-50%,-50%)
