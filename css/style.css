@@ -479,12 +479,25 @@ body{
     top:50%;
 
     transform:
-        translate(-50%,-50%);
+        translate(-50%,-50%)
+        scale(.3);
 
     transform-origin:center center;
+
+    opacity:0;
+
+    transition:1.5s;
+
+    pointer-events:none;
+
+    overflow:visible;
 }
 
 .orbit-container.active{
+
+    opacity:1;
+
+    pointer-events:auto;
 
     transform:
         translate(-50%,-50%)
@@ -516,8 +529,18 @@ body{
         translate(-50%,-50%);
 
     border-radius:50%;
-}
 
+    border:2px solid rgba(255,255,255,.25);
+
+    box-shadow:
+
+        0 0 25px #ffd4ff,
+
+        0 0 60px #8be8ff;
+
+    animation:
+        ringGlow 5s ease-in-out infinite;
+}
 
 /* BÓNG */
 
@@ -528,40 +551,76 @@ body{
     width:125px;
     height:125px;
 
-    margin-left:-62.5px;
-    margin-top:-62.5px;
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle at 35% 25%,
+
+            rgba(255,255,255,.95),
+
+            rgba(255,255,255,.2) 45%,
+
+            rgba(255,255,255,.05)
+        );
+
+    border:
+
+        2px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+
+        inset
+        -20px -20px 40px
+        rgba(255,170,255,.18),
+
+        inset
+        20px 20px 40px
+        rgba(180,255,255,.18),
+
+        0 0 35px rgba(255,190,255,.3),
+
+        0 0 80px rgba(150,255,255,.3);
 }
 
 .p1{
+
     left:50%;
     top:50%;
 
     transform:
-        translate(0,-200px);
+        translate(-50%,-260px);
 }
 
 .p2{
+
     left:50%;
     top:50%;
 
     transform:
-        translate(200px,0);
+        translate(135px,-50%);
 }
 
 .p3{
+
     left:50%;
     top:50%;
 
     transform:
-        translate(0,200px);
+        translate(-50%,135px);
 }
 
 .p4{
+
     left:50%;
     top:50%;
 
     transform:
-        translate(-200px,0);
+        translate(-260px,-50%);
 }
 
 @keyframes moonFloat{
@@ -588,14 +647,24 @@ body{
 @keyframes rotateOrbit{
 
     from{
+
         transform:
+
             translate(-50%,-50%)
+
+            scale(1)
+
             rotate(0deg);
     }
 
     to{
+
         transform:
+
             translate(-50%,-50%)
+
+            scale(1)
+
             rotate(360deg);
     }
 }
