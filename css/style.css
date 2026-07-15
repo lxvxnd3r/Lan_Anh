@@ -486,13 +486,9 @@ body{
 
 .orbit-container.active{
 
-    opacity:1;
-
     transform:
         translate(-50%,-50%)
         scale(1);
-
-    pointer-events:auto;
 
     animation:
         rotateOrbit 35s linear infinite;
@@ -592,25 +588,15 @@ body{
 @keyframes rotateOrbit{
 
     from{
-
         transform:
-
             translate(-50%,-50%)
-
-            rotate(0deg)
-
-            scale(1);
+            rotate(0deg);
     }
 
     to{
-
         transform:
-
             translate(-50%,-50%)
-
-            rotate(360deg)
-
-            scale(1);
+            rotate(360deg);
     }
 }
 
