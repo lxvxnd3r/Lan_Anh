@@ -626,41 +626,45 @@ body{
     background:
 
         radial-gradient(
-            circle at 30% 25%,
+            circle at 35% 28%,
 
             rgba(255,255,255,.95) 0%,
-            rgba(255,255,255,.55) 12%,
+            rgba(255,255,255,.45) 12%,
 
-            rgba(255,170,235,.55) 35%,
+            rgba(255,210,245,.18) 35%,
 
-            rgba(180,150,255,.45) 55%,
+            rgba(210,190,255,.12) 55%,
 
-            rgba(120,255,255,.55) 85%
+            rgba(170,255,255,.18) 100%
         );
+
+    opacity:.88;
+
+    border:
+        2px solid rgba(255,255,255,.25);
 
     backdrop-filter:
         blur(20px);
 
-    border:
+    -webkit-backdrop-filter:
+        blur(20px);
 
-        2px solid
-        rgba(255,255,255,.25);
+    overflow:hidden;
 
     box-shadow:
 
         inset
-        -25px -25px 45px
-        rgba(255,170,235,.45),
+        0 0 25px rgba(255,255,255,.18),
 
         inset
-        25px 25px 45px
-        rgba(120,255,255,.4),
+        -18px -18px 35px rgba(255,180,240,.18),
 
-        0 0 40px
-        rgba(255,180,240,.55),
+        inset
+        18px 18px 35px rgba(120,255,255,.18),
 
-        0 0 100px
-        rgba(120,255,255,.5);
+        0 0 30px rgba(255,180,240,.35),
+
+        0 0 70px rgba(120,255,255,.3);
 }
 
 .planet::before{
@@ -676,19 +680,18 @@ body{
     background:
 
         linear-gradient(
-
             135deg,
 
-            rgba(255,170,240,.95),
+            rgba(255,180,240,.9),
 
             transparent 35%,
 
             rgba(120,255,255,.95)
         );
 
-    opacity:.8;
+    filter:blur(5px);
 
-    filter:blur(4px);
+    opacity:.85;
 
     z-index:-1;
 }
@@ -699,10 +702,10 @@ body{
 
     position:absolute;
 
-    width:50px;
-    height:50px;
+    width:55px;
+    height:55px;
 
-    left:28px;
+    left:25px;
     top:18px;
 
     border-radius:50%;
@@ -715,12 +718,14 @@ body{
 
             rgba(255,255,255,.95),
 
-            rgba(255,255,255,.3),
+            rgba(255,255,255,.45),
 
             transparent
         );
 
     filter:blur(8px);
+
+    opacity:.95;
 }
 
 .p1{
@@ -840,5 +845,20 @@ body{
             0 0 90px #8be8ff,
 
             0 0 150px rgba(255,255,255,.3);
+    }
+}
+
+@keyframes sparkleRotate{
+
+    from{
+
+        transform:
+            rotate(0deg);
+    }
+
+    to{
+
+        transform:
+            rotate(360deg);
     }
 }
