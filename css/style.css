@@ -15,11 +15,14 @@ body{
     background:black;
 }
 
-/* VIDEO */
+/* ========================= */
+/* VIDEO NỀN */
+/* ========================= */
 
 #bg-video{
 
     position:fixed;
+
     inset:0;
 
     width:100%;
@@ -27,21 +30,51 @@ body{
 
     object-fit:cover;
 
+    object-position:center top;
+
     filter:
-        brightness(.6);
+
+        brightness(.78)
+
+        saturate(.95);
 
     z-index:0;
+
+    will-change:
+        transform;
+
+    transform:
+        translateZ(0);
+
+    backface-visibility:hidden;
 }
 
+/* ========================= */
 /* LỚP TỐI */
+/* ========================= */
 
 .overlay{
 
-    background:
-        rgba(0,0,0,.35);
+    position:fixed;
 
-    backdrop-filter:
-        brightness(.75);
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,0,0,.08) 0%,
+
+            rgba(0,0,0,.22) 45%,
+
+            rgba(0,0,0,.38) 100%
+        );
+
+    z-index:1;
+
+    pointer-events:none;
 }
 
 #welcome{
