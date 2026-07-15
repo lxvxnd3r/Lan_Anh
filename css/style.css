@@ -125,12 +125,13 @@ body{
 
     z-index:2;
 }
+
 .moon-system{
 
     position:relative;
 
-    width:700px;
-    height:700px;
+    width:900px;
+    height:900px;
 
     display:flex;
 
@@ -212,39 +213,84 @@ body{
 
     z-index:30;
 }
+
 .star{
 
     position:absolute;
 
-    width:16px;
-    height:16px;
-
     background:white;
 
-    transform:
-        rotate(45deg);
+    transform:rotate(45deg);
 
     border-radius:3px;
-
-    box-shadow:
-
-        0 0 12px white,
-
-        0 0 25px #ffd6ff,
-
-        0 0 50px #8be8ff;
 
     animation:
         twinkle 3s infinite;
 }
-.s1{top:190px;left:260px;}
-.s2{top:170px;right:260px;}
-.s3{top:310px;left:190px;}
-.s4{top:310px;right:190px;}
-.s5{bottom:250px;left:260px;}
-.s6{bottom:250px;right:260px;}
-.s7{top:230px;left:340px;}
-.s8{top:230px;right:340px;}
+
+.s1{
+    width:18px;
+    height:18px;
+
+    top:170px;
+    left:250px;
+}
+
+.s2{
+    width:11px;
+    height:11px;
+
+    top:205px;
+    right:290px;
+}
+
+.s3{
+    width:20px;
+    height:20px;
+
+    top:300px;
+    left:170px;
+}
+
+.s4{
+    width:13px;
+    height:13px;
+
+    top:260px;
+    right:170px;
+}
+
+.s5{
+    width:9px;
+    height:9px;
+
+    bottom:260px;
+    left:260px;
+}
+
+.s6{
+    width:17px;
+    height:17px;
+
+    bottom:240px;
+    right:220px;
+}
+
+.s7{
+    width:12px;
+    height:12px;
+
+    top:200px;
+    left:380px;
+}
+
+.s8{
+    width:15px;
+    height:15px;
+
+    top:330px;
+    right:320px;
+}
 
 .orbit-container{
 
@@ -362,38 +408,38 @@ body{
 
 .p1{
 
-    top:-85px;
+    top:0;
     left:50%;
 
     transform:
-        translateX(-50%);
+        translate(-50%,-50%);
 }
 
 .p2{
 
-    right:-85px;
+    right:0;
     top:50%;
 
     transform:
-        translateY(-50%);
+        translate(50%,-50%);
 }
 
 .p3{
 
-    bottom:-85px;
+    bottom:0;
     left:50%;
 
     transform:
-        translateX(-50%);
+        translate(-50%,50%);
 }
 
 .p4{
 
-    left:-85px;
+    left:0;
     top:50%;
 
     transform:
-        translateY(-50%);
+        translate(-50%,-50%);
 }
 
 @keyframes moonFloat{
