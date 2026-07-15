@@ -65,11 +65,11 @@ body{
 
             circle,
 
-            rgba(0,0,0,.08) 0%,
+            rgba(0,0,0,.03) 0%,
 
-            rgba(0,0,0,.22) 45%,
+            rgba(0,0,0,.15) 45%,
 
-            rgba(0,0,0,.38) 100%
+            rgba(0,0,0,.35) 100%
         );
 
     z-index:1;
@@ -519,8 +519,8 @@ body{
 
     position:absolute;
 
-    width:500px;
-    height:500px;
+    width:470px;
+    height:470px;
 
     left:50%;
     top:50%;
@@ -530,15 +530,51 @@ body{
 
     border-radius:50%;
 
-    border:2px solid rgba(255,255,255,.25);
+    border:2px solid rgba(255,255,255,.12);
+
+    background:
+
+        conic-gradient(
+
+            from 0deg,
+
+            #ff9fe6,
+
+            #d7b0ff,
+
+            #8ff8ff,
+
+            #ffffff,
+
+            #8ff8ff,
+
+            #d7b0ff,
+
+            #ff9fe6
+        );
+
+    mask:
+        radial-gradient(
+            transparent 97%,
+            white 99%
+        );
+
+    -webkit-mask:
+        radial-gradient(
+            transparent 97%,
+            white 99%
+        );
 
     box-shadow:
 
-        0 0 25px #ffd4ff,
+        0 0 20px #ff9fe6,
 
-        0 0 60px #8be8ff;
+        0 0 45px #d7b0ff,
+
+        0 0 90px #8ff8ff;
 
     animation:
+
         ringGlow 5s ease-in-out infinite;
 }
 
@@ -548,8 +584,8 @@ body{
 
     position:absolute;
 
-    width:145px;
-    height:145px;
+    width:150px;
+    height:150px;
 
     border-radius:50%;
 
@@ -559,32 +595,98 @@ body{
 
             circle at 35% 25%,
 
-            rgba(255,255,255,.95),
+            rgba(255,255,255,.95) 0%,
 
-            rgba(255,255,255,.2) 45%,
+            rgba(255,255,255,.45) 15%,
 
-            rgba(255,255,255,.05)
+            rgba(255,170,230,.25) 35%,
+
+            rgba(150,255,255,.18) 70%,
+
+            rgba(255,255,255,.05) 100%
         );
 
     border:
 
-        2px solid rgba(255,255,255,.2);
+        2px solid
+        rgba(255,255,255,.18);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:
+
+        blur(20px)
+        saturate(180%);
 
     box-shadow:
 
         inset
-        -20px -20px 40px
-        rgba(255,170,255,.18),
+        -15px -15px 30px
+        rgba(255,150,230,.25),
 
         inset
         20px 20px 40px
-        rgba(180,255,255,.18),
+        rgba(150,255,255,.22),
 
-        0 0 35px rgba(255,190,255,.3),
+        0 0 40px
+        rgba(255,170,230,.45),
 
-        0 0 80px rgba(150,255,255,.3);
+        0 0 90px
+        rgba(150,255,255,.4);
+}
+
+.planet::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,180,240,.7),
+
+            transparent 40%,
+
+            rgba(150,255,255,.6)
+        );
+
+    mix-blend-mode:screen;
+
+    pointer-events:none;
+}
+
+.planet::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:45px;
+    height:45px;
+
+    left:28px;
+    top:22px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.95),
+
+            transparent 80%
+        );
+
+    filter:blur(6px);
 }
 
 .p1{
