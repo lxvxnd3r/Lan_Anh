@@ -284,11 +284,11 @@ body{
 
     box-shadow:
 
-        0 0 5px rgba(255,111,209,.9),
+        0 0 10px #ff75d6,
 
-        0 0 12px rgba(199,143,255,.7),
+        0 0 22px #cf98ff,
 
-        0 0 18px rgba(108,236,255,.55);
+        0 0 38px #73f0ff;
 
     animation:
         twinkle 4s ease-in-out infinite;
@@ -325,8 +325,8 @@ body{
 }
 
 .s1{
-    width:22px;
-    height:22px;
+    width:28px;
+    height:28px;
 
     top:205px;
     left:285px;
@@ -335,8 +335,8 @@ body{
 }
 
 .s2{
-    width:12px;
-    height:12px;
+    width:16px;
+    height:16px;
 
     top:225px;
     left:355px;
@@ -345,8 +345,8 @@ body{
 }
 
 .s3{
-    width:18px;
-    height:18px;
+    width:24px;
+    height:24px;
 
     top:290px;
     left:235px;
@@ -355,8 +355,8 @@ body{
 }
 
 .s4{
-    width:14px;
-    height:14px;
+    width:18px;
+    height:18px;
 
     top:325px;
     left:405px;
@@ -365,8 +365,8 @@ body{
 }
 
 .s5{
-    width:11px;
-    height:11px;
+    width:15px;
+    height:15px;
 
     top:365px;
     left:295px;
@@ -375,8 +375,8 @@ body{
 }
 
 .s6{
-    width:20px;
-    height:20px;
+    width:26px;
+    height:26px;
 
     top:360px;
     left:430px;
@@ -385,8 +385,8 @@ body{
 }
 
 .s7{
-    width:9px;
-    height:9px;
+    width:14px;
+    height:14px;
 
     top:255px;
     left:315px;
@@ -395,8 +395,8 @@ body{
 }
 
 .s8{
-    width:16px;
-    height:16px;
+    width:20px;
+    height:20px;
 
     top:410px;
     left:360px;
@@ -405,8 +405,8 @@ body{
 }
 
 .s9{
-    width:24px;
-    height:24px;
+    width:30px;
+    height:30px;
 
     top:185px;
     left:410px;
@@ -415,8 +415,8 @@ body{
 }
 
 .s10{
-    width:10px;
-    height:10px;
+    width:14px;
+    height:14px;
 
     top:305px;
     left:335px;
@@ -425,8 +425,8 @@ body{
 }
 
 .s11{
-    width:19px;
-    height:19px;
+    width:26px;
+    height:26px;
 
     top:255px;
     left:470px;
@@ -435,8 +435,8 @@ body{
 }
 
 .s12{
-    width:13px;
-    height:13px;
+    width:17px;
+    height:17px;
 
     top:390px;
     left:250px;
@@ -445,8 +445,8 @@ body{
 }
 
 .s13{
-    width:17px;
-    height:17px;
+    width:22px;
+    height:22px;
 
     top:430px;
     left:455px;
@@ -476,7 +476,7 @@ body{
     height:720px;
 
     left:50%;
-    top:50%;
+    top:46%;
 
     transform:
         translate(-50%,-50%)
