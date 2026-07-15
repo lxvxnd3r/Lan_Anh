@@ -476,19 +476,12 @@ body{
     height:650px;
 
     left:50%;
-    top:50%;   
+    top:50%;
 
     transform:
-        translate(-50%,-50%)
-        scale(.3);
+        translate(-50%,-50%);
 
-    transform-origin:center;
-
-    opacity:0;
-
-    transition:1.5s;
-
-    pointer-events:none;
+    transform-origin:center center;
 }
 
 .orbit-container.active{
@@ -527,18 +520,6 @@ body{
         translate(-50%,-50%);
 
     border-radius:50%;
-
-    border:
-        2px solid rgba(255,255,255,.25);
-
-    box-shadow:
-
-        0 0 25px #ffd4ff,
-
-        0 0 55px #8be8ff;
-
-    animation:
-        ringGlow 5s ease-in-out infinite;
 }
 
 
@@ -551,50 +532,16 @@ body{
     width:125px;
     height:125px;
 
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-            circle at 35% 25%,
-            rgba(255,255,255,.95),
-            rgba(255,255,255,.15) 45%,
-            rgba(255,255,255,.05)
-        );
-
-    border:
-        2px solid rgba(255,255,255,.25);
-
-    backdrop-filter:blur(18px);
-
-    box-shadow:
-
-        inset
-        -20px -20px 40px
-        rgba(255,170,255,.15),
-
-        inset
-        20px 20px 40px
-        rgba(180,255,255,.15),
-
-        0 0 40px rgba(255,180,255,.35),
-
-        0 0 90px rgba(150,255,255,.3);
+    margin-left:-62.5px;
+    margin-top:-62.5px;
 }
-
-
-/* bán kính quỹ đạo:
-   360/2 = 180px
-   180 + 62.5 (nửa quả bóng)
-   ≈ 242px
-*/
 
 .p1{
     left:50%;
     top:50%;
 
     transform:
-        translate(-50%,-200px);
+        translate(0,-200px);
 }
 
 .p2{
@@ -602,7 +549,7 @@ body{
     top:50%;
 
     transform:
-        translate(200px,-50%);
+        translate(200px,0);
 }
 
 .p3{
@@ -610,7 +557,7 @@ body{
     top:50%;
 
     transform:
-        translate(-50%,200px);
+        translate(0,200px);
 }
 
 .p4{
@@ -618,7 +565,7 @@ body{
     top:50%;
 
     transform:
-        translate(-200px,-50%);
+        translate(-200px,0);
 }
 
 @keyframes moonFloat{
