@@ -476,13 +476,13 @@ body{
     height:720px;
 
     left:50%;
-    top:46%;
+    top:50%;
 
     transform:
         translate(-50%,-50%)
         scale(.3);
 
-    transform-origin:50% 50%;
+    transform-origin:center;
 
     opacity:0;
 
@@ -507,9 +507,11 @@ body{
 
 .orbit-container:hover{
 
-    animation-play-state:
-        paused;
+    animation-play-state:paused;
 }
+
+
+/* QUỸ ĐẠO */
 
 .orbit-ring{
 
@@ -536,12 +538,11 @@ body{
         0 0 55px #8be8ff;
 
     animation:
-
-        ringGlow
-        5s
-        ease-in-out
-        infinite;
+        ringGlow 5s ease-in-out infinite;
 }
+
+
+/* BÓNG */
 
 .planet{
 
@@ -564,8 +565,7 @@ body{
     border:
         2px solid rgba(255,255,255,.25);
 
-    backdrop-filter:
-        blur(18px);
+    backdrop-filter:blur(18px);
 
     box-shadow:
 
@@ -582,36 +582,47 @@ body{
         0 0 90px rgba(150,255,255,.3);
 }
 
+
+/* bán kính quỹ đạo:
+   360/2 = 180px
+   180 + 62.5 (nửa quả bóng)
+   ≈ 242px
+*/
+
 .p1{
+
     left:50%;
-    top:110px;
+    top:50%;
 
     transform:
-        translate(-50%,-50%);
+        translate(-50%,-242px);
 }
 
 .p2{
+
+    left:50%;
     top:50%;
-    right:110px;
 
     transform:
-        translate(50%,-50%);
+        translate(242px,-50%);
 }
 
 .p3{
+
     left:50%;
-    bottom:110px;
+    top:50%;
 
     transform:
-        translate(-50%,50%);
+        translate(-50%,242px);
 }
 
 .p4{
+
+    left:50%;
     top:50%;
-    left:110px;
 
     transform:
-        translate(-50%,-50%);
+        translate(-242px,-50%);
 }
 
 @keyframes moonFloat{
