@@ -216,10 +216,16 @@ body{
     background:
 
         radial-gradient(
+
             circle,
-            white 0%,
-            #ffe7ff 45%,
-            #8be8ff 100%
+
+            #ffffff 0%,
+
+            #ffd2f4 35%,
+
+            #ff9de5 60%,
+
+            #9cf6ff 100%
         );
 
     clip-path:
@@ -237,11 +243,13 @@ body{
 
     box-shadow:
 
-        0 0 10px white,
+        0 0 12px #ffd4ff,
 
-        0 0 25px #ffd6ff,
+        0 0 35px #ff9de5,
 
-        0 0 45px #8be8ff;
+        0 0 65px #8be8ff,
+
+        0 0 120px rgba(180,255,255,.8);
 
     animation:
         twinkle 4s ease-in-out infinite;
@@ -325,7 +333,7 @@ body{
         translate(-50%,-50%)
         scale(.3);
 
-    transform-origin:center;
+    transform-origin:50% 50%;
 
     opacity:0;
 
@@ -345,8 +353,7 @@ body{
     pointer-events:auto;
 
     animation:
-        rotateOrbit
-        35s linear infinite;
+        rotateOrbit 35s linear infinite;
 }
 
 .orbit-container:hover{
@@ -486,17 +493,23 @@ body{
     from{
 
         transform:
+
             translate(-50%,-50%)
-            scale(1)
-            rotate(0deg);
+
+            rotate(0deg)
+
+            scale(1);
     }
 
     to{
 
         transform:
+
             translate(-50%,-50%)
-            scale(1)
-            rotate(360deg);
+
+            rotate(360deg)
+
+            scale(1);
     }
 }
 
