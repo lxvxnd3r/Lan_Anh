@@ -130,8 +130,13 @@ body{
 
     position:relative;
 
-    width:700px;
+    width:900px;
     height:700px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
 }
 
 #moon{
@@ -210,8 +215,13 @@ body{
 }
 
 .star{
-
+    
     position:absolute;
+
+    overflow:visible;
+
+    isolation:isolate;
+
 
     background:
 
@@ -221,38 +231,68 @@ body{
 
             #ffffff 0%,
 
-            #ffd2f4 35%,
+            #ffc8ef 20%,
 
-            #ff9de5 60%,
+            #ff7fd8 55%,
 
-            #9cf6ff 100%
+            #73f7ff 100%
         );
 
     clip-path:
 
         polygon(
             50% 0%,
-            60% 40%,
+            62% 38%,
             100% 50%,
-            60% 60%,
+            62% 62%,
             50% 100%,
-            40% 60%,
+            38% 62%,
             0% 50%,
-            40% 40%
+            38% 38%
         );
 
     box-shadow:
 
-        0 0 12px #ffd4ff,
+        0 0 15px #ffd8f5,
 
-        0 0 35px #ff9de5,
+        0 0 40px #ff8ddd,
 
-        0 0 65px #8be8ff,
+        0 0 80px #73f7ff,
 
-        0 0 120px rgba(180,255,255,.8);
+        0 0 150px rgba(115,247,255,.95),
+
+        0 0 220px rgba(255,120,220,.7);
 
     animation:
         twinkle 4s ease-in-out infinite;
+}
+
+.star::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-35%;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,145,220,.55),
+
+            rgba(120,245,255,.45),
+
+            transparent 75%
+        );
+
+    z-index:-1;
+
+    filter:blur(14px);
 }
 
 .s1{
@@ -361,6 +401,7 @@ body{
     animation-play-state:
         paused;
 }
+
 .orbit-ring{
 
     position:absolute;
@@ -368,26 +409,28 @@ body{
     width:600px;
     height:600px;
 
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%);
+
     border-radius:50%;
 
     border:
-
-        2px solid
-        rgba(255,255,255,.25);
+        2px solid rgba(255,255,255,.25);
 
     box-shadow:
 
         0 0 25px #ffd4ff,
 
         0 0 55px #8be8ff;
-        animation:
-            
+
+    animation:
+
         ringGlow
-            
         5s
-            
         ease-in-out
-            
         infinite;
 }
 
@@ -431,41 +474,13 @@ body{
         0 0 80px rgba(150,255,255,.25);
 }
 
-.p1{
+.p1{ top:-85px; left:50%; transform:translateX(-50%); }
 
-    top:0;
-    left:50%;
+.p2{ right:-85px; top:50%; transform:translateY(-50%); }
 
-    transform:
-        translate(-50%,-50%);
-}
+.p3{ bottom:-85px; left:50%; transform:translateX(-50%); }
 
-.p2{
-
-    right:0;
-    top:50%;
-
-    transform:
-        translate(50%,-50%);
-}
-
-.p3{
-
-    bottom:0;
-    left:50%;
-
-    transform:
-        translate(-50%,50%);
-}
-
-.p4{
-
-    left:0;
-    top:50%;
-
-    transform:
-        translate(-50%,-50%);
-}
+.p4{ left:-85px; top:50%; transform:translateY(-50%); }
 
 @keyframes moonFloat{
 
@@ -517,11 +532,10 @@ body{
 
     0%,100%{
 
-        opacity:.4;
+        opacity:.75;
 
         transform:
-
-            scale(.8)
+            scale(.85)
             rotate(45deg);
     }
 
@@ -530,11 +544,16 @@ body{
         opacity:1;
 
         transform:
-
-            scale(1.4)
+            scale(1.55)
             rotate(45deg);
+
+        filter:
+
+            brightness(1.35)
+            saturate(1.4);
     }
 }
+
 @keyframes ringGlow{
 
     0%,100%{
