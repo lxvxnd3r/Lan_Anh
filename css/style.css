@@ -574,24 +574,24 @@ body{
         sparkleRotate 20s linear infinite;
 
  mask:
-    radial-gradient(
+radial-gradient(
     circle,
 
-        transparent 22%,
-        white 23%,
-        white 24.5%,
-        transparent 26%
-    );
+    transparent 36%,
+    white 37%,
+    white 38.5%,
+    transparent 40%
+);
 
 -webkit-mask:
-    radial-gradient(
-        circle,
+radial-gradient(
+    circle,
 
-        transparent 22%,
-        white 23%,
-        white 24.5%,
-        transparent 26%
-    );
+    transparent 36%,
+    white 37%,
+    white 38.5%,
+    transparent 40%
+);
 }
 
 .orbit-ring::after{
