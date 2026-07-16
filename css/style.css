@@ -484,17 +484,18 @@ body{
 
     opacity:1;
 
-    pointer-events:auto;
-
     transform:
         translate(-50%,-50%)
         scale(1);
+
+    pointer-events:auto;
 
     animation:
         rotateOrbit 35s linear infinite;
 }
 
-.orbit-container:hover{
+/* chỉ dừng khi hover vào bóng */
+.orbit-container:has(.planet:hover){
 
     animation-play-state:paused;
 }
