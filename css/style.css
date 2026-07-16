@@ -530,69 +530,22 @@ body{
 
     border-radius:50%;
 
-        overflow:visible;
+    overflow:visible;
 
     border:
 
-        2px solid
-        rgba(255,210,255,.35);
+        2px solid rgba(255,215,255,.7);
 
     box-shadow:
 
-        0 0 12px #ffb8ef,
+        0 0 12px #ffd7ff,
 
-        0 0 35px #d8b4ff,
+        0 0 35px #ffb8ff,
 
-        0 0 70px #8ffcff;
+        0 0 60px #8ffcff;
 }
 
 .orbit-ring::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-6px;
-
-    border-radius:50%;
-
-    border:
-
-        3px solid transparent;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #ffb5ec,
-            #d6b3ff,
-            #9efcff,
-            #ffffff,
-            #9efcff,
-            #d6b3ff,
-            #ffb5ec
-        )
-
-        border-box;
-
-    -webkit-mask:
-
-        linear-gradient(#fff 0 0)
-        padding-box,
-
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite:xor;
-
-    mask-composite:exclude;
-
-    filter:
-        blur(6px);
-
-    opacity:.9;
-}
-
-.orbit-ring::after{
 
     content:"";
 
@@ -606,47 +559,59 @@ body{
 
         repeating-conic-gradient(
 
-            rgba(255,255,255,.95) 0deg,
+            from 0deg,
 
-            rgba(255,255,255,.95) .5deg,
+            rgba(255,255,255,.95) 0deg,
+            rgba(255,255,255,.95) .6deg,
 
             transparent 1deg,
-
-            transparent 4deg
-        );
-
-    mask:
-
-        radial-gradient(
-
-            transparent 96%,
-
-            white 97%
-        );
-
-    -webkit-mask:
-
-        radial-gradient(
-
-            transparent 96%,
-
-            white 97%
+            transparent 5deg
         );
 
     filter:
 
-        blur(.8px)
+        blur(1px)
 
-        drop-shadow(
-            0 0 6px #ffb8ef
-        )
+        drop-shadow(0 0 5px #ffd9ff)
 
-        drop-shadow(
-            0 0 8px #8ffcff
-        );
+        drop-shadow(0 0 8px #8ffcff);
 
     animation:
-        sparkleRotate 20s linear infinite;
+
+        orbitSpark
+        18s linear infinite;
+}
+
+.orbit-ring::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-3px;
+
+    border-radius:50%;
+
+    background:
+
+        repeating-radial-gradient(
+
+            circle,
+
+            transparent 0px,
+
+            transparent 11px,
+
+            rgba(255,255,255,.8) 12px,
+
+            transparent 14px
+        );
+
+    filter:
+
+        blur(2px);
+
+    opacity:.7;
 }
 
 /* BÓNG */
@@ -665,35 +630,37 @@ body{
     background:
 
         radial-gradient(
-
             circle at 35% 28%,
 
-            rgba(255,255,255,.55) 0%,
-            rgba(255,255,255,.18) 15%,
+            rgba(255,255,255,.95) 0%,
+            rgba(255,255,255,.25) 18%,
 
-            rgba(255,185,245,.08) 55%,
+            rgba(255,185,255,.08) 45%,
 
-            rgba(120,255,255,.08) 100%
+            rgba(150,255,255,.10) 100%
         );
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
 
     border:
 
-        1px solid rgba(255,255,255,.35);
-
-    backdrop-filter:
-        blur(8px);
-
-    -webkit-backdrop-filter:
-        blur(8px);
+        2px solid rgba(255,255,255,.28);
 
     box-shadow:
 
         inset
-        0 0 25px rgba(255,255,255,.12),
+        0 0 25px rgba(255,255,255,.18),
 
-        0 0 20px rgba(255,180,255,.25),
+        inset
+        -10px -10px 25px rgba(255,190,255,.15),
 
-        0 0 40px rgba(120,255,255,.25);
+        inset
+        10px 10px 25px rgba(120,255,255,.15),
+
+        0 0 35px rgba(255,180,255,.25),
+
+        0 0 55px rgba(120,255,255,.22);
 }
 
 /* phản chiếu kính */
@@ -704,13 +671,13 @@ body{
 
     position:absolute;
 
-    width:55px;
-    height:55px;
-
-    top:18px;
-    left:25px;
+    width:45px;
+    height:45px;
 
     border-radius:50%;
+
+    top:20px;
+    left:25px;
 
     background:
 
@@ -720,74 +687,45 @@ body{
 
             rgba(255,255,255,.95),
 
+            rgba(255,255,255,.3),
+
             transparent 75%
         );
 
-    filter:
-        blur(10px);
+    filter:blur(8px);
 }
 
 /* viền pastel phát sáng */
 
-.orbit-ring::after{
+.planet::after{
 
     content:"";
 
     position:absolute;
 
-    inset:-10px;
+    width:70px;
+    height:220px;
 
-    border-radius:50%;
+    top:-40px;
+    left:-10px;
+
+    transform:
+        rotate(35deg);
 
     background:
 
-        repeating-conic-gradient(
+        linear-gradient(
 
-            from 0deg,
+            to right,
 
-            rgba(255,255,255,.95) 0deg,
+            transparent,
 
-            rgba(255,255,255,.95) .5deg,
+            rgba(255,255,255,.25),
 
-            transparent 1deg,
-
-            transparent 4deg
+            transparent
         );
 
-    mask:
-
-        radial-gradient(
-
-            transparent 96%,
-
-            white 97%
-        );
-
-    -webkit-mask:
-
-        radial-gradient(
-
-            transparent 96%,
-
-            white 97%
-        );
-
-    filter:
-
-        drop-shadow(
-            0 0 5px #ffb6ef
-        )
-
-        drop-shadow(
-            0 0 8px #8ffcff
-        )
-
-        blur(.5px);
-
-    animation:
-
-        sparkleRotate
-        20s linear infinite;
+    filter:blur(12px);
 }
 
 .p1{
