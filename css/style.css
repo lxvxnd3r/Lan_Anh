@@ -469,16 +469,20 @@ body{
     width:650px;
     height:650px;
 
-    transform:translate(-50%,-50%);
+    transform:
+        translate(-50%,-50%)
+        scale(0);
 
     opacity:0;
     visibility:hidden;
 
     pointer-events:none;
 
-    z-index:8;
+    transition:
+        transform .8s cubic-bezier(.22,1,.36,1),
+        opacity .6s ease;
 
-    transition:.8s;
+    z-index:8;
 }
 
 .orbit-container.active{
@@ -487,6 +491,10 @@ body{
     visibility:visible;
 
     pointer-events:auto;
+
+    transform:
+        translate(-50%,-50%)
+        scale(1);
 }
 
 
@@ -736,9 +744,17 @@ radial-gradient(
 
         inset 0 0 25px rgba(255,255,255,.12);
 
-    overflow:hidden;
+   overflow:hidden;
 
     z-index:10;
+
+    opacity:0;
+
+    transition:
+
+    transform .8s cubic-bezier(.22,1,.36,1),
+
+    opacity .8s ease;
 }
 
 /* phản chiếu kính */
@@ -825,6 +841,55 @@ radial-gradient(
         rotate(270deg)
         translateY(-200px)
         rotate(-270deg);
+}
+
+.orbit-container:not(.active) .p1,
+.orbit-container:not(.active) .p2,
+.orbit-container:not(.active) .p3,
+.orbit-container:not(.active) .p4{
+
+    transform:
+        translate(0,0);
+
+    opacity:0;
+}
+
+.orbit-container.active .p1{
+
+    transform:
+        translateY(-200px);
+
+    opacity:1;
+}
+
+.orbit-container.active .p2{
+
+    transform:
+        rotate(90deg)
+        translateY(-200px)
+        rotate(-90deg);
+
+    opacity:1;
+}
+
+.orbit-container.active .p3{
+
+    transform:
+        rotate(180deg)
+        translateY(-200px)
+        rotate(-180deg);
+
+    opacity:1;
+}
+
+.orbit-container.active .p4{
+
+    transform:
+        rotate(270deg)
+        translateY(-200px)
+        rotate(-270deg);
+
+    opacity:1;
 }
 
 @keyframes moonFloat{
