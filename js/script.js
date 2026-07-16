@@ -51,3 +51,48 @@ document.addEventListener("click",(e)=>{
     }
 
 });
+const orbitRotate =
+document.querySelector(".orbit-rotate");
+
+let isDragging = false;
+
+let currentRotation = 0;
+
+let startX = 0;
+
+
+orbitRotate.addEventListener("mousedown",(e)=>{
+
+    isDragging = true;
+
+    startX = e.clientX;
+
+    orbitRotate.style.cursor = "grabbing";
+
+});
+
+
+document.addEventListener("mouseup",()=>{
+
+    isDragging = false;
+
+    orbitRotate.style.cursor = "grab";
+
+});
+
+
+document.addEventListener("mousemove",(e)=>{
+
+    if(!isDragging) return;
+
+    const dx = e.clientX - startX;
+
+    startX = e.clientX;
+
+    currentRotation += dx * 0.25;
+
+    orbitRotate.style.transform =
+
+        `translate(-50%,-50%)
+         rotate(${currentRotation}deg)`;
+});
