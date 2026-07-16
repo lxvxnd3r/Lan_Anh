@@ -21,11 +21,11 @@ welcome.addEventListener(
 
         }
 
-        welcome.style.opacity="0";
+        welcome.style.opacity = "0";
 
         setTimeout(()=>{
 
-            welcome.style.display="none";
+            welcome.style.display = "none";
 
         },1000);
 
@@ -40,6 +40,6 @@ document.querySelector(".orbit-container");
 
 moon.addEventListener("click",()=>{
 
-    orbit.classList.toggle("active");
+    orbit.classList.add("active");
 
 });
