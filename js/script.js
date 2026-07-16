@@ -40,6 +40,6 @@ document.querySelector(".orbit-container");
 
 moon.addEventListener("click",()=>{
 
-    orbit.classList.add("active");
+    orbit.classList.toggle("active");
 
 });
