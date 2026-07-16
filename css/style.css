@@ -575,10 +575,7 @@ user-select:none;
 
     position:absolute;
 
-    left:0;
-    right:0;
-    bottom:0;
-    top:2px;
+    inset:0;
 
     border-radius:50%;
 
@@ -608,28 +605,37 @@ user-select:none;
         drop-shadow(0 0 6px #8ffcff);
 
     animation:
-
         sparkleRotate 20s linear infinite;
 
- mask:
-radial-gradient(
-    circle,
+    mask:
+        radial-gradient(
 
-    transparent 34%,
-    white 35%,
-    white 36.5%,
-    transparent 37%
-);
+            circle,
 
--webkit-mask:
-radial-gradient(
-    circle,
+            transparent 49%,
 
-    transparent 34%,
-    white 35%,
-    white 36.5%,
-    transparent 37%
-);
+            white 49.8%,
+
+            white 50.8%,
+
+            transparent 51.6%
+
+        );
+
+    -webkit-mask:
+        radial-gradient(
+
+            circle,
+
+            transparent 49%,
+
+            white 49.8%,
+
+            white 50.8%,
+
+            transparent 51.6%
+
+        );
 }
 
 .orbit-ring::after{
@@ -768,6 +774,8 @@ radial-gradient(
     -webkit-user-select:none;
 
     -webkit-user-drag:none;
+
+    pointer-events:none;
 }
 
 /* phản chiếu kính */
