@@ -185,9 +185,6 @@ body{
 
     cursor:pointer;
 
-    animation:
-        moonFloat 6s ease-in-out infinite;
-
     filter:
 
         drop-shadow(
