@@ -457,15 +457,21 @@ body{
 
 .orbit-container{
 
-    opacity:0;
+    position:absolute;
 
-    transform:
-        translate(-50%,-50%)
-        scale(.8);
+    left:50%;
+    top:50%;
+
+    width:650px;
+    height:650px;
+
+    transform:translate(-50%,-50%);
 
     pointer-events:none;
 
-    transition:.8s;
+    overflow:visible;
+
+    z-index:8;
 }
 
 .orbit-container.active{
@@ -502,13 +508,14 @@ body{
 /* QUỸ ĐẠO */
 
 .orbit-ring{
-    position:absolute;
 
-    width:400px;
-    height:400px;
+    position:absolute;
 
     left:50%;
     top:50%;
+
+    width:400px;
+    height:400px;
 
     transform:translate(-50%,-50%);
 
@@ -516,16 +523,16 @@ body{
 
     overflow:visible;
 
-    z-index:50;
+    border:
 
-    border:2px solid rgba(255,210,255,.35);
+        2px solid
+        rgba(255,190,255,.35);
 
     box-shadow:
-        0 0 12px rgba(255,190,255,.8),
-        0 0 30px rgba(255,170,255,.5),
-        0 0 60px rgba(170,255,255,.35);
 
-    animation:ringGlow 6s ease-in-out infinite;
+        0 0 25px rgba(255,180,255,.45),
+
+        inset 0 0 30px rgba(255,255,255,.15);
 }
 
 .orbit-ring::before{
@@ -675,45 +682,42 @@ radial-gradient(
 
     border-radius:50%;
 
-    overflow:hidden;
+    z-index:20;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(18px);
 
     background:
 
         radial-gradient(
-            circle at 35% 28%,
+            circle at 35% 35%,
 
-            rgba(255,255,255,.85) 0%,
-            rgba(255,255,255,.18) 12%,
+            rgba(255,255,255,.55) 0%,
 
-            rgba(255,255,255,.04) 40%,
+            rgba(255,255,255,.15) 18%,
 
-            rgba(255,255,255,.02) 70%,
+            rgba(255,255,255,.05) 40%,
 
-            rgba(255,255,255,.01) 100%
+            rgba(255,255,255,.02) 100%
         );
 
     border:
 
-        2px solid rgba(255,255,255,.5);
+        2px solid
+        rgba(255,255,255,.18);
 
     box-shadow:
 
-    inset
-    0 0 22px rgba(255,255,255,.18),
+        inset 0 0 25px rgba(255,255,255,.18),
 
-    inset
-    -10px -10px 25px rgba(255,170,255,.12),
+        inset -10px -10px 30px rgba(255,180,255,.18),
 
-    inset
-    10px 10px 25px rgba(120,255,255,.12),
+        inset 10px 10px 30px rgba(150,255,255,.18),
 
-    0 0 25px rgba(255,120,220,.9),
+        0 0 30px rgba(255,180,255,.75),
 
-    0 0 55px rgba(255,120,220,.65),
-
-    0 0 25px rgba(120,255,255,.9),
-
-    0 0 55px rgba(120,255,255,.65);
+        0 0 55px rgba(150,255,255,.65);
 }
 
 /* phản chiếu kính */
@@ -724,28 +728,24 @@ radial-gradient(
 
     position:absolute;
 
-    inset:0;
+    inset:-2px;
 
     border-radius:50%;
 
     background:
 
-        conic-gradient(
-
-            from 20deg,
-
-            rgba(180,255,255,.65),
-
-            rgba(255,190,255,.6),
-
-            rgba(180,255,255,.65)
+        linear-gradient(
+            135deg,
+            #ffb6ff,
+            #9fffff,
+            #ffb6ff
         );
 
-    opacity:.65;
+    opacity:.9;
 
-    mix-blend-mode:screen;
+    filter:blur(12px);
 
-    filter:blur(20px);
+    z-index:-1;
 }
 
 /* viền pastel phát sáng */
@@ -756,36 +756,36 @@ radial-gradient(
 
     position:absolute;
 
-    inset:-4px;
+    width:35%;
+    height:35%;
+
+    left:20%;
+    top:18%;
 
     border-radius:50%;
 
-    border:
+    background:
 
-        2px solid rgba(255,255,255,.35);
+        radial-gradient(
+            circle,
 
-    box-shadow:
+            rgba(255,255,255,.95),
 
-        0 0 20px #ff8fe4,
+            rgba(255,255,255,.05)
+        );
 
-        0 0 45px #ff8fe4,
-
-        0 0 20px #8ffcff,
-
-        0 0 45px #8ffcff,
-
-        0 0 90px rgba(255,255,255,.18);
+    filter:blur(10px);
 }
 
 .p1{
     left:50%;
-    top:-75px;
+    top:50px;
 
     transform:translateX(-50%);
 }
 
 .p2{
-    right:-75px;
+    right:50px;
     top:50%;
 
     transform:translateY(-50%);
@@ -793,13 +793,13 @@ radial-gradient(
 
 .p3{
     left:50%;
-    bottom:-75px;
+    bottom:50px;
 
     transform:translateX(-50%);
 }
 
 .p4{
-    left:-75px;
+    left:50px;
     top:50%;
 
     transform:translateY(-50%);
