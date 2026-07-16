@@ -516,7 +516,6 @@ body{
 /* QUỸ ĐẠO */
 
 .orbit-ring{
-
     position:absolute;
 
     width:400px;
@@ -525,99 +524,123 @@ body{
     left:50%;
     top:50%;
 
-    transform:
-        translate(-50%,-50%);
+    transform:translate(-50%,-50%);
 
     border-radius:50%;
 
     overflow:visible;
 
-    border:
-
-        2px solid rgba(255,215,255,.7);
+    border:2px solid rgba(255,210,255,.35);
 
     box-shadow:
+        0 0 12px rgba(255,190,255,.8),
+        0 0 30px rgba(255,170,255,.5),
+        0 0 60px rgba(170,255,255,.35);
 
-        0 0 12px #ffd7ff,
-
-        0 0 35px #ffb8ff,
-
-        0 0 60px #8ffcff;
+    animation:ringGlow 6s ease-in-out infinite;
 }
 
 .orbit-ring::before{
-
     content:"";
 
     position:absolute;
-
-    inset:-6px;
+    inset:-2px;
 
     border-radius:50%;
 
     background:
-
-        repeating-conic-gradient(
-
+        conic-gradient(
             from 0deg,
-
-            rgba(255,255,255,.95) 0deg,
-            rgba(255,255,255,.95) .6deg,
-
-            transparent 1deg,
-            transparent 5deg
+            rgba(255,255,255,0) 0deg,
+            rgba(255,255,255,.9) 15deg,
+            rgba(255,170,255,.8) 30deg,
+            rgba(255,255,255,0) 45deg,
+            rgba(255,255,255,0) 90deg,
+            rgba(170,255,255,.9) 110deg,
+            rgba(255,255,255,0) 130deg,
+            rgba(255,255,255,.8) 180deg,
+            rgba(255,255,255,0) 360deg
         );
 
-    filter:
+    mask:
+        radial-gradient(
+            circle,
+            transparent 96%,
+            white 98%,
+            white 100%
+        );
 
-        blur(1px)
-
-        drop-shadow(0 0 5px #ffd9ff)
-
-        drop-shadow(0 0 8px #8ffcff);
+    -webkit-mask:
+        radial-gradient(
+            circle,
+            transparent 96%,
+            white 98%,
+            white 100%
+        );
 
     animation:
+        sparkleRotate 12s linear infinite;
 
-        orbitSpark
-        18s linear infinite;
+    filter:blur(1px);
 }
 
 .orbit-ring::after{
-
     content:"";
 
     position:absolute;
-
-    inset:-3px;
+    inset:-25px;
 
     border-radius:50%;
 
     background:
+        radial-gradient(circle,
+            rgba(255,255,255,.95) 0 1px,
+            transparent 2px),
 
-        repeating-radial-gradient(
+        radial-gradient(circle,
+            rgba(255,190,255,.9) 0 1px,
+            transparent 2px),
 
-            circle,
+        radial-gradient(circle,
+            rgba(170,255,255,.9) 0 1px,
+            transparent 2px);
 
-            transparent 0px,
+    background-size:
+        55px 55px,
+        70px 70px,
+        85px 85px;
 
-            transparent 11px,
+    animation:
+        sparkleRotate 18s linear infinite;
 
-            rgba(255,255,255,.8) 12px,
-
-            transparent 14px
-        );
+    opacity:.9;
 
     filter:
+        blur(.3px)
+        drop-shadow(0 0 6px #fff);
 
-        blur(2px);
+    mask:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            white 49%,
+            white 55%,
+            transparent 60%
+        );
 
-    opacity:.7;
+    -webkit-mask:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            white 49%,
+            white 55%,
+            transparent 60%
+        );
 }
 
 /* BÓNG */
 
 .planet{
-
     position:absolute;
 
     width:150px;
@@ -625,42 +648,59 @@ body{
 
     border-radius:50%;
 
-    overflow:hidden;
-
     background:
-
         radial-gradient(
-            circle at 35% 28%,
-
+            circle at 30% 25%,
             rgba(255,255,255,.95) 0%,
-            rgba(255,255,255,.25) 18%,
-
-            rgba(255,185,255,.08) 45%,
-
-            rgba(150,255,255,.10) 100%
+            rgba(255,255,255,.35) 12%,
+            rgba(255,255,255,.12) 22%,
+            rgba(255,170,255,.12) 55%,
+            rgba(170,255,255,.12) 100%
         );
 
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:
+        blur(22px)
+        saturate(180%);
 
     border:
-
-        2px solid rgba(255,255,255,.28);
+        2px solid rgba(255,255,255,.25);
 
     box-shadow:
 
         inset
-        0 0 25px rgba(255,255,255,.18),
+        0 0 35px rgba(255,255,255,.25),
 
         inset
-        -10px -10px 25px rgba(255,190,255,.15),
+        -20px -20px 45px rgba(255,170,255,.15),
 
         inset
-        10px 10px 25px rgba(120,255,255,.15),
+        20px 20px 45px rgba(170,255,255,.15),
 
-        0 0 35px rgba(255,180,255,.25),
+        0 0 25px rgba(255,255,255,.45),
 
-        0 0 55px rgba(120,255,255,.22);
+        0 0 70px rgba(180,255,255,.25);
+}
+
+.planet::before{
+    content:"";
+
+    position:absolute;
+
+    width:28px;
+    height:28px;
+
+    border-radius:50%;
+
+    left:28px;
+    top:20px;
+
+    background:
+        rgba(255,255,255,.95);
+
+    filter:
+        blur(6px);
+
+    opacity:.9;
 }
 
 /* phản chiếu kính */
