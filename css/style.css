@@ -491,6 +491,26 @@ body{
     pointer-events:auto;
 }
 
+.orbit-rotate{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    left:0;
+    top:0;
+
+    animation:
+        rotateOrbit 35s linear infinite;
+}
+
+.orbit-container:has(.planet:hover)
+.orbit-rotate{
+
+    animation-play-state:paused;
+}
+
 /* QUỸ ĐẠO */
 
 .orbit-ring{
