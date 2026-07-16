@@ -491,23 +491,14 @@ body{
 }
 
 .orbit-rotate{
-
     position:absolute;
-
     width:100%;
     height:100%;
 
-    left:0;
-    top:0;
-
     animation:
-        rotateOrbit 35s linear infinite;
-}
+        orbitSpin 35s linear infinite;
 
-.orbit-container:has(.planet:hover)
-.orbit-rotate{
-
-    animation-play-state:paused;
+    transform-origin:center center;
 }
 
 /* QUỸ ĐẠO */
@@ -687,42 +678,48 @@ radial-gradient(
 
     border-radius:50%;
 
-    z-index:20;
-
-    cursor:pointer;
-
-    backdrop-filter:blur(18px);
-
     background:
 
         radial-gradient(
-            circle at 35% 35%,
+            circle at 35% 30%,
 
-            rgba(255,255,255,.55) 0%,
+            rgba(255,255,255,.95) 0%,
+            rgba(255,255,255,.55) 10%,
 
-            rgba(255,255,255,.15) 18%,
+            rgba(210,255,255,.15) 35%,
 
-            rgba(255,255,255,.05) 40%,
+            rgba(255,200,255,.10) 60%,
 
-            rgba(255,255,255,.02) 100%
+            rgba(255,255,255,.04) 100%
         );
 
-    border:
+    backdrop-filter:
+        blur(8px);
 
-        2px solid
-        rgba(255,255,255,.18);
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    border:
+        2.5px solid rgba(255,255,255,.45);
 
     box-shadow:
 
-        inset 0 0 25px rgba(255,255,255,.18),
+        inset
+        0 0 25px rgba(255,255,255,.25),
 
-        inset -10px -10px 30px rgba(255,180,255,.18),
+        inset
+        -10px -10px 20px rgba(255,180,255,.15),
 
-        inset 10px 10px 30px rgba(150,255,255,.18),
+        inset
+        10px 10px 20px rgba(130,255,255,.15),
 
-        0 0 30px rgba(255,180,255,.75),
+        0 0 15px rgba(255,180,255,.55),
 
-        0 0 55px rgba(150,255,255,.65);
+        0 0 25px rgba(120,255,255,.45),
+
+        0 0 45px rgba(255,255,255,.25);
+
+    overflow:hidden;
 }
 
 /* phản chiếu kính */
@@ -733,7 +730,7 @@ radial-gradient(
 
     position:absolute;
 
-    inset:-2px;
+    inset:0;
 
     border-radius:50%;
 
@@ -741,16 +738,17 @@ radial-gradient(
 
         linear-gradient(
             135deg,
-            #ffb6ff,
-            #9fffff,
-            #ffb6ff
+
+            rgba(120,255,255,.18),
+
+            transparent 35%,
+
+            transparent 60%,
+
+            rgba(255,180,255,.18)
         );
 
-    opacity:.9;
-
-    filter:blur(12px);
-
-    z-index:-1;
+    pointer-events:none;
 }
 
 /* viền pastel phát sáng */
@@ -764,7 +762,7 @@ radial-gradient(
     width:35%;
     height:35%;
 
-    left:20%;
+    left:18%;
     top:18%;
 
     border-radius:50%;
@@ -776,10 +774,13 @@ radial-gradient(
 
             rgba(255,255,255,.95),
 
-            rgba(255,255,255,.05)
+            rgba(255,255,255,.15) 70%,
+
+            transparent
         );
 
-    filter:blur(10px);
+    filter:
+        blur(8px);
 }
 
 .p1{
