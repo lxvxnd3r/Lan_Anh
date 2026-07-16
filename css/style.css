@@ -455,6 +455,10 @@ body{
 .s12{animation-duration:4.1s;}
 .s13{animation-duration:6.2s;}
 
+/* ===========================
+   ORBIT CONTAINER
+=========================== */
+
 .orbit-container{
 
     position:absolute;
@@ -468,17 +472,20 @@ body{
     transform:
         translate(-50%,-50%);
 
-    z-index:8;
-
     opacity:0;
     visibility:hidden;
 
     pointer-events:none;
 
+    z-index:8;
+
     transition:
-        opacity .8s ease;
+        opacity .8s ease,
+        visibility .8s ease;
 }
 
+
+/* mở */
 
 .orbit-container.active{
 
@@ -489,26 +496,30 @@ body{
 }
 
 
+/* ===========================
+   PHẦN QUAY
+=========================== */
+
 .orbit-rotate{
+
     position:absolute;
+
     inset:0;
 
     width:100%;
     height:100%;
 
-    transform-origin:center center;
+    transform-origin:
+        center center;
 
     animation:
         rotateOrbit 35s linear infinite;
-}
-
-
-.orbit-container:not(.active)
-.orbit-rotate{
 
     animation-play-state:paused;
 }
 
+
+/* chỉ quay khi mở */
 
 .orbit-container.active
 .orbit-rotate{
@@ -517,7 +528,9 @@ body{
 }
 
 
-.orbit-container.active:has(.planet:hover)
+/* hover bóng mới dừng */
+
+.orbit-container:has(.planet:hover)
 .orbit-rotate{
 
     animation-play-state:paused;
@@ -797,27 +810,33 @@ radial-gradient(
 }
 
 .p1{
-    top:0;
-    left:50%;
-    transform:translateX(-50%);
+
+    transform:
+        translateY(-250px);
 }
 
 .p2{
-    right:0;
-    top:50%;
-    transform:translateY(-50%);
+
+    transform:
+        rotate(90deg)
+        translateY(-250px)
+        rotate(-90deg);
 }
 
 .p3{
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
+
+    transform:
+        rotate(180deg)
+        translateY(-250px)
+        rotate(-180deg);
 }
 
 .p4{
-    left:0;
-    top:50%;
-    transform:translateY(-50%);
+
+    transform:
+        rotate(270deg)
+        translateY(-250px)
+        rotate(-270deg);
 }
 
 @keyframes moonFloat{
