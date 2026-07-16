@@ -50,7 +50,7 @@ document.addEventListener("click",(e)=>{
         orbit.classList.remove("active");
     }
 
-});
+/* CLICK  XOAY */
 const orbitRotate =
 document.querySelector(".orbit-rotate");
 
@@ -58,16 +58,16 @@ let isDragging = false;
 
 let currentRotation = 0;
 
-let startX = 0;
+let lastX = 0;
 
 
 orbitRotate.addEventListener("mousedown",(e)=>{
 
     isDragging = true;
 
-    startX = e.clientX;
+    lastX = e.clientX;
 
-    orbitRotate.style.cursor = "grabbing";
+    orbitRotate.classList.add("dragging");
 
 });
 
@@ -76,7 +76,7 @@ document.addEventListener("mouseup",()=>{
 
     isDragging = false;
 
-    orbitRotate.style.cursor = "grab";
+    orbitRotate.classList.remove("dragging");
 
 });
 
@@ -85,14 +85,16 @@ document.addEventListener("mousemove",(e)=>{
 
     if(!isDragging) return;
 
-    const dx = e.clientX - startX;
+    const dx =
+        e.clientX - lastX;
 
-    startX = e.clientX;
+    lastX = e.clientX;
 
-    currentRotation += dx * 0.25;
+    currentRotation += dx * 0.35;
 
     orbitRotate.style.transform =
 
         `translate(-50%,-50%)
          rotate(${currentRotation}deg)`;
+
 });
