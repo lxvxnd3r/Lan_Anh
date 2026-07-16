@@ -457,16 +457,11 @@ body{
 
 .orbit-container{
 
-    position:absolute;
-
-    left:50%;
-    top:50%;
+    opacity:0;
 
     transform:
         translate(-50%,-50%)
         scale(.8);
-
-    opacity:0;
 
     pointer-events:none;
 
@@ -477,11 +472,11 @@ body{
 
     opacity:1;
 
-    pointer-events:auto;
-
     transform:
         translate(-50%,-50%)
         scale(1);
+
+    pointer-events:auto;
 }
 
 .orbit-rotate{
