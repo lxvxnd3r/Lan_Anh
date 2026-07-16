@@ -208,6 +208,14 @@ body{
     background-clip:text;
 
     color:transparent;
+    
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    -moz-user-select:none;
+
+    -ms-user-select:none;
 }
 
 .search-text{
