@@ -459,36 +459,29 @@ body{
 
     position:absolute;
 
-    width:650px;
-    height:650px;
-
     left:50%;
     top:50%;
 
     transform:
         translate(-50%,-50%)
-        scale(.3);
-
-    transform-origin:center center;
+        scale(.8);
 
     opacity:0;
 
-    transition:1.5s;
-
     pointer-events:none;
 
-    overflow:visible;
+    transition:.8s;
 }
 
 .orbit-container.active{
 
     opacity:1;
 
+    pointer-events:auto;
+
     transform:
         translate(-50%,-50%)
         scale(1);
-
-    pointer-events:auto;
 }
 
 .orbit-rotate{
