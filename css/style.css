@@ -537,7 +537,7 @@ body{
 
     position:absolute;
 
-    inset:0;
+    inset:-28px;
 
     border-radius:50%;
 
