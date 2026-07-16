@@ -548,9 +548,7 @@ body{
 
     position:absolute;
 
-    inset:-20px;
-
-    z-index:51;
+    inset:-16px;
 
     border-radius:50%;
 
@@ -560,127 +558,88 @@ body{
 
         radial-gradient(circle,#fff 0 1px,transparent 2px),
 
-        radial-gradient(circle,#ffb8ff 0 1px,transparent 2px),
+        radial-gradient(circle,#ffb7ef 0 1px,transparent 2px),
 
         radial-gradient(circle,#8ffcff 0 1px,transparent 2px);
 
     background-size:
 
-        18px 18px,
-        28px 28px,
-        40px 40px;
+        16px 16px,
+
+        24px 24px,
+
+        34px 34px;
 
     filter:
 
         blur(.2px)
 
-        drop-shadow(0 0 5px #fff)
+        drop-shadow(0 0 4px #fff)
 
-        drop-shadow(0 0 8px #ffb8ff)
+        drop-shadow(0 0 7px #ffb7ef)
 
-        drop-shadow(0 0 8px #8ffcff);
+        drop-shadow(0 0 7px #8ffcff);
 
     opacity:.95;
 
     animation:
 
         sparkleRotate
-        18s
+        20s
         linear
         infinite;
 
-    mask:
+    clip-path:
 
-        radial-gradient(
-
-            circle,
-
-            transparent 53%,
-
-            white 54%,
-
-            white 57%,
-
-            transparent 58%
-        );
-
-    -webkit-mask:
-
-        radial-gradient(
-
-            circle,
-
-            transparent 53%,
-
-            white 54%,
-
-            white 57%,
-
-            transparent 58%
-        );
+        circle(53%);
 }
 
 .orbit-ring::after{
+
     content:"";
 
     position:absolute;
 
-    z-index:52;
-    
-    inset:-25px;
+    inset:-28px;
 
     border-radius:50%;
 
-background:
-    radial-gradient(circle, rgba(255,255,255,.95) 0 1px, transparent 2px),
-    radial-gradient(circle, rgba(255,190,255,.9) 0 1px, transparent 2px),
-    radial-gradient(circle, rgba(170,255,255,.9) 0 1px, transparent 2px),
-    radial-gradient(circle, rgba(255,255,255,.7) 0 .8px, transparent 1.6px);
+    background:
 
-background-size:
-        25px 25px,
-        35px 35px,
-        45px 45px,
-        60px 60px;
+        radial-gradient(circle,#fff 0 .8px,transparent 2px),
 
-    animation:
-        sparkleRotate 18s linear infinite;
+        radial-gradient(circle,#ffb7ef 0 .8px,transparent 2px),
 
-    opacity:.9;
+        radial-gradient(circle,#8ffcff 0 .8px,transparent 2px);
+
+    background-size:
+
+        18px 18px,
+
+        30px 30px,
+
+        42px 42px;
 
     filter:
-        blur(.3px)
-        drop-shadow(0 0 6px #fff);
 
-       mask:
+        blur(.25px)
 
-        radial-gradient(
+        drop-shadow(0 0 5px #ffb7ef)
 
-        circle,
+        drop-shadow(0 0 5px #8ffcff);
 
-        transparent 49.55%,
+    opacity:.8;
 
-        white 49.6%,
+    animation:
 
-        white 49.9%,
+        sparkleRotate
+        28s
+        linear
+        infinite reverse;
 
-        transparent 50%
-    );
+    clip-path:
 
-    -webkit-mask:
-
-        radial-gradient(
-
-        circle,
-
-        transparent 49.55%,
-
-        white 49.6%,
-
-        white 49.9%,
-
-        transparent 50%
-    );
+        circle(56%);
 }
 
 /* BÓNG */
@@ -717,14 +676,18 @@ background-size:
 
     box-shadow:
 
-        inset
-        0 0 18px rgba(255,255,255,.18),
+    inset
+    0 0 20px rgba(255,255,255,.18),
 
-        0 0 18px rgba(255,180,255,.45),
+    0 0 15px rgba(255,170,255,.65),
 
-        0 0 18px rgba(180,255,255,.45),
+    0 0 30px rgba(255,170,255,.55),
 
-        0 0 35px rgba(255,255,255,.15);
+    0 0 15px rgba(120,255,255,.65),
+
+    0 0 30px rgba(120,255,255,.55),
+
+    0 0 70px rgba(255,255,255,.10);
 }
 
 /* phản chiếu kính */
@@ -773,9 +736,17 @@ background-size:
 
     border:
 
-        1px solid rgba(255,255,255,.45);
+        2px solid rgba(255,255,255,.28);
 
-    opacity:.8;
+    box-shadow:
+
+        0 0 12px #ffb6ef,
+
+        0 0 22px #ffb6ef,
+
+        0 0 12px #8ffcff,
+
+        0 0 22px #8ffcff;
 }
 
 .p1{
