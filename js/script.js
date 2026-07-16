@@ -87,75 +87,42 @@ document.addEventListener(
 
 /* KÉO XOAY */
 
-let isDragging = false;
+let dragging = false;
 
-let currentRotation = 0;
-
-let lastX = 0;
-
+let rotation = 0;
 
 orbitRotate.addEventListener(
     "mousedown",
-    (e)=>{
+    ()=>{
 
-        isDragging = true;
-
-        lastX = e.clientX;
-
-        orbitRotate.classList.add(
-            "dragging"
-        );
+        dragging = true;
 
     }
 );
-
 
 document.addEventListener(
     "mouseup",
     ()=>{
 
-        isDragging = false;
-
-        orbitRotate.classList.remove(
-            "dragging"
-        );
+        dragging = false;
 
     }
 );
-
 
 document.addEventListener(
     "mousemove",
     (e)=>{
 
-        if(!isDragging)
+        if(!dragging)
             return;
 
-        const dx =
-            e.clientX - lastX;
-
-        lastX =
-            e.clientX;
-
-        currentRotation +=
-            dx * 0.35;
+        rotation +=
+            e.movementX * 0.45;
 
         orbitRotate.style.transform =
 
-            `translate(-50%,-50%)
-             rotate(${currentRotation}deg)`;
-
-    }
-);
-
-
-/* TRÁNH BỊ KẸT DRAG */
-
-window.addEventListener(
-    "blur",
-    ()=>{
-
-        isDragging = false;
+        `translate(-50%,-50%)
+         rotate(${rotation}deg)`;
 
     }
 );
