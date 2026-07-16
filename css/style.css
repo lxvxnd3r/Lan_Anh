@@ -542,7 +542,7 @@ body{
     border-radius:50%;
 
     transform:
-        translateY(-3px);
+        translateY(3px);
 
     background:
 
@@ -573,31 +573,31 @@ body{
 
         sparkleRotate 20s linear infinite;
 
-mask:
+    mask:
         radial-gradient(
-        circle,
+            circle,
 
-        transparent 31%,
+            transparent 31%,
 
-        white 32%,
+            white 32%,
 
-        white 33.5%,
+            white 33.5%,
 
-        transparent 35%
-    );
+            transparent 35%
+        );
 
--webkit-mask:
+    -webkit-mask:
         radial-gradient(
-        circle,
+            circle,
 
-        transparent 31%,
+            transparent 31%,
 
-        white 32%,
+            white 32%,
 
-        white 33.5%,
+            white 33.5%,
 
-        transparent 35%
-    );
+            transparent 35%
+        );
 }
 
 .orbit-ring::after{
