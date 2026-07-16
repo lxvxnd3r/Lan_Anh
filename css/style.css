@@ -510,17 +510,12 @@ body{
     width:0;
     height:0;
 
-    transform:
-        translate(-50%,-50%);
-
-    transform-origin:
-        center center;
+    transform-origin:center center;
 
     animation:
         rotateOrbit 35s linear infinite;
 
-    animation-play-state:
-        paused;
+    animation-play-state:paused;
 }
 
 /* chỉ quay khi mở */
@@ -867,25 +862,11 @@ radial-gradient(
 @keyframes rotateOrbit{
 
     from{
-
-        transform:
-
-            translate(-50%,-50%)
-
-            scale(1)
-
-            rotate(0deg);
+        transform:rotate(0deg);
     }
 
     to{
-
-        transform:
-
-            translate(-50%,-50%)
-
-            scale(1)
-
-            rotate(360deg);
+        transform:rotate(360deg);
     }
 }
 
