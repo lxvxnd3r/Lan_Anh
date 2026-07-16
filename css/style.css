@@ -666,34 +666,34 @@ body{
 
         radial-gradient(
 
-            circle at 30% 25%,
+            circle at 35% 28%,
 
-            rgba(255,255,255,.45) 0%,
-            rgba(255,255,255,.18) 18%,
-            rgba(255,180,240,.10) 50%,
-            rgba(120,255,255,.10) 100%
+            rgba(255,255,255,.55) 0%,
+            rgba(255,255,255,.18) 15%,
+
+            rgba(255,185,245,.08) 55%,
+
+            rgba(120,255,255,.08) 100%
         );
 
-    backdrop-filter:blur(30px);
-    -webkit-backdrop-filter:blur(30px);
-
     border:
-        1.5px solid rgba(255,255,255,.28);
+
+        1px solid rgba(255,255,255,.35);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
 
     box-shadow:
 
         inset
-        0 0 30px rgba(255,255,255,.08),
+        0 0 25px rgba(255,255,255,.12),
 
-        inset
-        -15px -15px 35px rgba(255,180,240,.08),
+        0 0 20px rgba(255,180,255,.25),
 
-        inset
-        15px 15px 35px rgba(120,255,255,.08),
-
-        0 0 20px rgba(255,180,240,.20),
-
-        0 0 35px rgba(120,255,255,.18);
+        0 0 40px rgba(120,255,255,.25);
 }
 
 /* phản chiếu kính */
@@ -707,8 +707,8 @@ body{
     width:55px;
     height:55px;
 
+    top:18px;
     left:25px;
-    top:20px;
 
     border-radius:50%;
 
@@ -718,12 +718,13 @@ body{
 
             circle,
 
-            rgba(255,255,255,.85),
+            rgba(255,255,255,.95),
 
-            transparent 70%
+            transparent 75%
         );
 
-    filter:blur(10px);
+    filter:
+        blur(10px);
 }
 
 /* viền pastel phát sáng */
@@ -791,34 +792,34 @@ body{
 
 .p1{
     left:50%;
-    top:-75px;
+    top:125px;
 
     transform:
-        translateX(-50%);
+        translate(-50%,-50%);
 }
 
 .p2{
     top:50%;
-    right:-75px;
+    right:125px;
 
     transform:
-        translateY(-50%);
+        translate(50%,-50%);
 }
 
 .p3{
     left:50%;
-    bottom:-75px;
+    bottom:125px;
 
     transform:
-        translateX(-50%);
+        translate(-50%,50%);
 }
 
 .p4{
     top:50%;
-    left:-75px;
+    left:125px;
 
     transform:
-        translateY(-50%);
+        translate(-50%,-50%);
 }
 
 @keyframes moonFloat{
