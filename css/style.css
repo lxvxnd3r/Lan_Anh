@@ -526,13 +526,18 @@ body{
     transition:
         transform .05s linear;
 
-        cursor:grab;
-    }
+    cursor:grab;
+}
 
 .orbit-rotate.dragging{
 
-        cursor:grabbing;
-    }
+    cursor:grabbing;
+}
+
+user-select:none;
+
+    -webkit-user-select:none;
+}
 
 /* QUỸ ĐẠO */
 
@@ -757,6 +762,12 @@ radial-gradient(
     transform 1.4s cubic-bezier(.22,1,.36,1),
 
     opacity 1.4s ease;
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    -webkit-user-drag:none;
 }
 
 /* phản chiếu kính */
