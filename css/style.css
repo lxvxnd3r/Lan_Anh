@@ -546,23 +546,19 @@ body{
 
     position:absolute;
 
-    inset:-16px;
+    inset:-10px;
 
     border-radius:50%;
 
+    pointer-events:none;
+
     background:
 
-        radial-gradient(circle,
-            rgba(255,255,255,.95) 0 1px,
-            transparent 2px),
+        radial-gradient(circle,#fff 0 1px,transparent 2px),
 
-        radial-gradient(circle,
-            rgba(255,190,255,.9) 0 1px,
-            transparent 2px),
+        radial-gradient(circle,#ffcbff 0 1px,transparent 2px),
 
-        radial-gradient(circle,
-            rgba(170,255,255,.9) 0 1px,
-            transparent 2px);
+        radial-gradient(circle,#9ffcff 0 1px,transparent 2px);
 
     background-size:
 
@@ -570,47 +566,49 @@ body{
         26px 26px,
         34px 34px;
 
+    filter:
+
+        blur(.4px)
+
+        drop-shadow(0 0 5px #fff)
+
+        drop-shadow(0 0 8px #8ffcff)
+
+        drop-shadow(0 0 8px #ffcbff);
+
     opacity:.95;
 
     animation:
-        sparkleRotate 18s linear infinite;
-
-    filter:
-
-        blur(.3px)
-
-        drop-shadow(0 0 6px #fff)
-
-        drop-shadow(0 0 12px #8ff8ff)
-
-        drop-shadow(0 0 12px #ffb4ff);
+        sparkleRotate 20s linear infinite;
 
     mask:
 
         radial-gradient(
+
             circle,
 
-            transparent 53%,
+            transparent 52%,
+
+            white 53%,
 
             white 54%,
 
-            white 56%,
-
-            transparent 57%
+            transparent 55%
         );
 
     -webkit-mask:
 
         radial-gradient(
+
             circle,
 
-            transparent 53%,
+            transparent 52%,
+
+            white 53%,
 
             white 54%,
 
-            white 56%,
-
-            transparent 57%
+            transparent 55%
         );
 }
 
@@ -646,9 +644,9 @@ background-size:
     mask:
         radial-gradient(
             circle,
-            transparent 45%,
-            white 49%,
-            white 55%,
+            transparent 50%,
+            white 50%,
+            white 50%,
             transparent 60%
     );
 
@@ -673,42 +671,35 @@ background-size:
 
     border-radius:50%;
 
+    overflow:hidden;
+
     background:
 
         radial-gradient(
-            circle at 30% 25%,
+            circle at 35% 28%,
 
-                rgba(255,255,255,.9) 0%,
-    
-                rgba(255,255,255,.35) 12%,
+            rgba(255,255,255,.85) 0%,
+            rgba(255,255,255,.18) 12%,
 
-                rgba(255,255,255,.12) 22%,
+            rgba(255,255,255,.04) 40%,
 
-                rgba(255,180,255,.05) 55%,
+            rgba(255,255,255,.02) 70%,
 
-                rgba(180,255,255,.05) 100%
-    );
+            rgba(255,255,255,.01) 100%
+        );
 
-    border:2px solid rgba(255,255,255,.18);
+    border:
 
-    backdrop-filter:
-        blur(10px)
-        saturate(160%);
+        1.5px solid rgba(255,255,255,.22);
 
     box-shadow:
 
         inset
         0 0 18px rgba(255,255,255,.12),
 
-        inset
-        -15px -15px 30px rgba(255,180,255,.08),
+        0 0 25px rgba(255,190,255,.22),
 
-        inset
-        15px 15px 30px rgba(180,255,255,.08),
-
-        0 0 18px rgba(255,180,255,.25),
-
-        0 0 30px rgba(180,255,255,.2);
+        0 0 25px rgba(180,255,255,.22);
 }
 
 /* phản chiếu kính */
@@ -719,28 +710,28 @@ background-size:
 
     position:absolute;
 
-    inset:-2px;
+    inset:0;
 
     border-radius:50%;
 
-    padding:2px;
-
     background:
-        linear-gradient(
-            135deg,
-            rgba(255,180,255,.9),
-            rgba(180,255,255,.95)
+
+        conic-gradient(
+
+            from 20deg,
+
+            rgba(180,255,255,.65),
+
+            rgba(255,190,255,.6),
+
+            rgba(180,255,255,.65)
         );
 
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    opacity:.65;
 
-    -webkit-mask-composite:xor;
+    mix-blend-mode:screen;
 
-    mask-composite:exclude;
-
-    opacity:.9;
+    filter:blur(20px);
 }
 
 /* viền pastel phát sáng */
