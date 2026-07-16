@@ -784,34 +784,30 @@ radial-gradient(
 
 .p1{
     left:50%;
-    top:125px;
+    top:-75px;
 
-    transform:
-        translate(-50%,-50%);
+    transform:translateX(-50%);
 }
 
 .p2{
+    right:-75px;
     top:50%;
-    right:125px;
 
-    transform:
-        translate(50%,-50%);
+    transform:translateY(-50%);
 }
 
 .p3{
     left:50%;
-    bottom:125px;
+    bottom:-75px;
 
-    transform:
-        translate(-50%,50%);
+    transform:translateX(-50%);
 }
 
 .p4{
+    left:-75px;
     top:50%;
-    left:125px;
 
-    transform:
-        translate(-50%,-50%);
+    transform:translateY(-50%);
 }
 
 @keyframes moonFloat{
