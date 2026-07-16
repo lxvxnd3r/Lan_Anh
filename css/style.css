@@ -581,35 +581,31 @@ body{
 
         sparkleRotate 20s linear infinite;
 
-    mask:
-
+mask:
         radial-gradient(
+        circle,
 
-            circle,
+        transparent 31%,
 
-            transparent 48.9%,
+        white 32%,
 
-            white 49.1%,
+        white 33.5%,
 
-            white 49.35%,
+        transparent 35%
+    );
 
-            transparent 49.55%
-        );
-
-    -webkit-mask:
-
+-webkit-mask:
         radial-gradient(
+        circle,
 
-            circle,
+        transparent 31%,
 
-            transparent 48.9%,
+        white 32%,
 
-            white 49.1%,
+        white 33.5%,
 
-            white 49.35%,
-
-            transparent 49.55%
-        );
+        transparent 35%
+    );
 }
 
 .orbit-ring::after{
