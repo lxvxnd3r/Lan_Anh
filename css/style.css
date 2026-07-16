@@ -592,23 +592,17 @@ body{
 
     border-radius:50%;
 
-    background:
-        radial-gradient(circle,
-            rgba(255,255,255,.95) 0 1px,
-            transparent 2px),
+background:
+    radial-gradient(circle, rgba(255,255,255,.95) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(255,190,255,.9) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(170,255,255,.9) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,.7) 0 .8px, transparent 1.6px);
 
-        radial-gradient(circle,
-            rgba(255,190,255,.9) 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle,
-            rgba(170,255,255,.9) 0 1px,
-            transparent 2px);
-
-    background-size:
-        55px 55px,
-        70px 70px,
-        85px 85px;
+background-size:
+        25px 25px,
+        35px 35px,
+        45px 45px,
+        60px 60px;
 
     animation:
         sparkleRotate 18s linear infinite;
@@ -626,21 +620,22 @@ body{
             white 49%,
             white 55%,
             transparent 60%
-        );
+    );
 
     -webkit-mask:
         radial-gradient(
-            circle,
-            transparent 45%,
-            white 49%,
-            white 55%,
-            transparent 60%
-        );
+        circle,
+        transparent 47%,
+        white 48%,
+        white 52%,
+        transparent 53%
+    );
 }
 
 /* BÓNG */
 
 .planet{
+
     position:absolute;
 
     width:150px;
@@ -649,58 +644,34 @@ body{
     border-radius:50%;
 
     background:
+
         radial-gradient(
-            circle at 30% 25%,
-            rgba(255,255,255,.95) 0%,
-            rgba(255,255,255,.35) 12%,
-            rgba(255,255,255,.12) 22%,
-            rgba(255,170,255,.12) 55%,
-            rgba(170,255,255,.12) 100%
+            circle at 35% 30%,
+
+            rgba(255,255,255,.75) 0%,
+            rgba(255,255,255,.15) 15%,
+
+            rgba(255,255,255,.04) 40%,
+
+            rgba(255,255,255,.02) 60%,
+
+            rgba(255,255,255,.05) 100%
         );
 
-    backdrop-filter:
-        blur(22px)
-        saturate(180%);
+    border:2px solid rgba(255,255,255,.18);
 
-    border:
-        2px solid rgba(255,255,255,.25);
+    backdrop-filter:
+        blur(14px)
+        saturate(170%);
 
     box-shadow:
 
         inset
-        0 0 35px rgba(255,255,255,.25),
+        0 0 25px rgba(255,255,255,.12),
 
-        inset
-        -20px -20px 45px rgba(255,170,255,.15),
+        0 0 25px rgba(255,180,255,.25),
 
-        inset
-        20px 20px 45px rgba(170,255,255,.15),
-
-        0 0 25px rgba(255,255,255,.45),
-
-        0 0 70px rgba(180,255,255,.25);
-}
-
-.planet::before{
-    content:"";
-
-    position:absolute;
-
-    width:28px;
-    height:28px;
-
-    border-radius:50%;
-
-    left:28px;
-    top:20px;
-
-    background:
-        rgba(255,255,255,.95);
-
-    filter:
-        blur(6px);
-
-    opacity:.9;
+        0 0 35px rgba(170,255,255,.25);
 }
 
 /* phản chiếu kính */
@@ -711,28 +682,28 @@ body{
 
     position:absolute;
 
-    width:45px;
-    height:45px;
+    inset:-2px;
 
     border-radius:50%;
 
-    top:20px;
-    left:25px;
+    padding:2px;
 
     background:
-
-        radial-gradient(
-
-            circle,
-
-            rgba(255,255,255,.95),
-
-            rgba(255,255,255,.3),
-
-            transparent 75%
+        linear-gradient(
+            135deg,
+            rgba(255,180,255,.9),
+            rgba(180,255,255,.95)
         );
 
-    filter:blur(8px);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    opacity:.9;
 }
 
 /* viền pastel phát sáng */
@@ -743,29 +714,20 @@ body{
 
     position:absolute;
 
-    width:70px;
-    height:220px;
+    width:35px;
+    height:35px;
 
-    top:-40px;
-    left:-10px;
+    top:18px;
+    left:28px;
 
-    transform:
-        rotate(35deg);
+    border-radius:50%;
 
     background:
+        rgba(255,255,255,.9);
 
-        linear-gradient(
+    filter:blur(10px);
 
-            to right,
-
-            transparent,
-
-            rgba(255,255,255,.25),
-
-            transparent
-        );
-
-    filter:blur(12px);
+    opacity:.85;
 }
 
 .p1{
