@@ -577,20 +577,20 @@ body{
 radial-gradient(
     circle,
 
-    transparent 32%,
-    white 33%,
-    white 34.5%,
-    transparent 35%
+    transparent 34%,
+    white 35%,
+    white 36.5%,
+    transparent 37%
 );
 
 -webkit-mask:
 radial-gradient(
     circle,
 
-    transparent 32%,
-    white 33%,
-    white 34.5%,
-    transparent 35%
+    transparent 34%,
+    white 35%,
+    white 36.5%,
+    transparent 37%
 );
 }
 
