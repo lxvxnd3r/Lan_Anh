@@ -489,17 +489,7 @@ body{
         scale(1);
 
     pointer-events:auto;
-
-    animation:
-        rotateOrbit 35s linear infinite;
 }
-
-/* chỉ dừng khi hover vào bóng */
-.orbit-container:has(.planet:hover){
-
-    animation-play-state:paused;
-}
-
 
 /* QUỸ ĐẠO */
 
