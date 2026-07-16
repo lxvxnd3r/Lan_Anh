@@ -530,7 +530,7 @@ body{
 
     border-radius:50%;
 
-    overflow:visible;
+        overflow:visible;
 
     border:
 
@@ -660,56 +660,41 @@ body{
 
     border-radius:50%;
 
-    overflow:visible;
+    overflow:hidden;
 
     background:
 
         radial-gradient(
 
-            circle at 35% 30%,
+            circle at 30% 25%,
 
-            rgba(255,255,255,.92) 0%,
-
-            rgba(255,255,255,.45) 15%,
-
-            rgba(255,210,245,.18) 40%,
-
-            rgba(200,185,255,.12) 65%,
-
-            rgba(170,255,255,.18) 100%
+            rgba(255,255,255,.45) 0%,
+            rgba(255,255,255,.18) 18%,
+            rgba(255,180,240,.10) 50%,
+            rgba(120,255,255,.10) 100%
         );
 
-    backdrop-filter:
-        blur(22px);
-
-    -webkit-backdrop-filter:
-        blur(22px);
+    backdrop-filter:blur(30px);
+    -webkit-backdrop-filter:blur(30px);
 
     border:
-        2px solid rgba(255,255,255,.28);
+        1.5px solid rgba(255,255,255,.28);
 
     box-shadow:
 
         inset
-        -25px -25px 45px
-        rgba(255,180,240,.12),
+        0 0 30px rgba(255,255,255,.08),
 
         inset
-        20px 20px 45px
-        rgba(120,255,255,.15),
+        -15px -15px 35px rgba(255,180,240,.08),
 
         inset
-        0 0 25px
-        rgba(255,255,255,.18),
+        15px 15px 35px rgba(120,255,255,.08),
 
-        0 0 30px
-        rgba(255,180,240,.30),
+        0 0 20px rgba(255,180,240,.20),
 
-        0 0 55px
-        rgba(120,255,255,.22);
+        0 0 35px rgba(120,255,255,.18);
 }
-
-
 
 /* phản chiếu kính */
 
@@ -719,11 +704,11 @@ body{
 
     position:absolute;
 
-    width:65px;
-    height:65px;
+    width:55px;
+    height:55px;
 
-    left:22px;
-    top:18px;
+    left:25px;
+    top:20px;
 
     border-radius:50%;
 
@@ -733,89 +718,107 @@ body{
 
             circle,
 
-            rgba(255,255,255,.95),
+            rgba(255,255,255,.85),
 
-            rgba(255,255,255,.55),
-
-            transparent
+            transparent 70%
         );
 
-    filter:
-        blur(12px);
-
-    opacity:.95;
+    filter:blur(10px);
 }
-
-
 
 /* viền pastel phát sáng */
 
-.planet::after{
+.orbit-ring::after{
 
     content:"";
 
     position:absolute;
 
-    inset:-3px;
+    inset:-10px;
 
     border-radius:50%;
 
     background:
 
-        linear-gradient(
+        repeating-conic-gradient(
 
-            135deg,
+            from 0deg,
 
-            rgba(255,175,235,.95),
+            rgba(255,255,255,.95) 0deg,
 
-            rgba(210,180,255,.95),
+            rgba(255,255,255,.95) .5deg,
 
-            rgba(140,255,255,.95)
+            transparent 1deg,
+
+            transparent 4deg
         );
 
-    z-index:-1;
+    mask:
+
+        radial-gradient(
+
+            transparent 96%,
+
+            white 97%
+        );
+
+    -webkit-mask:
+
+        radial-gradient(
+
+            transparent 96%,
+
+            white 97%
+        );
 
     filter:
 
-        blur(12px);
+        drop-shadow(
+            0 0 5px #ffb6ef
+        )
 
-    opacity:.7;
+        drop-shadow(
+            0 0 8px #8ffcff
+        )
+
+        blur(.5px);
+
+    animation:
+
+        sparkleRotate
+        20s linear infinite;
 }
 
 .p1{
-
     left:50%;
-    top:50%;
+    top:-75px;
 
     transform:
-        translate(-50%,-310px);
+        translateX(-50%);
 }
 
 .p2{
-
-    left:50%;
     top:50%;
+    right:-75px;
 
     transform:
-        translate(190px,-50%);
+        translateY(-50%);
 }
 
 .p3{
-
     left:50%;
-    top:50%;
+    bottom:-75px;
 
     transform:
-        translate(-50%,190px);
+        translateX(-50%);
 }
 
 .p4{
-
-    left:50%;
     top:50%;
+    left:-75px;
 
     transform:
-        translate(-310px,-50%);
+        translateY(-50%);
 }
 
 @keyframes moonFloat{
