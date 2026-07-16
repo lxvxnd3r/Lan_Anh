@@ -551,14 +551,14 @@ user-select:none;
     width:400px;
     height:400px;
 
-    transform:translate(-50%,-50%);
+    transform:
+        translate(-50%,-50%);
 
     border-radius:50%;
 
     overflow:visible;
 
     border:
-
         2px solid
         rgba(255,190,255,.35);
 
@@ -612,13 +612,13 @@ user-select:none;
 
             circle,
 
-            transparent 49%,
+            transparent 48.5%,
 
-            white 49.8%,
+            white 49.3%,
 
-            white 50.8%,
+            white 50.2%,
 
-            transparent 51.6%
+            transparent 51%
 
         );
 
@@ -627,13 +627,13 @@ user-select:none;
 
             circle,
 
-            transparent 49%,
+            transparent 48.5%,
 
-            white 49.8%,
+            white 49.3%,
 
-            white 50.8%,
+            white 50.2%,
 
-            transparent 51.6%
+            transparent 51%
 
         );
 }
