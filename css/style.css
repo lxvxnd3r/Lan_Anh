@@ -526,8 +526,13 @@ body{
     transition:
         transform .05s linear;
 
-    cursor:grab;
-}
+        cursor:grab;
+    }
+
+.orbit-rotate.dragging{
+
+        cursor:grabbing;
+    }
 
 /* QUỸ ĐẠO */
 
