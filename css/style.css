@@ -215,14 +215,6 @@ body{
     color:transparent;
 }
 
-#moon:hover{
-
-    transform:
-
-        translate(-50%,-50%)
-
-        scale(1.08);
-}
 .search-text{
 
     position:absolute;
