@@ -1,1 +1,75 @@
+#moon{
 
+    position:absolute;
+
+    left:51%;
+    top:50%;
+
+    transform:
+
+        translate(-50%,-50%)
+
+        rotate(10deg);
+
+    font-size:170px;
+
+    z-index:20;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #ffd4ff,
+
+            #dcd6ff,
+
+            #bffcff
+        );
+
+    color:transparent;
+
+    background-clip:text;
+
+    -webkit-background-clip:text;
+
+    filter:
+
+        drop-shadow(
+            0 0 25px
+            rgba(255,180,255,.7)
+        )
+
+        drop-shadow(
+            0 0 60px
+            rgba(180,255,255,.6)
+        );
+}
+
+.search-text{
+
+    position:absolute;
+
+    top:480px;
+
+    font-size:34px;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 15px #ffd4ff,
+
+        0 0 35px #8be8ff,
+
+        0 0 70px #8be8ff;
+
+    z-index:30;
+}
