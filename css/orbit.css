@@ -268,13 +268,34 @@
 .orbit-sparkle2{
 
     position:absolute;
+
     inset:0;
 
     border-radius:50%;
 
-    z-index:999;
+    background:
 
-    background:white;
+        radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
+
+        radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
+
+        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px);
+
+    background-size:
+
+        18px 18px,
+        24px 24px,
+        30px 30px;
+
+    opacity:.9;
+
+    filter:
+
+        drop-shadow(0 0 2px #fff)
+
+        drop-shadow(0 0 4px #ffb6ef)
+
+        drop-shadow(0 0 4px #8ffcff);
 
     mask:
 
@@ -282,9 +303,9 @@
 
             circle,
 
-            transparent 82%,
+            transparent 84%,
 
-            white 84%,
+            white 86%,
 
             white 88%,
 
@@ -298,9 +319,9 @@
 
             circle,
 
-            transparent 82%,
+            transparent 84%,
 
-            white 84%,
+            white 86%,
 
             white 88%,
 
