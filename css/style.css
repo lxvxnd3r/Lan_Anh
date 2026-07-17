@@ -558,6 +558,21 @@ body{
 
     border-radius:50%;
 
+    overflow:visible;
+
+    z-index:5;
+}
+
+.orbit-ring::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
     background:
 
         conic-gradient(
@@ -586,13 +601,13 @@ body{
 
             circle,
 
-            transparent 47%,
+            transparent 48.3%,
 
-            white 48.5%,
+            white 49.6%,
 
-            white 51.5%,
+            white 50.8%,
 
-            transparent 53%
+            transparent 52%
 
         );
 
@@ -602,27 +617,29 @@ body{
 
             circle,
 
-            transparent 47%,
+            transparent 48.3%,
 
-            white 48.5%,
+            white 49.6%,
 
-            white 51.5%,
+            white 50.8%,
 
-            transparent 53%
+            transparent 52%
 
         );
 
     box-shadow:
 
-        0 0 20px rgba(255,180,255,.45),
+        0 0 15px rgba(255,190,255,.45),
 
-        0 0 25px rgba(140,255,255,.45);
+        0 0 20px rgba(143,252,255,.45);
 
     animation:
-        sparkleRotate 20s linear infinite;
+        sparkleRotate 22s linear infinite;
 }
 
-.orbit-sparkle1{
+.orbit-ring::after{
+
+    content:"";
 
     position:absolute;
 
@@ -644,22 +661,22 @@ body{
         14px 14px,
         18px 18px;
 
-    opacity:.5;
+    opacity:.45;
 
     filter:
 
         drop-shadow(0 0 4px #fff)
 
-        drop-shadow(0 0 5px #ffb6ef)
+        drop-shadow(0 0 6px #ffb6ef)
 
-        drop-shadow(0 0 5px #8ffcff);
+        drop-shadow(0 0 6px #8ffcff);
 
     animation:
 
         sparkleRotate
         18s
         linear
-        infinite;
+        infinite reverse;
 
     mask:
 
@@ -667,13 +684,13 @@ body{
 
             circle,
 
-            transparent 48%,
+            transparent 48.5%,
 
-            white 49%,
+            white 49.5%,
 
-            white 50%,
+            white 50.3%,
 
-            transparent 51%
+            transparent 51.3%
 
         );
 
@@ -683,13 +700,13 @@ body{
 
             circle,
 
-            transparent 48%,
+            transparent 48.5%,
 
-            white 49%,
+            white 49.5%,
 
-            white 50%,
+            white 50.3%,
 
-            transparent 51%
+            transparent 51.3%
 
         );
 }
@@ -698,9 +715,15 @@ body{
 
     position:absolute;
 
-    inset:0;
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
 
     border-radius:50%;
+
+    pointer-events:none;
 
     background:
 
@@ -716,7 +739,7 @@ body{
         16px 16px,
         22px 22px;
 
-    opacity:.35;
+    opacity:.3;
 
     filter:
 
@@ -731,7 +754,7 @@ body{
         sparkleRotate
         30s
         linear
-        infinite reverse;
+        infinite;
 
     mask:
 
@@ -739,13 +762,13 @@ body{
 
             circle,
 
-            transparent 54%,
-
-            white 55%,
+            transparent 55%,
 
             white 56%,
 
-            transparent 57%
+            white 57%,
+
+            transparent 58%
 
         );
 
@@ -755,13 +778,13 @@ body{
 
             circle,
 
-            transparent 54%,
-
-            white 55%,
+            transparent 55%,
 
             white 56%,
 
-            transparent 57%
+            white 57%,
+
+            transparent 58%
 
         );
 }
