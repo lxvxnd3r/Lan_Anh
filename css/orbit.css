@@ -167,7 +167,7 @@
 
         0 0 12px rgba(143,252,255,.10);
 
-    opacity:1;
+    opacity:0.25;
 
     animation:
         sparkleRotate 22s linear infinite;
@@ -205,19 +205,19 @@
         14px 14px,
         18px 18px;
 
-    opacity:.95;
+    opacity:.7;
 
     filter:
 
-    drop-shadow(0 0 5px #fff)
+    drop-shadow(0 0 2px #fff)
 
-    drop-shadow(0 0 10px #ffb6ef)
+    drop-shadow(0 0 5px #ffb6ef)
 
-    drop-shadow(0 0 10px #8ffcff)
+    drop-shadow(0 0 5px #8ffcff)
 
-    drop-shadow(0 0 18px #ffb6ef)
+    drop-shadow(0 0 8px #ffb6ef)
 
-    drop-shadow(0 0 18px #8ffcff);
+    drop-shadow(0 0 8px #8ffcff);
         
     animation:
 
