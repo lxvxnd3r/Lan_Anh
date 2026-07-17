@@ -619,30 +619,28 @@ body{
 
     background:
 
-        radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
+        radial-gradient(circle,#fff 0 .9px,transparent 2px),
 
-        radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
+        radial-gradient(circle,#ffb6ef 0 .9px,transparent 2px),
 
-        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px);
+        radial-gradient(circle,#8ffcff 0 .9px,transparent 2px);
 
     background-size:
 
-        10px 10px,
-        14px 14px,
-        18px 18px;
+        12px 12px,
+        16px 16px,
+        22px 22px;
 
-    opacity:.55;
+    opacity:.45;
 
     filter:
 
         drop-shadow(0 0 4px #fff)
-
-        drop-shadow(0 0 5px #ffb6ef)
-
-        drop-shadow(0 0 5px #8ffcff);
+        drop-shadow(0 0 6px #ffb6ef)
+        drop-shadow(0 0 6px #8ffcff);
 
     animation:
-        sparkleRotate 18s linear infinite;
+        sparkleRotate 22s linear infinite;
 
     mask:
 
@@ -650,13 +648,13 @@ body{
 
             circle,
 
-            transparent 47.5%,
+            transparent 32%,
 
-            white 48.5%,
+            white 33%,
 
-            white 50.5%,
+            white 34%,
 
-            transparent 51.5%
+            transparent 35%
 
         );
 
@@ -666,13 +664,13 @@ body{
 
             circle,
 
-            transparent 47.5%,
+            transparent 32%,
 
-            white 48.5%,
+            white 33%,
 
-            white 50.5%,
+            white 34%,
 
-            transparent 51.5%
+            transparent 35%
 
         );
 }
@@ -689,11 +687,11 @@ body{
 
     background:
 
-        radial-gradient(circle,#fff 0 1px,transparent 2px),
+        radial-gradient(circle,#fff 0 .9px,transparent 2px),
 
-        radial-gradient(circle,#ffb6ef 0 1px,transparent 2px),
+        radial-gradient(circle,#ffb6ef 0 .9px,transparent 2px),
 
-        radial-gradient(circle,#8ffcff 0 1px,transparent 2px);
+        radial-gradient(circle,#8ffcff 0 .9px,transparent 2px);
 
     background-size:
 
@@ -701,18 +699,16 @@ body{
         16px 16px,
         22px 22px;
 
-    opacity:.35;
+    opacity:.45;
 
     filter:
 
         drop-shadow(0 0 4px #fff)
-
         drop-shadow(0 0 6px #ffb6ef)
-
         drop-shadow(0 0 6px #8ffcff);
 
     animation:
-        sparkleRotate 30s linear infinite reverse;
+        sparkleRotate 22s linear infinite;
 
     mask:
 
@@ -720,13 +716,13 @@ body{
 
             circle,
 
-            transparent 53%,
+            transparent 46%,
 
-            white 54%,
+            white 47%,
 
-            white 55%,
+            white 48%,
 
-            transparent 56%
+            transparent 49%
 
         );
 
@@ -736,13 +732,13 @@ body{
 
             circle,
 
-            transparent 53%,
+            transparent 46%,
 
-            white 54%,
+            white 47%,
 
-            white 55%,
+            white 48%,
 
-            transparent 56%
+            transparent 49%
 
         );
 }
