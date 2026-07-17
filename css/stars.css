@@ -14,21 +14,18 @@
 
     transform-origin:center;
 
+    pointer-events:none;
+
     background:
 
         linear-gradient(
-
             135deg,
-
             #ff6fd1,
-
             #c78fff,
-
             #6cecff
         );
 
     clip-path:
-
         polygon(
             50% 0%,
             60% 40%,
