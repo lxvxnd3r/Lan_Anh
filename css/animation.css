@@ -1,1 +1,162 @@
+/* =========================================
+                MOON FLOAT
+========================================= */
 
+@keyframes moonFloat{
+
+    0%,100%{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            translateY(0px);
+    }
+
+    50%{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            translateY(-15px);
+    }
+}
+
+
+/* =========================================
+                ORBIT ROTATE
+========================================= */
+
+@keyframes rotateOrbit{
+
+    from{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            rotate(0deg);
+    }
+
+    to{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            rotate(360deg);
+    }
+}
+
+
+/* =========================================
+                SPARKLE ROTATE
+========================================= */
+
+@keyframes sparkleRotate{
+
+    from{
+
+        transform:
+            rotate(0deg);
+    }
+
+    to{
+
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* =========================================
+                STAR TWINKLE
+========================================= */
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.6;
+
+        scale:.8;
+    }
+
+    50%{
+
+        opacity:1;
+
+        scale:1.3;
+    }
+}
+
+
+/* =========================================
+                RING GLOW
+========================================= */
+
+@keyframes ringGlow{
+
+    0%,100%{
+
+        opacity:.6;
+    }
+
+    50%{
+
+        opacity:1;
+
+        box-shadow:
+
+            0 0 40px #ffd4ff,
+
+            0 0 90px #8be8ff,
+
+            0 0 150px rgba(255,255,255,.3);
+    }
+}
+
+
+/* =========================================
+          ORBIT OPEN / CLOSE
+========================================= */
+
+@keyframes orbitExpand{
+
+    from{
+
+        transform:
+            translate(-50%,-50%)
+            scale(0);
+    }
+
+    to{
+
+        transform:
+            translate(-50%,-50%)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+            PLANET APPEAR
+========================================= */
+
+@keyframes planetAppear{
+
+    from{
+
+        opacity:0;
+
+        scale:.2;
+    }
+
+    to{
+
+        opacity:1;
+
+        scale:1;
+    }
+}
