@@ -1,12 +1,8 @@
-/* =========================================
-                    MOON
-========================================= */
-
 #moon{
 
     position:absolute;
 
-    left:51%;
+    left:50%;
     top:50%;
 
     transform:
@@ -46,51 +42,6 @@
 
     user-select:none;
     -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
 
     -webkit-user-drag:none;
-}
-
-
-/* =========================================
-                SEARCH TEXT
-========================================= */
-
-.search-text{
-
-    position:absolute;
-
-    top:480px;
-
-    font-size:34px;
-
-    color:white;
-
-    text-shadow:
-
-        0 0 15px #ffd4ff,
-
-        0 0 35px #8be8ff,
-
-        0 0 70px #8be8ff;
-
-    z-index:30;
-
-    user-select:none;
-    -webkit-user-select:none;
-}
-
-
-/* =========================================
-              MOON OPTIONAL GLOW
-========================================= */
-
-/* Nếu sau này muốn bật nổi lơ lửng */
-
-.moon-float{
-
-    animation:
-        moonFloat
-        6s ease-in-out infinite;
 }
