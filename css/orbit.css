@@ -268,14 +268,15 @@
 .orbit-sparkle2{
 
     position:absolute;
+
     inset:0;
 
-    border:2px solid red;
+    border-radius:50%;
 
-    mask:none;
-    -webkit-mask:none;
+    z-index:999;
 
     background:none;
 
-    z-index:999;
+    border:2px solid red;
+
 }
