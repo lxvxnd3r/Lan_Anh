@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 
     <meta charset="UTF-8">
@@ -9,12 +10,16 @@
 
     <title>Lan Anh</title>
 
+    <!-- CSS CHÍNH -->
+
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/welcome.css">
     <link rel="stylesheet" href="css/moon.css">
     <link rel="stylesheet" href="css/stars.css">
     <link rel="stylesheet" href="css/planet.css">
     <link rel="stylesheet" href="css/animation.css">
+
+    <!-- ORBIT -->
 
     <link rel="stylesheet" href="css/orbit/orbit-container.css">
     <link rel="stylesheet" href="css/orbit/orbit-ring.css">
@@ -29,61 +34,82 @@
 
     <!-- VIDEO NỀN -->
 
-    <video
-        id="bg-video"
-        autoplay
-        muted
-        loop
-        playsinline>
+    <video id="bg-video"
+           autoplay
+           muted
+           loop
+           playsinline>
 
-        <source
-            src="tree1.mp4"
-            type="video/mp4">
+        <source src="tree1.mp4"
+                type="video/mp4">
 
     </video>
 
-    <!-- LỚP TỐI -->
+
+    <!-- OVERLAY -->
 
     <div class="overlay"></div>
 
-     <!-- KHUNG CHÍNH -->
-    
-<div class="container">
 
-    <div class="moon-system">
+    <!-- KHUNG CHÍNH -->
 
-        <!-- MẶT TRĂNG -->
-        
-        <div id="moon">🌙</div>
+    <div class="container">
 
-        <!-- SAO -->
-        <div class="star s1"></div>
-        <div class="star s2"></div>
-        <div class="star s3"></div>
-        <div class="star s4"></div>
-        <div class="star s5"></div>
-        <div class="star s6"></div>
-        <div class="star s7"></div>
-        <div class="star s8"></div>
-        <div class="star s9"></div>
-        <div class="star s10"></div>
-        <div class="star s11"></div>
-        <div class="star s12"></div>
-        <div class="star s13"></div>
 
-        <!-- ORBIT -->
-        <div class="orbit-container">
+        <!-- LAYER DÀNH RIÊNG CHO HIỆU ỨNG THỦY TINH -->
 
-            <div class="orbit-ring">
+        <div class="glass-layer"></div>
 
-                <div class="orbit-gradient"></div>
 
-                <div class="orbit-sparkle1"></div>
+        <!-- MOON SYSTEM -->
 
-                <div class="orbit-sparkle2"></div>
+        <div class="moon-system">
+
+
+            <!-- MẶT TRĂNG -->
+
+            <div id="moon">🌙</div>
+
+
+            <!-- SAO -->
+
+            <div class="star s1"></div>
+            <div class="star s2"></div>
+            <div class="star s3"></div>
+            <div class="star s4"></div>
+            <div class="star s5"></div>
+            <div class="star s6"></div>
+            <div class="star s7"></div>
+            <div class="star s8"></div>
+            <div class="star s9"></div>
+            <div class="star s10"></div>
+            <div class="star s11"></div>
+            <div class="star s12"></div>
+            <div class="star s13"></div>
+
+
+            <!-- ORBIT -->
+
+            <div class="orbit-container">
+
+                <div class="orbit-ring">
+
+                    <div class="orbit-gradient"></div>
+
+                    <div class="orbit-sparkle1"></div>
+
+                    <div class="orbit-sparkle2"></div>
+
+                </div>
 
             </div>
 
+        </div>
+
+
+        <!-- PLANET LAYER -->
+
+        <div class="planet-layer">
 
             <div class="orbit-rotate">
 
@@ -99,17 +125,15 @@
 
         </div>
 
+
+        <!-- TEXT -->
+
+        <p class="search-text">
+
+        </p>
+
     </div>
 
-</div>
-    
-            <!-- CHỮ -->
-
-            <p class="search-text">
-
-
-
-            </p>
 
     <!-- WELCOME -->
 
@@ -122,16 +146,14 @@
     </div>
 
 
-    <!-- NHẠC -->
+    <!-- MUSIC -->
 
-    <audio
-        id="music"
-        loop
-        preload="auto">
+    <audio id="music"
+           loop
+           preload="auto">
 
-        <source
-            src="spider thread monopoly.mp3"
-            type="audio/mpeg">
+        <source src="spider thread monopoly.mp3"
+                type="audio/mpeg">
 
     </audio>
 
