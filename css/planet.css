@@ -1,1 +1,244 @@
+/* =========================================
+                    PLANET
+========================================= */
 
+.planet{
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    left:50%;
+    top:50%;
+
+    margin-left:-75px;
+    margin-top:-75px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 28%,
+
+            rgba(255,255,255,.95) 0%,
+            rgba(255,255,255,.65) 12%,
+
+            rgba(255,255,255,.08) 35%,
+
+            rgba(150,255,255,.04) 60%,
+
+            rgba(255,180,255,.04) 100%
+        );
+
+    border:
+        2px solid rgba(255,255,255,.55);
+
+    backdrop-filter:
+        blur(2px);
+
+    box-shadow:
+
+        0 0 15px rgba(255,190,255,.45),
+
+        0 0 22px rgba(120,255,255,.45),
+
+        inset 0 0 25px rgba(255,255,255,.12);
+
+    overflow:hidden;
+
+    z-index:10;
+
+    opacity:0;
+
+    transition:
+
+        transform 1.4s cubic-bezier(.22,1,.36,1),
+
+        opacity 1.4s ease;
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    -webkit-user-drag:none;
+}
+
+
+/* =========================================
+              GLASS REFLECTION
+========================================= */
+
+.planet::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(120,255,255,.18),
+
+            transparent 40%,
+
+            transparent 60%,
+
+            rgba(255,180,255,.20)
+        );
+}
+
+
+/* =========================================
+                HIGHLIGHT
+========================================= */
+
+.planet::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:32%;
+    height:32%;
+
+    left:20%;
+    top:16%;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.95),
+
+            rgba(255,255,255,.15) 70%,
+
+            transparent
+        );
+
+    filter:blur(7px);
+}
+
+
+/* =========================================
+              PLANET POSITIONS
+========================================= */
+
+.p1{
+
+    transform:
+        translateY(-200px);
+}
+
+.p2{
+
+    transform:
+
+        rotate(90deg)
+
+        translateY(-200px)
+
+        rotate(-90deg);
+}
+
+.p3{
+
+    transform:
+
+        rotate(180deg)
+
+        translateY(-200px)
+
+        rotate(-180deg);
+}
+
+.p4{
+
+    transform:
+
+        rotate(270deg)
+
+        translateY(-200px)
+
+        rotate(-270deg);
+}
+
+
+/* =========================================
+            CLOSED STATE
+========================================= */
+
+.orbit-container:not(.active) .p1,
+.orbit-container:not(.active) .p2,
+.orbit-container:not(.active) .p3,
+.orbit-container:not(.active) .p4{
+
+    transform:
+        translate(0,0);
+
+    opacity:0;
+}
+
+
+/* =========================================
+            OPEN STATE
+========================================= */
+
+.orbit-container.active .p1{
+
+    transform:
+        translateY(-200px);
+
+    opacity:1;
+}
+
+.orbit-container.active .p2{
+
+    transform:
+
+        rotate(90deg)
+
+        translateY(-200px)
+
+        rotate(-90deg);
+
+    opacity:1;
+}
+
+.orbit-container.active .p3{
+
+    transform:
+
+        rotate(180deg)
+
+        translateY(-200px)
+
+        rotate(-180deg);
+
+    opacity:1;
+}
+
+.orbit-container.active .p4{
+
+    transform:
+
+        rotate(270deg)
+
+        translateY(-200px)
+
+        rotate(-270deg);
+
+    opacity:1;
+}
