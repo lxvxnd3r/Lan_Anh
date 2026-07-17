@@ -120,23 +120,22 @@
 
             from 0deg,
 
-            #ffb6ef,
+            rgba(255,182,239,.20),
 
-            #ffd8f7,
+            rgba(255,216,247,.14),
 
-            #e0cfff,
+            rgba(224,207,255,.12),
 
-            #c9d8ff,
+            rgba(201,216,255,.12),
 
-            #a8eeff,
+            rgba(168,238,255,.14),
 
-            #8ffcff,
+            rgba(143,252,255,.20),
 
-            #ffb6ef
+            rgba(255,182,239,.20)
         );
 
     mask:
-
         radial-gradient(
 
             circle,
@@ -149,7 +148,6 @@
         );
 
     -webkit-mask:
-
         radial-gradient(
 
             circle,
@@ -163,19 +161,21 @@
 
     box-shadow:
 
-        inset 0 0 10px rgba(255,255,255,.18),
+        inset 0 0 6px rgba(255,255,255,.20),
 
-        0 0 18px rgba(255,255,255,.25),
+        0 0 10px rgba(255,255,255,.25),
 
-        0 0 30px rgba(180,220,255,.15);
+        0 0 20px rgba(255,190,255,.15),
 
-    opacity:.75;
+        0 0 20px rgba(143,252,255,.15);
+
+    opacity:.45;
+
+    mix-blend-mode:screen;
 
     animation:
         sparkleRotate 22s linear infinite;
 }
-
-
 
 /* =========================================
           INNER SPARKLE
