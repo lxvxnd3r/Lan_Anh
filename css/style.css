@@ -616,13 +616,13 @@ user-select:none;
 
             circle,
 
-            transparent 20%,
-
-            white 21%,
+            transparent 21%,
 
             white 22%,
 
-            transparent 23%
+            white 23%,
+
+            transparent 24%
 
         );
 
@@ -631,13 +631,13 @@ user-select:none;
 
             circle,
 
-            transparent 20%,
-
-            white 21%,
+            transparent 21%,
 
             white 22%,
 
-            transparent 23%
+            white 23%,
+
+            transparent 24%
 
         );
 }
@@ -694,13 +694,13 @@ user-select:none;
 
             circle,
 
-            transparent 49.3%,
+            transparent 44.3%,
 
-            white 49.9%,
+            white 44.9%,
 
-            white 50.5%,
+            white 45.5%,
 
-            transparent 51.1%
+            transparent 46.1%
 
         );
 
@@ -710,13 +710,13 @@ user-select:none;
 
             circle,
 
-            transparent 49.3%,
+            transparent 44.3%,
 
-            white 49.9%,
+            white 44.9%,
 
-            white 50.5%,
+            white 45.5%,
 
-            transparent 51.1%
+            transparent 46.1%
 
         );
 }
