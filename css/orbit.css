@@ -114,46 +114,68 @@
 
     border-radius:50%;
 
-    border:6px solid transparent;
-
     background:
 
         conic-gradient(
 
             from 0deg,
 
-            #ffb6ef,
+            rgba(255,182,239,.55),
 
-            #ffd8f7,
+            rgba(255,216,247,.45),
 
-            #e0cfff,
+            rgba(224,207,255,.40),
 
-            #c9d8ff,
+            rgba(201,216,255,.40),
 
-            #a8eeff,
+            rgba(168,238,255,.45),
 
-            #8ffcff,
+            rgba(143,252,255,.55),
 
-            #ffb6ef
+            rgba(255,182,239,.55)
+        );
 
-        )
+    mask:
 
-        border-box;
+        radial-gradient(
+
+            circle,
+
+            transparent 94%,
+
+            white 95%,
+
+            white 97%,
+
+            transparent 98%
+
+        );
 
     -webkit-mask:
 
-        linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0);
+        radial-gradient(
 
-    -webkit-mask-composite:xor;
+            circle,
 
-    mask-composite:exclude;
+            transparent 94%,
+
+            white 95%,
+
+            white 97%,
+
+            transparent 98%
+
+        );
 
     box-shadow:
 
-        0 0 20px rgba(255,180,255,.45),
+        0 0 10px rgba(255,190,255,.35),
 
-        0 0 25px rgba(143,252,255,.45);
+        0 0 15px rgba(143,252,255,.35),
+
+        0 0 25px rgba(255,255,255,.20);
+
+    opacity:.9;
 
     animation:
         sparkleRotate 22s linear infinite;
