@@ -268,15 +268,43 @@
 .orbit-sparkle2{
 
     position:absolute;
-
     inset:0;
 
     border-radius:50%;
 
     z-index:999;
 
-    background:none;
+    background:white;
 
-    border:2px solid red;
+    mask:
 
+        radial-gradient(
+
+            circle,
+
+            transparent 82%,
+
+            white 84%,
+
+            white 88%,
+
+            transparent 90%
+
+        );
+
+    -webkit-mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 82%,
+
+            white 84%,
+
+            white 88%,
+
+            transparent 90%
+
+        );
 }
