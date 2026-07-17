@@ -167,7 +167,7 @@
 
         0 0 12px rgba(143,252,255,.10);
 
-    opacity:0.25;
+    opacity:0.75;
 
     animation:
         sparkleRotate 22s linear infinite;
@@ -201,11 +201,11 @@
 
     background-size:
 
-        10px 10px,
-        14px 14px,
-        18px 18px;
+        12px 12px,
+        16px 16px,
+        22px 22px;
 
-    opacity:.7;
+    opacity:.25;
 
     filter:
 
@@ -277,36 +277,38 @@
 
     background:
 
-          radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
+        radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
 
-          radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
-  
-          radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px),
+        radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
 
-          radial-gradient(circle,#e7b8ff 0 .8px,transparent 1.8px),
+        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px),
 
-          radial-gradient(circle,#c7f8ff 0 .8px,transparent 1.8px);
-    
+        radial-gradient(circle,#e7b8ff 0 .8px,transparent 1.8px),
+
+        radial-gradient(circle,#c7f8ff 0 .8px,transparent 1.8px);
+
     background-size:
 
         12px 12px,
         16px 16px,
-        22px 22px;
+        22px 22px,
+        28px 28px,
+        34px 34px;
 
-    opacity:.40;
+    opacity:.55;
 
     filter:
 
-      drop-shadow(0 0 5px #fff)
+        drop-shadow(0 0 2px #fff)
 
-      drop-shadow(0 0 10px #ffb6ef)
-  
-      drop-shadow(0 0 10px #8ffcff)
+        drop-shadow(0 0 5px #ffb6ef)
 
-      drop-shadow(0 0 18px #ffb6ef)
-  
-      drop-shadow(0 0 18px #8ffcff);
-  
+        drop-shadow(0 0 5px #8ffcff)
+
+        drop-shadow(0 0 8px #ffb6ef)
+
+        drop-shadow(0 0 8px #8ffcff);
+
     animation:
 
         sparkleRotate
@@ -320,13 +322,13 @@
 
             circle,
 
-            transparent 94%,
+            transparent 89%,
 
-            white 95%,
+            white 90%,
 
-            white 96%,
+            white 91%,
 
-            transparent 97%
+            transparent 92%
 
         );
 
@@ -336,13 +338,13 @@
 
             circle,
 
-            transparent 94%,
+            transparent 89%,
 
-            white 95%,
+            white 90%,
 
-            white 96%,
+            white 91%,
 
-            transparent 97%
+            transparent 92%
 
         );
 }
