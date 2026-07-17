@@ -1,1 +1,53 @@
+.orbit-gradient{
 
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    border:6px solid transparent;
+
+    background:
+
+        conic-gradient(
+
+            from 0deg,
+
+            rgba(255,182,239,.75),
+
+            rgba(255,216,247,.65),
+
+            rgba(224,207,255,.60),
+
+            rgba(201,216,255,.60),
+
+            rgba(168,238,255,.65),
+
+            rgba(143,252,255,.75),
+
+            rgba(255,182,239,.75)
+        );
+
+        border-box;
+
+    -webkit-mask:
+
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    box-shadow:
+
+        0 0 10px rgba(255,190,255,.35),
+
+        0 0 15px rgba(143,252,255,.35),
+
+        0 0 25px rgba(255,255,255,.20);
+
+    animation:
+        sparkleRotate 22s linear infinite;
+}
