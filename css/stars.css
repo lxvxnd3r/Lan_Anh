@@ -1,1 +1,237 @@
+/* =========================================
+                    STARS
+========================================= */
 
+.star{
+
+    position:absolute;
+
+    overflow:visible;
+
+    isolation:isolate;
+
+    z-index:40;
+
+    transform-origin:center;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #ff6fd1,
+
+            #c78fff,
+
+            #6cecff
+        );
+
+    clip-path:
+
+        polygon(
+            50% 0%,
+            60% 40%,
+            100% 50%,
+            60% 60%,
+            50% 100%,
+            40% 60%,
+            0% 50%,
+            40% 40%
+        );
+
+    box-shadow:
+
+        0 0 10px #ff75d6,
+
+        0 0 22px #cf98ff,
+
+        0 0 38px #73f0ff;
+
+    animation:
+        twinkle 4s ease-in-out infinite;
+}
+
+.star::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-55%;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,150,230,.55),
+
+            rgba(180,170,255,.35),
+
+            rgba(120,255,255,.25),
+
+            transparent
+        );
+
+    filter:blur(10px);
+
+    z-index:-1;
+}
+
+
+/* =========================================
+                STAR POSITIONS
+========================================= */
+
+.s1{
+    width:28px;
+    height:28px;
+
+    top:205px;
+    left:285px;
+
+    transform:rotate(18deg);
+}
+
+.s2{
+    width:16px;
+    height:16px;
+
+    top:225px;
+    left:355px;
+
+    transform:rotate(-25deg);
+}
+
+.s3{
+    width:24px;
+    height:24px;
+
+    top:290px;
+    left:235px;
+
+    transform:rotate(42deg);
+}
+
+.s4{
+    width:18px;
+    height:18px;
+
+    top:325px;
+    left:405px;
+
+    transform:rotate(8deg);
+}
+
+.s5{
+    width:15px;
+    height:15px;
+
+    top:365px;
+    left:295px;
+
+    transform:rotate(-35deg);
+}
+
+.s6{
+    width:26px;
+    height:26px;
+
+    top:360px;
+    left:430px;
+
+    transform:rotate(28deg);
+}
+
+.s7{
+    width:14px;
+    height:14px;
+
+    top:255px;
+    left:315px;
+
+    transform:rotate(60deg);
+}
+
+.s8{
+    width:20px;
+    height:20px;
+
+    top:410px;
+    left:360px;
+
+    transform:rotate(-15deg);
+}
+
+.s9{
+    width:30px;
+    height:30px;
+
+    top:185px;
+    left:410px;
+
+    transform:rotate(35deg);
+}
+
+.s10{
+    width:14px;
+    height:14px;
+
+    top:305px;
+    left:335px;
+
+    transform:rotate(0deg);
+}
+
+.s11{
+    width:26px;
+    height:26px;
+
+    top:255px;
+    left:470px;
+
+    transform:rotate(-48deg);
+}
+
+.s12{
+    width:17px;
+    height:17px;
+
+    top:390px;
+    left:250px;
+
+    transform:rotate(20deg);
+}
+
+.s13{
+    width:22px;
+    height:22px;
+
+    top:430px;
+    left:455px;
+
+    transform:rotate(72deg);
+}
+
+
+/* =========================================
+            TWINKLE SPEEDS
+========================================= */
+
+.s1{animation-duration:3.2s;}
+.s2{animation-duration:5.4s;}
+.s3{animation-duration:4.6s;}
+.s4{animation-duration:6s;}
+.s5{animation-duration:3.7s;}
+.s6{animation-duration:5.1s;}
+.s7{animation-duration:4.2s;}
+.s8{animation-duration:6.4s;}
+.s9{animation-duration:4.9s;}
+.s10{animation-duration:3.4s;}
+.s11{animation-duration:5.7s;}
+.s12{animation-duration:4.1s;}
+.s13{animation-duration:6.2s;}
