@@ -27,18 +27,18 @@
             rgba(143,252,255,.75),
 
             rgba(255,182,239,.75)
-        );
 
-        border-box;
+        ) border-box;
 
     -webkit-mask:
 
         linear-gradient(#fff 0 0) padding-box,
+
         linear-gradient(#fff 0 0);
 
     -webkit-mask-composite:xor;
 
-    mask-composite:exclude;
+    /* mask-composite:exclude; */
 
     box-shadow:
 
