@@ -1,1 +1,67 @@
+.orbit-sparkle2{
 
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(circle,#fff 0 .9px,transparent 2px),
+
+        radial-gradient(circle,#ffb6ef 0 .9px,transparent 2px),
+
+        radial-gradient(circle,#8ffcff 0 .9px,transparent 2px);
+
+    background-size:
+
+        12px 12px,
+        16px 16px,
+        22px 22px;
+
+    opacity:.65;
+
+    filter:
+
+        drop-shadow(0 0 4px #fff)
+        drop-shadow(0 0 6px #ffb6ef)
+        drop-shadow(0 0 6px #8ffcff);
+
+    animation:
+        sparkleRotate 22s linear infinite;
+
+    mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 52%,
+
+            white 53%,
+
+            white 54%,
+
+            transparent 55%
+
+        );
+
+    -webkit-mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 52%,
+
+            white 53%,
+
+            white 54%,
+
+            transparent 55%
+
+        );
+}
