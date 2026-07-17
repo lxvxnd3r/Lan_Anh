@@ -562,6 +562,8 @@ body{
 
     border-radius:50%;
 
+    border:6px solid transparent;
+
     background:
 
         conic-gradient(
@@ -582,44 +584,27 @@ body{
 
             #ffb6ef
 
-        );
+        )
 
-        mask:
+        border-box;
 
-            radial-gradient(
+    -webkit-mask:
 
-            circle,
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
 
-            transparent 95%,
+    -webkit-mask-composite:xor;
 
-            white 96%,
+    mask-composite:exclude;
 
-            white 100%
+    box-shadow:
 
-    );
+        0 0 20px rgba(255,180,255,.45),
 
-        -webkit-mask:
+        0 0 25px rgba(143,252,255,.45);
 
-            radial-gradient(
-
-            circle,
-
-            transparent 95%,
-
-            white 96%,
-
-            white 100%
-        
-    );
-
-        box-shadow:
-
-            0 0 20px rgba(255,180,255,.45),
-
-            0 0 25px rgba(143,252,255,.45);
-
-        animation:
-            sparkleRotate 22s linear infinite;
+    animation:
+        sparkleRotate 22s linear infinite;
 }
 
 .orbit-sparkle1{
@@ -629,6 +614,8 @@ body{
     inset:0;
 
     border-radius:50%;
+
+    pointer-events:none;
 
     background:
 
@@ -655,11 +642,7 @@ body{
         drop-shadow(0 0 5px #8ffcff);
 
     animation:
-
-        sparkleRotate
-        18s
-        linear
-        infinite;
+        sparkleRotate 18s linear infinite;
 
     mask:
 
@@ -667,31 +650,31 @@ body{
 
             circle,
 
-            transparent 93%,
+            transparent 47.5%,
 
-            white 94%,
+            white 48.5%,
 
-            white 95%,
+            white 50.5%,
 
-            transparent 96%
+            transparent 51.5%
 
         );
 
-         -webkit-mask:
+    -webkit-mask:
 
-    radial-gradient(
+        radial-gradient(
 
-        circle,
+            circle,
 
-        transparent 93%,
+            transparent 47.5%,
 
-        white 94%,
+            white 48.5%,
 
-        white 95%,
+            white 50.5%,
 
-        transparent 96%
+            transparent 51.5%
 
-    );
+        );
 }
 
 .orbit-sparkle2{
@@ -701,6 +684,8 @@ body{
     inset:0;
 
     border-radius:50%;
+
+    pointer-events:none;
 
     background:
 
@@ -727,43 +712,39 @@ body{
         drop-shadow(0 0 6px #8ffcff);
 
     animation:
+        sparkleRotate 30s linear infinite reverse;
 
-        sparkleRotate
-        30s
-        linear
-        infinite reverse;
+    mask:
 
-        mask:
+        radial-gradient(
 
-    radial-gradient(
+            circle,
 
-        circle,
+            transparent 53%,
 
-        transparent 93%,
+            white 54%,
 
-        white 94%,
+            white 55%,
 
-        white 97%,
+            transparent 56%
 
-        transparent 98%
-
-    );
+        );
 
     -webkit-mask:
 
-    radial-gradient(
+        radial-gradient(
 
-        circle,
+            circle,
 
-        transparent 93%,
+            transparent 53%,
 
-        white 94%,
+            white 54%,
 
-        white 97%,
+            white 55%,
 
-        transparent 98%
+            transparent 56%
 
-    );
+        );
 }
 
 /* BÓNG */
