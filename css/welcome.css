@@ -1,1 +1,49 @@
+#welcome{
 
+    position:fixed;
+
+    inset:0;
+
+    background:black;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    z-index:9999;
+
+    cursor:pointer;
+
+    transition:1s;
+}
+
+#welcome h1{
+
+    font-size:90px;
+
+    margin-bottom:25px;
+
+    text-shadow:
+
+        0 0 30px white,
+
+        0 0 60px #8be8ff;
+}
+
+#welcome p{
+
+    font-size:24px;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 10px white,
+
+        0 0 25px #8be8ff;
+}
