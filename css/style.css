@@ -579,6 +579,8 @@ user-select:none;
 
     border-radius:50%;
 
+    pointer-events:none;
+
     background:
 
         radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
@@ -607,25 +609,37 @@ user-select:none;
     animation:
         sparkleRotate 20s linear infinite;
 
+    opacity:.9;
+
     mask:
-    radial-gradient(
-        circle,
+        radial-gradient(
 
-        transparent 33.5%,
-        white 34.5%,
-        white 35.5%,
-        transparent 36.5%
-    );
+            circle,
 
--webkit-mask:
-    radial-gradient(
-        circle,
+            transparent 31.8%,
 
-        transparent 33.5%,
-        white 34.5%,
-        white 35.5%,
-        transparent 36.5%
-    );
+            white 32.6%,
+
+            white 33.6%,
+
+            transparent 34.5%
+
+        );
+
+    -webkit-mask:
+        radial-gradient(
+
+            circle,
+
+            transparent 31.8%,
+
+            white 32.6%,
+
+            white 33.6%,
+
+            transparent 34.5%
+
+        );
 }
 
 .orbit-ring::after{
@@ -648,7 +662,7 @@ user-select:none;
 
         radial-gradient(circle,#8ffcff 0 1px,transparent 2px),
 
-        radial-gradient(circle,#fff 0 .6px,transparent 1.5px);
+        radial-gradient(circle,#fff 0 .7px,transparent 1.4px);
 
     background-size:
 
@@ -661,9 +675,9 @@ user-select:none;
 
         drop-shadow(0 0 4px #fff)
 
-        drop-shadow(0 0 6px #ffb6ef)
+        drop-shadow(0 0 7px #ffb6ef)
 
-        drop-shadow(0 0 6px #8ffcff);
+        drop-shadow(0 0 7px #8ffcff);
 
     animation:
 
@@ -680,13 +694,13 @@ user-select:none;
 
             circle,
 
-            transparent 49.2%,
+            transparent 49.3%,
 
-            white 49.8%,
+            white 49.9%,
 
-            white 50.6%,
+            white 50.5%,
 
-            transparent 51.2%
+            transparent 51.1%
 
         );
 
@@ -696,13 +710,13 @@ user-select:none;
 
             circle,
 
-            transparent 49.2%,
+            transparent 49.3%,
 
-            white 49.8%,
+            white 49.9%,
 
-            white 50.6%,
+            white 50.5%,
 
-            transparent 51.2%
+            transparent 51.1%
 
         );
 }
