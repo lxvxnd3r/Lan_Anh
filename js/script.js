@@ -126,3 +126,10 @@ document.addEventListener(
 
     }
 );
+
+/* CHẶN CHUỘT PHẢI */
+
+document.addEventListener(
+    "contextmenu",
+    e => e.preventDefault()
+);
