@@ -163,13 +163,13 @@
 
     box-shadow:
 
-    0 0 25px rgba(255,180,255,.75),
+        inset 0 0 10px rgba(255,255,255,.18),
 
-    0 0 35px rgba(143,252,255,.75),
+        0 0 18px rgba(255,255,255,.25),
 
-    0 0 60px rgba(255,210,255,.35),
+        0 0 30px rgba(180,220,255,.15);
 
-    0 0 70px rgba(180,255,255,.30);
+    opacity:.75;
 
     animation:
         sparkleRotate 22s linear infinite;
@@ -209,7 +209,7 @@
         14px 14px,
         18px 18px;
 
-    opacity:.55;
+    opacity:.95;
 
     filter:
 
