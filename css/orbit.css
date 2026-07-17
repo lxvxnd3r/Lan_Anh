@@ -1,3 +1,7 @@
+/* =========================================
+                ORBIT CONTAINER
+========================================= */
+
 .orbit-container{
 
     position:absolute;
@@ -9,9 +13,7 @@
     height:650px;
 
     transform:
-
         translate(-50%,-50%)
-
         scale(0);
 
     opacity:0;
@@ -22,7 +24,7 @@
 
         opacity 1.2s ease,
 
-        transform 1.2s cubic-bezier(.22,1,.36,1);
+        transform 1.4s cubic-bezier(.22,1,.36,1);
 
     z-index:8;
 }
@@ -34,11 +36,15 @@
     pointer-events:auto;
 
     transform:
-
         translate(-50%,-50%)
-
         scale(1);
 }
+
+
+
+/* =========================================
+                ORBIT ROTATE
+========================================= */
 
 .orbit-rotate{
 
@@ -51,19 +57,278 @@
     height:100%;
 
     transform:
-
         translate(-50%,-50%)
-
         rotate(0deg);
 
     cursor:grab;
 
     user-select:none;
-
     -webkit-user-select:none;
+
+    transition:
+        transform .05s linear;
 }
 
 .orbit-rotate.dragging{
 
     cursor:grabbing;
+}
+
+
+
+/* =========================================
+                ORBIT RING
+========================================= */
+
+.orbit-ring{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:400px;
+    height:400px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    overflow:visible;
+
+    z-index:5;
+}
+
+
+
+/* =========================================
+              MAIN GRADIENT RING
+========================================= */
+
+.orbit-gradient{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+
+        conic-gradient(
+
+            from 0deg,
+
+            #ffb6ef,
+
+            #ffd8f7,
+
+            #e0cfff,
+
+            #c9d8ff,
+
+            #a8eeff,
+
+            #8ffcff,
+
+            #ffb6ef
+        );
+
+    mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 95%,
+
+            white 96%,
+
+            white 100%
+        );
+
+    -webkit-mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 95%,
+
+            white 96%,
+
+            white 100%
+        );
+
+    box-shadow:
+
+        0 0 15px rgba(255,180,255,.45),
+
+        0 0 18px rgba(143,252,255,.45),
+
+        0 0 30px rgba(220,210,255,.35);
+
+    animation:
+        sparkleRotate 22s linear infinite;
+}
+
+
+
+/* =========================================
+          INNER SPARKLE
+========================================= */
+
+.orbit-sparkle1{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
+
+        radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
+
+        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px);
+
+    background-size:
+
+        10px 10px,
+        14px 14px,
+        18px 18px;
+
+    opacity:.55;
+
+    filter:
+
+        drop-shadow(0 0 4px #fff)
+
+        drop-shadow(0 0 5px #ffb6ef)
+
+        drop-shadow(0 0 5px #8ffcff);
+
+    animation:
+
+        sparkleRotate
+        18s
+        linear
+        infinite;
+
+    mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 33.5%,
+
+            white 34.5%,
+
+            white 35.5%,
+
+            transparent 36.5%
+
+        );
+
+    -webkit-mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 33.5%,
+
+            white 34.5%,
+
+            white 35.5%,
+
+            transparent 36.5%
+
+        );
+}
+
+
+
+/* =========================================
+          OUTER SPARKLE
+========================================= */
+
+.orbit-sparkle2{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(circle,#fff 0 1px,transparent 2px),
+
+        radial-gradient(circle,#ffb6ef 0 1px,transparent 2px),
+
+        radial-gradient(circle,#8ffcff 0 1px,transparent 2px);
+
+    background-size:
+
+        12px 12px,
+        16px 16px,
+        22px 22px;
+
+    opacity:.40;
+
+    filter:
+
+        drop-shadow(0 0 4px #fff)
+
+        drop-shadow(0 0 6px #ffb6ef)
+
+        drop-shadow(0 0 6px #8ffcff);
+
+    animation:
+
+        sparkleRotate
+        30s
+        linear
+        infinite reverse;
+
+    mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 94%,
+
+            white 95%,
+
+            white 96%,
+
+            transparent 97%
+
+        );
+
+    -webkit-mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 94%,
+
+            white 95%,
+
+            white 96%,
+
+            transparent 97%
+
+        );
 }
