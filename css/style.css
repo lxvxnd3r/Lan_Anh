@@ -487,9 +487,9 @@ body{
 
     transition:
 
-        transform 1.2s cubic-bezier(.22,1,.36,1),
+        transform 1.3s cubic-bezier(.22,1,.36,1),
 
-        opacity 1.2s ease;
+        opacity 1.3s ease;
 
     z-index:8;
 }
@@ -504,19 +504,6 @@ body{
 
     pointer-events:auto;
 }
-
-.orbit-container.active{
-
-    opacity:1;
-    visibility:visible;
-
-    pointer-events:auto;
-
-    transform:
-        translate(-50%,-50%)
-        scale(1);
-}
-
 
 /* ===========================
    PHẦN QUAY
@@ -533,12 +520,16 @@ body{
     height:100%;
 
     transform:
+
         translate(-50%,-50%)
+
         rotate(0deg);
 
     cursor:grab;
 
     user-select:none;
+
+    -webkit-user-select:none;
 }
 
 /* QUỸ ĐẠO */
@@ -550,8 +541,8 @@ body{
     left:50%;
     top:50%;
 
-    width:450px;
-    height:450px;
+    width:400px;
+    height:400px;
 
     transform:
         translate(-50%,-50%);
@@ -575,48 +566,60 @@ body{
 
         conic-gradient(
 
+            from 0deg,
+
             #ffb6ef,
+
             #ffd8f7,
+
             #e0cfff,
+
             #c9d8ff,
+
             #a8eeff,
+
             #8ffcff,
+
             #ffb6ef
 
         );
 
-    mask:
-        radial-gradient(
+        mask:
+
+            radial-gradient(
 
             circle,
 
-            transparent 48.5%,
+            transparent 95%,
 
-            white 49.8%,
+            white 96%,
 
-            white 50.8%,
+            white 100%
 
-            transparent 52%
+    );
 
-        );
+        -webkit-mask:
 
-    -webkit-mask:
-        radial-gradient(
+            radial-gradient(
 
             circle,
 
-            transparent 48.5%,
+            transparent 95%,
 
-            white 49.8%,
+            white 96%,
 
-            white 50.8%,
+            white 100%
+        
+    );
 
-            transparent 52%
+        box-shadow:
 
-        );
+            0 0 20px rgba(255,180,255,.45),
 
-    animation:
-        sparkleRotate 22s linear infinite;
+            0 0 25px rgba(143,252,255,.45);
+
+        animation:
+            sparkleRotate 22s linear infinite;
 }
 
 .orbit-sparkle1{
@@ -626,8 +629,6 @@ body{
     inset:0;
 
     border-radius:50%;
-
-    pointer-events:none;
 
     background:
 
@@ -666,31 +667,31 @@ body{
 
             circle,
 
-            transparent 48.4%,
+            transparent 93%,
 
-            white 49.1%,
+            white 94%,
 
-            white 50%,
+            white 95%,
 
-            transparent 50.9%
-
-        );
-
-    -webkit-mask:
-
-        radial-gradient(
-
-            circle,
-
-            transparent 48.4%,
-
-            white 49.1%,
-
-            white 50%,
-
-            transparent 50.9%
+            transparent 96%
 
         );
+
+         -webkit-mask:
+
+    radial-gradient(
+
+        circle,
+
+        transparent 93%,
+
+        white 94%,
+
+        white 95%,
+
+        transparent 96%
+
+    );
 }
 
 .orbit-sparkle2{
@@ -700,8 +701,6 @@ body{
     inset:0;
 
     border-radius:50%;
-
-    pointer-events:none;
 
     background:
 
@@ -734,37 +733,37 @@ body{
         linear
         infinite reverse;
 
-    mask:
+        mask:
 
-        radial-gradient(
+    radial-gradient(
 
-            circle,
+        circle,
 
-            transparent 54.5%,
+        transparent 93%,
 
-            white 55.2%,
+        white 94%,
 
-            white 56%,
+        white 97%,
 
-            transparent 56.8%
+        transparent 98%
 
-        );
+    );
 
     -webkit-mask:
 
-        radial-gradient(
+    radial-gradient(
 
-            circle,
+        circle,
 
-            transparent 54.5%,
+        transparent 93%,
 
-            white 55.2%,
+        white 94%,
 
-            white 56%,
+        white 97%,
 
-            transparent 56.8%
+        transparent 98%
 
-        );
+    );
 }
 
 /* BÓNG */
