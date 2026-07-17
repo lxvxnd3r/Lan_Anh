@@ -45,7 +45,8 @@
         sparkleRotate
         18s
         linear
-        infinite;
+        infinite
+        reverse;
 
     mask:
 
