@@ -527,16 +527,14 @@ body{
         transform .05s linear;
 
     cursor:grab;
+
+    user-select:none;
+    -webkit-user-select:none;
 }
 
 .orbit-rotate.dragging{
 
     cursor:grabbing;
-}
-
-user-select:none;
-
-    -webkit-user-select:none;
 }
 
 /* QUỸ ĐẠO */
@@ -559,7 +557,7 @@ user-select:none;
     overflow:visible;
 
     border:
-        2px solid
+        19px solid
         rgba(255,190,255,.35);
 
     box-shadow:
