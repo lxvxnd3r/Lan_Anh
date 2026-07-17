@@ -2,12 +2,12 @@
 
     position:absolute;
 
-    left:50%;
-    top:50%;
+    left:51%;
+    top:53%;
 
     transform:
         translate(-50%,-50%)
-        rotate(10deg);
+        rotate(32deg);
 
     font-size:170px;
 
