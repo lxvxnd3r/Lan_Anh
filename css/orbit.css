@@ -163,11 +163,13 @@
 
     box-shadow:
 
-        0 0 15px rgba(255,180,255,.45),
+    0 0 25px rgba(255,180,255,.75),
 
-        0 0 18px rgba(143,252,255,.45),
+    0 0 35px rgba(143,252,255,.75),
 
-        0 0 30px rgba(220,210,255,.35);
+    0 0 60px rgba(255,210,255,.35),
+
+    0 0 70px rgba(180,255,255,.30);
 
     animation:
         sparkleRotate 22s linear infinite;
@@ -195,7 +197,11 @@
 
         radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
 
-        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px);
+        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px),
+
+        radial-gradient(circle,#e7b8ff 0 .8px,transparent 1.8px),
+
+        radial-gradient(circle,#c7f8ff 0 .8px,transparent 1.8px);
 
     background-size:
 
@@ -207,12 +213,16 @@
 
     filter:
 
-        drop-shadow(0 0 4px #fff)
+    drop-shadow(0 0 5px #fff)
 
-        drop-shadow(0 0 5px #ffb6ef)
+    drop-shadow(0 0 10px #ffb6ef)
 
-        drop-shadow(0 0 5px #8ffcff);
+    drop-shadow(0 0 10px #8ffcff)
 
+    drop-shadow(0 0 18px #ffb6ef)
+
+    drop-shadow(0 0 18px #8ffcff);
+        
     animation:
 
         sparkleRotate
@@ -271,12 +281,16 @@
 
     background:
 
-        radial-gradient(circle,#fff 0 1px,transparent 2px),
+          radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
 
-        radial-gradient(circle,#ffb6ef 0 1px,transparent 2px),
+          radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
+  
+          radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px),
 
-        radial-gradient(circle,#8ffcff 0 1px,transparent 2px);
+          radial-gradient(circle,#e7b8ff 0 .8px,transparent 1.8px),
 
+          radial-gradient(circle,#c7f8ff 0 .8px,transparent 1.8px);
+    
     background-size:
 
         12px 12px,
@@ -287,12 +301,16 @@
 
     filter:
 
-        drop-shadow(0 0 4px #fff)
+      drop-shadow(0 0 5px #fff)
 
-        drop-shadow(0 0 6px #ffb6ef)
+      drop-shadow(0 0 10px #ffb6ef)
+  
+      drop-shadow(0 0 10px #8ffcff)
 
-        drop-shadow(0 0 6px #8ffcff);
-
+      drop-shadow(0 0 18px #ffb6ef)
+  
+      drop-shadow(0 0 18px #8ffcff);
+  
     animation:
 
         sparkleRotate
