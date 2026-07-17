@@ -481,15 +481,28 @@ body{
         translate(-50%,-50%)
         scale(0);
 
-        opacity:0;
+    opacity:0;
 
     pointer-events:none;
 
     transition:
-        opacity 1.2s ease,
-        transform 1.2s cubic-bezier(.22,1,.36,1);
+
+        transform 1.2s cubic-bezier(.22,1,.36,1),
+
+        opacity 1.2s ease;
 
     z-index:8;
+}
+
+.orbit-container.active{
+
+    transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    opacity:1;
+
+    pointer-events:auto;
 }
 
 .orbit-container.active{
@@ -523,18 +536,9 @@ body{
         translate(-50%,-50%)
         rotate(0deg);
 
-    transition:
-        transform .05s linear;
-
     cursor:grab;
 
     user-select:none;
-    -webkit-user-select:none;
-}
-
-.orbit-rotate.dragging{
-
-    cursor:grabbing;
 }
 
 /* QUỸ ĐẠO */
@@ -554,47 +558,71 @@ body{
 
     border-radius:50%;
 
-    overflow:visible;
-
-    border:6px solid transparent;
-
-    border-image:
+    background:
 
         conic-gradient(
 
             from 0deg,
 
-            #ffb6ef 0deg,
+            #ffb6ef,
 
-            #ffd8f7 60deg,
+            #ffd8f7,
 
-            #e0cfff 120deg,
+            #e0cfff,
 
-            #c9d8ff 180deg,
+            #c9d8ff,
 
-            #a8eeff 260deg,
+            #a8eeff,
 
-            #8ffcff 360deg
+            #8ffcff,
 
-        ) 1;
+            #ffb6ef
+
+        );
+
+    mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 47%,
+
+            white 48.5%,
+
+            white 51.5%,
+
+            transparent 53%
+
+        );
+
+    -webkit-mask:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 47%,
+
+            white 48.5%,
+
+            white 51.5%,
+
+            transparent 53%
+
+        );
 
     box-shadow:
 
-        0 0 15px rgba(255,190,255,.45),
+        0 0 20px rgba(255,180,255,.45),
 
-        0 0 18px rgba(143,252,255,.45),
-
-        inset 0 0 20px rgba(255,255,255,.12);
+        0 0 25px rgba(140,255,255,.45);
 
     animation:
-        sparkleRotate 25s linear infinite;
-
-    z-index:5;
+        sparkleRotate 20s linear infinite;
 }
 
-.orbit-ring::before{
-
-    content:"";
+.orbit-sparkle1{
 
     position:absolute;
 
@@ -602,26 +630,21 @@ body{
 
     border-radius:50%;
 
-    pointer-events:none;
-
     background:
 
         radial-gradient(circle,#fff 0 .8px,transparent 1.8px),
 
         radial-gradient(circle,#ffb6ef 0 .8px,transparent 1.8px),
 
-        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px),
-
-        radial-gradient(circle,#fff 0 .5px,transparent 1.2px);
+        radial-gradient(circle,#8ffcff 0 .8px,transparent 1.8px);
 
     background-size:
 
         10px 10px,
         14px 14px,
-        18px 18px,
-        24px 24px;
+        18px 18px;
 
-    opacity:.55;
+    opacity:.5;
 
     filter:
 
@@ -632,50 +655,52 @@ body{
         drop-shadow(0 0 5px #8ffcff);
 
     animation:
-        sparkleRotate 20s linear infinite;
+
+        sparkleRotate
+        18s
+        linear
+        infinite;
 
     mask:
+
         radial-gradient(
 
             circle,
 
-            transparent 33.5%,
+            transparent 48%,
 
-            white 34.5%,
+            white 49%,
 
-            white 35.5%,
+            white 50%,
 
-            transparent 36.5%
+            transparent 51%
 
         );
 
     -webkit-mask:
+
         radial-gradient(
 
             circle,
 
-            transparent 33.5%,
+            transparent 48%,
 
-            white 34.5%,
+            white 49%,
 
-            white 35.5%,
+            white 50%,
 
-            transparent 36.5%
+            transparent 51%
 
         );
 }
 
-.orbit-ring::after{
-
-    content:"";
+.orbit-sparkle2{
 
     position:absolute;
 
     inset:0;
 
     border-radius:50%;
-
-    pointer-events:none;
 
     background:
 
@@ -691,7 +716,7 @@ body{
         16px 16px,
         22px 22px;
 
-    opacity:.45;
+    opacity:.35;
 
     filter:
 
@@ -704,7 +729,7 @@ body{
     animation:
 
         sparkleRotate
-        28s
+        30s
         linear
         infinite reverse;
 
@@ -714,13 +739,13 @@ body{
 
             circle,
 
-            transparent 49.2%,
+            transparent 54%,
 
-            white 49.8%,
+            white 55%,
 
-            white 50.6%,
+            white 56%,
 
-            transparent 51.2%
+            transparent 57%
 
         );
 
@@ -730,13 +755,13 @@ body{
 
             circle,
 
-            transparent 49.2%,
+            transparent 54%,
 
-            white 49.8%,
+            white 55%,
 
-            white 50.6%,
+            white 56%,
 
-            transparent 51.2%
+            transparent 57%
 
         );
 }
