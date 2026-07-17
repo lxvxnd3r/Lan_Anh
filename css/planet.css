@@ -22,29 +22,32 @@
         radial-gradient(
             circle at 35% 28%,
 
-            rgba(255,255,255,.95) 0%,
-            rgba(255,255,255,.65) 12%,
+            rgba(255,255,255,.92) 0%,
+            rgba(255,255,255,.55) 10%,
 
-            rgba(255,255,255,.08) 35%,
+            rgba(255,255,255,.10) 28%,
 
-            rgba(150,255,255,.04) 60%,
+            rgba(180,255,255,.05) 55%,
 
-            rgba(255,180,255,.04) 100%
+            rgba(255,190,255,.04) 100%
         );
 
     border:
-        2px solid rgba(255,255,255,.55);
+        2px solid rgba(255,255,255,.50);
 
     backdrop-filter:
-        blur(2px);
+        blur(3px);
+
+    -webkit-backdrop-filter:
+        blur(3px);
 
     box-shadow:
 
-        0 0 15px rgba(255,190,255,.45),
+        0 0 15px rgba(255,190,255,.35),
 
-        0 0 22px rgba(120,255,255,.45),
+        0 0 22px rgba(120,255,255,.35),
 
-        inset 0 0 25px rgba(255,255,255,.12);
+        inset 0 0 20px rgba(255,255,255,.08);
 
     overflow:hidden;
 
@@ -65,7 +68,6 @@
     -webkit-user-drag:none;
 }
 
-
 /* =========================================
               GLASS REFLECTION
 ========================================= */
@@ -82,20 +84,22 @@
 
     background:
 
-        linear-gradient(
+        radial-gradient(
 
-            135deg,
+            circle at 65% 35%,
 
-            rgba(120,255,255,.18),
+            rgba(255,255,255,.85),
 
-            transparent 40%,
+            rgba(255,255,255,.25) 25%,
 
-            transparent 60%,
+            transparent 55%
 
-            rgba(255,180,255,.20)
         );
-}
 
+    mix-blend-mode:screen;
+
+    pointer-events:none;
+}
 
 /* =========================================
                 HIGHLIGHT
@@ -121,16 +125,24 @@
 
             circle,
 
-            rgba(255,255,255,.95),
+            rgba(255,255,255,.98) 0%,
+
+            rgba(255,255,255,.55) 30%,
 
             rgba(255,255,255,.15) 70%,
 
-            transparent
+            transparent 100%
+
         );
 
     filter:blur(7px);
-}
 
+    pointer-events:none;
+
+    z-index:2;
+
+    mix-blend-mode:screen;
+}
 
 /* =========================================
               PLANET POSITIONS
