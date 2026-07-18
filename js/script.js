@@ -12,7 +12,7 @@ const moon =
     document.getElementById("moon");
 
 const orbit =
-    document.querySelector(".orbit-container");
+    document.querySelector(".orbit-system");
 
 const orbitRotate =
     document.querySelector(".orbit-rotate");
