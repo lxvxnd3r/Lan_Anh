@@ -161,10 +161,10 @@
         rotate(-270deg);
 }
 
-.orbit-container:not(.active) .p1,
-.orbit-container:not(.active) .p2,
-.orbit-container:not(.active) .p3,
-.orbit-container:not(.active) .p4{
+.orbit-system:not(.active) .p1,
+.orbit-system:not(.active) .p2,
+.orbit-system:not(.active) .p3,
+.orbit-system:not(.active) .p4{
 
     transform:
         translate(0,0);
@@ -172,7 +172,7 @@
     opacity:0;
 }
 
-.orbit-container.active .p1{
+.orbit-system.active .p1{
 
     transform:
         translateY(-200px);
@@ -180,31 +180,40 @@
     opacity:1;
 }
 
-.orbit-container.active .p2{
+.orbit-system.active .p2{
 
     transform:
+
         rotate(90deg)
+
         translateY(-200px)
+
         rotate(-90deg);
 
     opacity:1;
 }
 
-.orbit-container.active .p3{
+.orbit-system.active .p3{
 
     transform:
+
         rotate(180deg)
+
         translateY(-200px)
+
         rotate(-180deg);
 
     opacity:1;
 }
 
-.orbit-container.active .p4{
+.orbit-system.active .p4{
 
     transform:
+
         rotate(270deg)
+
         translateY(-200px)
+
         rotate(-270deg);
 
     opacity:1;
