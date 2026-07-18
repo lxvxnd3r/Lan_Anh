@@ -2,24 +2,21 @@
 
     position:absolute;
 
-    left:0;
-    top:0;
+    left:50%;
+    top:50%;
 
     width:0;
     height:0;
 
     transform:
+        translate(-50%,-50%)
         rotate(0deg);
 
     transform-origin:center center;
 
     overflow:visible;
 
+    pointer-events:auto;
+
     cursor:grab;
-
-    user-select:none;
-    -webkit-user-select:none;
-
-    transition:
-        transform .05s linear;
 }
