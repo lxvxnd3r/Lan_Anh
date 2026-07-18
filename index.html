@@ -21,20 +21,20 @@
 
     <!-- ORBIT -->
 
+    <link rel="stylesheet" href="css/orbit/orbit-system.css">
     <link rel="stylesheet" href="css/orbit/orbit-container.css">
     <link rel="stylesheet" href="css/orbit/orbit-ring.css">
     <link rel="stylesheet" href="css/orbit/orbit-gradient.css">
     <link rel="stylesheet" href="css/orbit/orbit-sparkle1.css">
     <link rel="stylesheet" href="css/orbit/orbit-sparkle2.css">
     <link rel="stylesheet" href="css/orbit/orbit-rotate.css">
-    <link rel="stylesheet" href="css/orbit/orbit-system.css">
     <link rel="stylesheet" href="css/orbit/planet-layer.css">
 
 </head>
 
 <body>
 
-    <!-- VIDEO NỀN -->
+    <!-- VIDEO -->
 
     <video id="bg-video"
            autoplay
@@ -53,12 +53,11 @@
     <div class="overlay"></div>
 
 
-    <!-- KHUNG CHÍNH -->
+    <!-- MAIN -->
 
     <div class="container">
 
-
-        <!-- LAYER DÀNH RIÊNG CHO HIỆU ỨNG THỦY TINH -->
+        <!-- GLASS EFFECT -->
 
         <div class="glass-layer"></div>
 
@@ -67,13 +66,12 @@
 
         <div class="moon-system">
 
-
-            <!-- MẶT TRĂNG -->
+            <!-- MOON -->
 
             <div id="moon">🌙</div>
 
 
-            <!-- SAO -->
+            <!-- STARS -->
 
             <div class="star s1"></div>
             <div class="star s2"></div>
@@ -90,17 +88,42 @@
             <div class="star s13"></div>
 
 
-            <!-- ORBIT -->
+            <!-- ORBIT SYSTEM -->
 
-            <div class="orbit-container">
+            <div class="orbit-system">
 
-                <div class="orbit-ring">
+                <!-- ORBIT FX -->
 
-                    <div class="orbit-gradient"></div>
+                <div class="orbit-container">
 
-                    <div class="orbit-sparkle1"></div>
+                    <div class="orbit-ring">
 
-                    <div class="orbit-sparkle2"></div>
+                        <div class="orbit-gradient"></div>
+
+                        <div class="orbit-sparkle1"></div>
+
+                        <div class="orbit-sparkle2"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PLANETS -->
+
+                <div class="planet-layer">
+
+                    <div class="orbit-rotate">
+
+                        <div class="planet p1"></div>
+
+                        <div class="planet p2"></div>
+
+                        <div class="planet p3"></div>
+
+                        <div class="planet p4"></div>
+
+                    </div>
 
                 </div>
 
@@ -108,34 +131,12 @@
 
         </div>
 
-
-        <!-- PLANET LAYER -->
-
-        <div class="planet-layer">
-
-            <div class="orbit-rotate">
-
-                <div class="planet p1"></div>
-
-                <div class="planet p2"></div>
-
-                <div class="planet p3"></div>
-
-                <div class="planet p4"></div>
-
-            </div>
-
-        </div> 
-        
     </div>
 
-        <!-- TEXT -->
 
-        <p class="search-text">
+    <!-- TEXT -->
 
-        </p>
-
-    </div>
+    <p class="search-text"></p>
 
 
     <!-- WELCOME -->
@@ -161,7 +162,7 @@
     </audio>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- JS -->
 
     <script src="js/script.js"></script>
 
