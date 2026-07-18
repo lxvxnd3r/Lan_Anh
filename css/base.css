@@ -108,20 +108,24 @@ body{
 
     position:fixed;
 
-    left:50%;
     top:50%;
+    left:50%;
 
     transform:
         translate(-50%,-50%);
 
-    width:1200px;
-    height:900px;
+    width:900px;
+    height:700px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
 
     overflow:visible;
 
-    z-index:5;
+    z-index:2;
 }
-
 
 /* =========================================
                 GLASS LAYER
@@ -147,22 +151,16 @@ body{
 
 .moon-system{
 
-    position:absolute;
+    position:relative;
 
-    left:50%;
-    top:50%;
+    width:800px;
+    height:600px;
 
-    transform:
-        translate(-50%,-50%);
+    display:flex;
 
-    width:900px;
-    height:700px;
-
-    overflow:visible;
-
-    z-index:20;
+    justify-content:center;
+    align-items:center;
 }
-
 
 /* =========================================
                 PLANET LAYER
@@ -190,12 +188,19 @@ body{
 
     position:absolute;
 
-    left:50%;
+    top:480px;
 
-    transform:
-        translateX(-50%);
+    font-size:34px;
 
-    bottom:70px;
+    color:white;
 
-    z-index:100;
+    text-shadow:
+
+        0 0 15px #ffd4ff,
+
+        0 0 35px #8be8ff,
+
+        0 0 70px #8be8ff;
+
+    z-index:30;
 }
