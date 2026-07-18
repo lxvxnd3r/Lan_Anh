@@ -11,9 +11,6 @@ const music =
 const moon =
     document.getElementById("moon");
 
-const container =
-    document.querySelector(".container");
-
 const orbit =
     document.querySelector(".orbit-container");
 
@@ -57,7 +54,7 @@ welcome.addEventListener(
 
 
 /* =========================================
-            MOON CLICK
+                MOON CLICK
 ========================================= */
 
 moon.addEventListener(
@@ -66,14 +63,14 @@ moon.addEventListener(
 
         e.stopPropagation();
 
-        container.classList.toggle("active");
+        orbit.classList.toggle("active");
 
     }
 );
 
 
 /* =========================================
-        CLICK OUTSIDE TO CLOSE
+            CLICK OUTSIDE
 ========================================= */
 
 document.addEventListener(
@@ -90,7 +87,7 @@ document.addEventListener(
 
         ) {
 
-            container.classList.remove("active");
+            orbit.classList.remove("active");
 
         }
 
