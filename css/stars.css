@@ -14,18 +14,21 @@
 
     transform-origin:center;
 
-    pointer-events:none;
-
     background:
 
         linear-gradient(
+
             135deg,
+
             #ff6fd1,
+
             #c78fff,
+
             #6cecff
         );
 
     clip-path:
+
         polygon(
             50% 0%,
             60% 40%,
@@ -78,11 +81,6 @@
 
     z-index:-1;
 }
-
-
-/* =========================================
-                STAR POSITIONS
-========================================= */
 
 .s1{
     width:28px;
@@ -213,11 +211,6 @@
 
     transform:rotate(72deg);
 }
-
-
-/* =========================================
-            TWINKLE SPEEDS
-========================================= */
 
 .s1{animation-duration:3.2s;}
 .s2{animation-duration:5.4s;}
