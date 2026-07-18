@@ -1,33 +1,42 @@
+/* =========================================
+                ELEMENTS
+========================================= */
+
 const welcome =
-document.getElementById("welcome");
+    document.getElementById("welcome");
 
 const music =
-document.getElementById("music");
+    document.getElementById("music");
 
 const moon =
-document.getElementById("moon");
+    document.getElementById("moon");
+
+const container =
+    document.querySelector(".container");
 
 const orbit =
-document.querySelector(".orbit-container");
+    document.querySelector(".orbit-container");
 
 const orbitRotate =
-document.querySelector(".orbit-rotate");
+    document.querySelector(".orbit-rotate");
 
 
-/* CLICK MÀN HÌNH CHÀO */
+/* =========================================
+            WELCOME SCREEN
+========================================= */
 
 welcome.addEventListener(
     "click",
-    async ()=>{
+    async () => {
 
-        try{
+        try {
 
             music.volume = 0.5;
 
             await music.play();
 
         }
-        catch(e){
+        catch (e) {
 
             console.log(e);
 
@@ -37,37 +46,41 @@ welcome.addEventListener(
 
         welcome.style.pointerEvents = "none";
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
             welcome.style.display = "none";
 
-        },800);
+        }, 800);
 
     }
 );
 
 
-/* CLICK MẶT TRĂNG */
+/* =========================================
+            MOON CLICK
+========================================= */
 
 moon.addEventListener(
     "click",
-    (e)=>{
+    (e) => {
 
         e.stopPropagation();
 
-        orbit.classList.toggle("active");
+        container.classList.toggle("active");
 
     }
 );
 
 
-/* CLICK NGOÀI THÌ ĐÓNG */
+/* =========================================
+        CLICK OUTSIDE TO CLOSE
+========================================= */
 
 document.addEventListener(
     "click",
-    (e)=>{
+    (e) => {
 
-        if(
+        if (
 
             !orbit.contains(e.target)
 
@@ -75,9 +88,9 @@ document.addEventListener(
 
             e.target !== moon
 
-        ){
+        ) {
 
-            orbit.classList.remove("active");
+            container.classList.remove("active");
 
         }
 
@@ -85,35 +98,40 @@ document.addEventListener(
 );
 
 
-/* KÉO XOAY */
+/* =========================================
+                DRAG ROTATE
+========================================= */
 
 let dragging = false;
 
 let rotation = 0;
 
+
 orbitRotate.addEventListener(
     "mousedown",
-    ()=>{
+    () => {
 
         dragging = true;
 
     }
 );
 
+
 document.addEventListener(
     "mouseup",
-    ()=>{
+    () => {
 
         dragging = false;
 
     }
 );
 
+
 document.addEventListener(
     "mousemove",
-    (e)=>{
+    (e) => {
 
-        if(!dragging)
+        if (!dragging)
             return;
 
         rotation +=
@@ -121,13 +139,18 @@ document.addEventListener(
 
         orbitRotate.style.transform =
 
-        `translate(-50%,-50%)
-         rotate(${rotation}deg)`;
+            `
+            translate(-50%,-50%)
+            rotate(${rotation}deg)
+            `;
 
     }
 );
 
-/* CHẶN CHUỘT PHẢI */
+
+/* =========================================
+            DISABLE RIGHT CLICK
+========================================= */
 
 document.addEventListener(
     "contextmenu",
