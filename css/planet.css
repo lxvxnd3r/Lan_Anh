@@ -17,59 +17,55 @@
 
     border-radius:50%;
 
-    overflow:visible;
-
-    z-index:100;
-
-    pointer-events:none;
-
-    user-select:none;
-
-    -webkit-user-select:none;
-    -webkit-user-drag:none;
-
-    opacity:0;
-
     background:
 
         radial-gradient(
             circle at 35% 28%,
 
-            rgba(255,255,255,.45) 0%,
+            rgba(255,255,255,.95) 0%,
+            rgba(255,255,255,.65) 12%,
 
-            rgba(255,255,255,.20) 12%,
+            rgba(255,255,255,.08) 35%,
 
-            rgba(255,255,255,.06) 35%,
+            rgba(150,255,255,.04) 60%,
 
-            rgba(180,255,255,.03) 60%,
-
-            rgba(255,190,255,.02) 100%
+            rgba(255,180,255,.04) 100%
         );
 
     border:
-        2px solid rgba(255,255,255,.40);
+        2px solid rgba(255,255,255,.55);
 
     backdrop-filter:
-        blur(7px);
-
-    -webkit-backdrop-filter:
-        blur(7px);
+        blur(2px);
 
     box-shadow:
 
-        0 0 12px rgba(255,190,255,.25),
+        0 0 15px rgba(255,190,255,.45),
 
-        0 0 18px rgba(120,255,255,.25),
+        0 0 22px rgba(120,255,255,.45),
 
-        inset 0 0 20px rgba(255,255,255,.08);
+        inset 0 0 25px rgba(255,255,255,.12);
+
+   overflow:hidden;
+
+    z-index:10;
+
+    opacity:0;
 
     transition:
 
-        transform 1.4s cubic-bezier(.22,1,.36,1),
+    transform 1.4s cubic-bezier(.22,1,.36,1),
 
-        opacity 1.4s ease;
+    opacity 1.4s ease;
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    -webkit-user-drag:none;
+
+    pointer-events:none;
 }
-
 
 /* =========================================
               GLASS REFLECTION
@@ -87,23 +83,19 @@
 
     background:
 
-        radial-gradient(
+        linear-gradient(
 
-            circle at 68% 34%,
+            135deg,
 
-            rgba(255,255,255,.95),
+            rgba(120,255,255,.18),
 
-            rgba(255,255,255,.28) 20%,
+            transparent 40%,
 
-            transparent 55%
+            transparent 60%,
 
+            rgba(255,180,255,.20)
         );
-
-    mix-blend-mode:screen;
-
-    pointer-events:none;
 }
-
 
 /* =========================================
                 HIGHLIGHT
@@ -115,11 +107,11 @@
 
     position:absolute;
 
-    width:40%;
-    height:40%;
+    width:32%;
+    height:32%;
 
-    left:18%;
-    top:14%;
+    left:20%;
+    top:16%;
 
     border-radius:50%;
 
@@ -129,81 +121,58 @@
 
             circle,
 
-            rgba(255,255,255,.98) 0%,
+            rgba(255,255,255,.95),
 
-            rgba(255,255,255,.60) 35%,
+            rgba(255,255,255,.15) 70%,
 
-            rgba(255,255,255,.15) 75%,
-
-            transparent 100%
+            transparent
         );
 
-    filter:blur(8px);
-
-    pointer-events:none;
-
-    mix-blend-mode:screen;
+    filter:blur(3px);
 }
-
 
 /* =========================================
             PLANET POSITIONS
 ========================================= */
 
 .p1{
-
     transform:
         translateY(-200px);
 }
 
 .p2{
-
     transform:
-
         rotate(90deg)
-
         translateY(-200px)
-
         rotate(-90deg);
 }
 
 .p3{
-
     transform:
-
         rotate(180deg)
-
         translateY(-200px)
-
         rotate(-180deg);
 }
 
 .p4{
-
     transform:
-
         rotate(270deg)
-
         translateY(-200px)
-
         rotate(-270deg);
 }
 
-/* =========================================
-            CLOSED STATE
-========================================= */
+.orbit-container:not(.active) .p1,
+.orbit-container:not(.active) .p2,
+.orbit-container:not(.active) .p3,
+.orbit-container:not(.active) .p4{
 
-.container:not(.active) .planet{
+    transform:
+        translate(0,0);
 
     opacity:0;
 }
 
-
-/* =========================================
-            OPEN STATE
-========================================= */
-
-.container.active .p1{
+.orbit-container.active .p1{
 
     transform:
         translateY(-200px);
@@ -211,40 +180,31 @@
     opacity:1;
 }
 
-.container.active .p2{
+.orbit-container.active .p2{
 
     transform:
-
         rotate(90deg)
-
         translateY(-200px)
-
         rotate(-90deg);
 
     opacity:1;
 }
 
-.container.active .p3{
+.orbit-container.active .p3{
 
     transform:
-
         rotate(180deg)
-
         translateY(-200px)
-
         rotate(-180deg);
 
     opacity:1;
 }
 
-.container.active .p4{
+.orbit-container.active .p4{
 
     transform:
-
         rotate(270deg)
-
         translateY(-200px)
-
         rotate(-270deg);
 
     opacity:1;
