@@ -1,1 +1,12 @@
+.planet-layer{
 
+    position:absolute;
+
+    inset:0;
+
+    overflow:visible;
+
+    z-index:30;
+
+    pointer-events:none;
+}
