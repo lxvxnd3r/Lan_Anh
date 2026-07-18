@@ -161,26 +161,36 @@
         rotate(-270deg);
 }
 
-.orbit-system:not(.active) .p1,
-.orbit-system:not(.active) .p2,
-.orbit-system:not(.active) .p3,
-.orbit-system:not(.active) .p4{
+/* =========================================
+                CLOSED
+========================================= */
+
+.orbit-system:not(.active) .planet{
+
+    opacity:0;
 
     transform:
         translate(0,0);
 
-    opacity:0;
 }
+
+
+/* =========================================
+                OPEN
+========================================= */
 
 .orbit-system.active .p1{
 
+    opacity:1;
+
     transform:
         translateY(-200px);
-
-    opacity:1;
 }
 
+
 .orbit-system.active .p2{
+
+    opacity:1;
 
     transform:
 
@@ -189,11 +199,12 @@
         translateY(-200px)
 
         rotate(-90deg);
-
-    opacity:1;
 }
 
+
 .orbit-system.active .p3{
+
+    opacity:1;
 
     transform:
 
@@ -202,11 +213,12 @@
         translateY(-200px)
 
         rotate(-180deg);
-
-    opacity:1;
 }
 
+
 .orbit-system.active .p4{
+
+    opacity:1;
 
     transform:
 
@@ -215,6 +227,4 @@
         translateY(-200px)
 
         rotate(-270deg);
-
-    opacity:1;
 }
