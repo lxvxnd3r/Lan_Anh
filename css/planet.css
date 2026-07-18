@@ -196,10 +196,6 @@
 .container:not(.active) .planet{
 
     opacity:0;
-
-    transform:
-
-        scale(.15);
 }
 
 
@@ -209,15 +205,13 @@
 
 .container.active .p1{
 
-    opacity:1;
-
     transform:
         translateY(-200px);
+
+    opacity:1;
 }
 
 .container.active .p2{
-
-    opacity:1;
 
     transform:
 
@@ -226,11 +220,11 @@
         translateY(-200px)
 
         rotate(-90deg);
+
+    opacity:1;
 }
 
 .container.active .p3{
-
-    opacity:1;
 
     transform:
 
@@ -239,11 +233,11 @@
         translateY(-200px)
 
         rotate(-180deg);
+
+    opacity:1;
 }
 
 .container.active .p4{
-
-    opacity:1;
 
     transform:
 
@@ -252,4 +246,6 @@
         translateY(-200px)
 
         rotate(-270deg);
+
+    opacity:1;
 }
