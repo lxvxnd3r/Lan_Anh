@@ -1,3 +1,7 @@
+/* =========================================
+                ORBIT ROTATE
+========================================= */
+
 .orbit-rotate{
 
     position:absolute;
@@ -5,8 +9,8 @@
     left:50%;
     top:50%;
 
-    width:0;
-    height:0;
+    width:500px;
+    height:500px;
 
     transform:
         translate(-50%,-50%)
@@ -14,9 +18,23 @@
 
     transform-origin:center center;
 
+    border-radius:50%;
+
     overflow:visible;
 
     pointer-events:auto;
 
     cursor:grab;
+
+    user-select:none;
+    -webkit-user-select:none;
+
+    transition:
+        transform .05s linear;
+}
+
+
+.orbit-rotate:active{
+
+    cursor:grabbing;
 }
