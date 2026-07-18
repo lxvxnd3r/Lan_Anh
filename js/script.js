@@ -135,11 +135,7 @@ document.addEventListener(
             e.movementX * 0.45;
 
         orbitRotate.style.transform =
-
-            `
-            translate(-50%,-50%)
-            rotate(${rotation}deg)
-            `;
+          `rotate(${rotation}deg)`;
 
     }
 );
