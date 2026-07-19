@@ -22,15 +22,15 @@
         radial-gradient(
             circle at 35% 28%,
 
-            rgba(255,255,255,.96) 0%,
-            rgba(255,255,255,.58) 12%,
-            rgba(255,255,255,.10) 36%,
-            rgba(150,255,255,.08) 62%,
-            rgba(255,180,255,.10) 100%
+            rgba(255,255,255,.90) 0%,
+            rgba(235,252,255,.68) 13%,
+            rgba(148,220,255,.58) 42%,
+            rgba(136,205,242,.52) 68%,
+            rgba(230,244,255,.56) 100%
         );
 
     border:
-        2px solid rgba(255,255,255,.55);
+        1.5px solid rgba(255,255,255,.62);
 
     backdrop-filter:
         blur(7px)
@@ -48,9 +48,7 @@
 
         0 0 22px rgba(120,255,255,.45),
 
-        inset 0 0 25px rgba(255,255,255,.12),
-
-        inset 0 -12px 24px rgba(15,25,60,.12);
+        inset 0 0 20px rgba(255,255,255,.24);
 
    overflow:hidden;
 
@@ -99,7 +97,9 @@
 
         brightness(.78)
         saturate(.95)
-        blur(.8px);
+        blur(.35px);
+
+    opacity:.58;
 
     pointer-events:none;
 
@@ -134,31 +134,31 @@
 
             circle at 45% 48%,
 
-            rgba(255,255,255,.10) 0%,
-            rgba(150,235,255,.08) 45%,
-            rgba(255,180,255,.08) 100%
+            rgba(255,255,255,.24) 0%,
+            rgba(176,235,255,.20) 45%,
+            rgba(255,206,250,.16) 100%
         ),
 
         linear-gradient(
 
             135deg,
 
-            rgba(120,255,255,.18),
+            rgba(255,255,255,.22),
 
             transparent 40%,
 
             transparent 60%,
 
-            rgba(255,180,255,.20)
+            rgba(255,180,255,.14)
         );
 
     box-shadow:
 
-        inset 0 0 24px rgba(255,255,255,.10),
+        inset 0 0 18px rgba(255,255,255,.16),
 
-        inset 0 0 42px rgba(122,220,255,.08);
+        inset 0 0 30px rgba(122,220,255,.10);
 
-    opacity:.7;
+    opacity:.9;
 
     z-index:1;
 }
@@ -198,9 +198,9 @@
 
     box-shadow:
 
-        0 0 18px rgba(255,255,255,.65),
+        0 0 14px rgba(255,255,255,.56),
 
-        0 0 30px rgba(190,245,255,.28);
+        0 0 24px rgba(190,245,255,.22);
 
     z-index:2;
 }
