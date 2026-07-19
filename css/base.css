@@ -174,7 +174,7 @@ body{
 
     overflow:visible;
 
-    pointer-events:none;
+    pointer-events:auto;
 
     z-index:60;
 }
