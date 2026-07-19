@@ -228,3 +228,31 @@
 
         rotate(-270deg);
 }
+
+/* =========================================
+                PLANET VIDEO
+========================================= */
+
+.planet-bg{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:100vw;
+    height:100vh;
+
+    object-fit:cover;
+
+    transform:
+        translate(-50%,-50%);
+
+    pointer-events:none;
+
+    opacity:.35;
+
+    mix-blend-mode:screen;
+
+    z-index:-1;
+}
