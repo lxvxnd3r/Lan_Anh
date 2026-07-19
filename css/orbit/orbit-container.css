@@ -30,9 +30,11 @@
 }
 
 
-/* ACTIVE */
+/* =========================================
+                    ACTIVE
+========================================= */
 
-.orbit-system.active .orbit-container{
+.orbit-container.active{
 
     opacity:1;
 
