@@ -8,9 +8,6 @@ const welcome =
 const music =
     document.getElementById("music");
 
-const backgroundVideo =
-    document.getElementById("bg-video");
-
 const moon =
     document.getElementById("moon");
 
@@ -19,12 +16,6 @@ const orbit =
 
 const orbitRotate =
     document.querySelector(".orbit-rotate");
-
-const planets =
-    document.querySelectorAll(".planet");
-
-const planetBackgrounds =
-    document.querySelectorAll(".planet-bg");
 
 
 /* =========================================
@@ -40,19 +31,6 @@ welcome.addEventListener(
             music.volume = 0.5;
 
             await music.play();
-
-            planetBackgrounds.forEach(
-                bg => {
-
-                    bg.currentTime =
-                        backgroundVideo.currentTime;
-
-                    bg.play().catch(
-                        e => console.log(e)
-                    );
-
-                }
-            );
 
         }
         catch (e) {
@@ -87,8 +65,6 @@ moon.addEventListener(
 
         orbit.classList.toggle("active");
 
-        updatePlanetBackgrounds();
-
     }
 );
 
@@ -113,67 +89,9 @@ document.addEventListener(
 
             orbit.classList.remove("active");
 
-            updatePlanetBackgrounds();
-
         }
 
     }
-);
-
-
-/* =========================================
-        KEEP BUBBLES SHOWING BACKGROUND ONLY
-========================================= */
-
-function updatePlanetBackgrounds(){
-
-    planets.forEach(
-        planet => {
-
-            const bg =
-                planet.querySelector(".planet-bg");
-
-            if (!bg)
-                return;
-
-            const rect =
-                planet.getBoundingClientRect();
-
-            bg.style.setProperty(
-                "--planet-bg-x",
-                `${-rect.left}px`
-            );
-
-            bg.style.setProperty(
-                "--planet-bg-y",
-                `${-rect.top}px`
-            );
-
-        }
-    );
-
-}
-
-
-window.addEventListener(
-    "resize",
-    updatePlanetBackgrounds
-);
-
-
-function animatePlanetBackgrounds(){
-
-    updatePlanetBackgrounds();
-
-    requestAnimationFrame(
-        animatePlanetBackgrounds
-    );
-
-}
-
-
-requestAnimationFrame(
-    animatePlanetBackgrounds
 );
 
 
@@ -222,8 +140,6 @@ document.addEventListener(
         translate(-50%,-50%)
           rotate(${rotation}deg)
 `;
-
-        updatePlanetBackgrounds();
 
     }
 );
