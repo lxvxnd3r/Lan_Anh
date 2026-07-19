@@ -20,35 +20,40 @@
     background:
 
         radial-gradient(
-            circle at 35% 28%,
+            circle at 32% 24%,
 
-            rgba(255,255,255,.82) 0%,
-            rgba(255,255,255,.44) 12%,
-            rgba(255,255,255,.12) 35%,
-            rgba(150,255,255,.10) 60%,
-            rgba(255,180,255,.12) 100%
+            rgba(255,255,255,.96) 0%,
+            rgba(255,255,255,.84) 10%,
+            rgba(226,248,255,.62) 24%,
+            rgba(128,196,242,.52) 48%,
+            rgba(188,154,236,.44) 74%,
+            rgba(245,252,255,.58) 100%
         );
 
     border:
-        1px solid rgba(255,255,255,.62);
+        2px solid rgba(255,255,255,.68);
 
     backdrop-filter:
-        blur(16px)
-        saturate(1.15)
-        brightness(1.05);
+        blur(7px)
+        saturate(1.35)
+        brightness(1.08);
 
     -webkit-backdrop-filter:
-        blur(16px)
-        saturate(1.15)
-        brightness(1.05);
+        blur(7px)
+        saturate(1.35)
+        brightness(1.08);
 
     box-shadow:
 
-        0 0 15px rgba(255,190,255,.45),
+        0 0 18px rgba(255,255,255,.78),
 
-        0 0 22px rgba(120,255,255,.45),
+        0 0 26px rgba(255,190,255,.52),
 
-        inset 0 0 18px rgba(255,255,255,.10);
+        0 0 40px rgba(120,255,255,.48),
+
+        inset 0 0 22px rgba(255,255,255,.64),
+
+        inset 0 -34px 54px rgba(12,24,64,.42);
 
    overflow:hidden;
 
@@ -74,6 +79,45 @@
 }
 
 /* =========================================
+            REAL BACKGROUND WINDOW
+========================================= */
+
+.planet-bg{
+
+    display:block;
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100vw;
+    height:100vh;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    filter:
+
+        brightness(.78)
+        saturate(.95)
+        blur(1.5px);
+
+    pointer-events:none;
+
+    transform:
+        translate(
+            var(--planet-bg-x, -50vw),
+            var(--planet-bg-y, -50vh)
+        );
+
+    transform-origin:top left;
+
+    z-index:0;
+}
+
+/* =========================================
               GLASS REFLECTION
 ========================================= */
 
@@ -83,7 +127,7 @@
 
     position:absolute;
 
-    inset:0;
+    inset:6px;
 
     border-radius:50%;
 
@@ -91,33 +135,34 @@
 
         radial-gradient(
 
-            circle at 45% 48%,
+            circle at 50% 54%,
 
-            rgba(255,255,255,.08) 0%,
-            rgba(176,235,255,.06) 45%,
-            rgba(255,206,250,.08) 100%
+            rgba(8,22,58,.78) 0%,
+            rgba(34,92,142,.58) 38%,
+            rgba(148,214,246,.42) 66%,
+            rgba(255,255,255,.36) 100%
         ),
 
         linear-gradient(
 
             135deg,
 
-            rgba(120,255,255,.16),
+            rgba(255,255,255,.46),
 
             transparent 40%,
 
-            transparent 60%,
+            rgba(255,255,255,.10) 60%,
 
-            rgba(255,180,255,.18)
+            rgba(255,180,255,.38)
         );
 
     box-shadow:
 
-        inset 0 0 18px rgba(255,255,255,.08),
+        inset 0 0 34px rgba(255,255,255,.28),
 
-        inset 0 0 30px rgba(122,220,255,.06);
+        inset 0 0 70px rgba(122,220,255,.24);
 
-    opacity:.65;
+    opacity:.86;
 
     z-index:1;
 }
@@ -153,13 +198,13 @@
             transparent
         );
 
-    filter:blur(3px);
+    filter:blur(4px);
 
     box-shadow:
 
-        0 0 14px rgba(255,255,255,.56),
+        0 0 26px rgba(255,255,255,.85),
 
-        0 0 24px rgba(190,245,255,.22);
+        0 0 48px rgba(190,245,255,.45);
 
     z-index:2;
 }
