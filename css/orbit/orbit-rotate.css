@@ -29,8 +29,9 @@
     user-select:none;
     -webkit-user-select:none;
 
-    transition:
-        transform .05s linear;
+    touch-action:none;
+
+    will-change:transform;
 }
 
 

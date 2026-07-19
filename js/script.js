@@ -96,52 +96,138 @@ document.addEventListener(
 
 
 /* =========================================
-                DRAG ROTATE
+            AUTO / DRAG ROTATE
 ========================================= */
-
-let dragging = false;
 
 let rotation = 0;
 
+let lastFrameTime = 0;
+
+let activePointerId = null;
+
+let lastPointerX = 0;
+
+const autoRotateSpeed = 7;
+
+const dragRotateSpeed = 0.45;
+
+
+function renderOrbitRotation(){
+
+    orbitRotate.style.transform =
+
+        `
+        translate(-50%,-50%)
+        rotate(${rotation}deg)
+`;
+
+}
+
+
+function animateOrbit(timestamp){
+
+    if (!lastFrameTime)
+        lastFrameTime = timestamp;
+
+    const deltaSeconds =
+        (timestamp - lastFrameTime) / 1000;
+
+    lastFrameTime =
+        timestamp;
+
+    if (activePointerId === null) {
+
+        rotation +=
+            autoRotateSpeed * deltaSeconds;
+
+        renderOrbitRotation();
+
+    }
+
+    requestAnimationFrame(
+        animateOrbit
+    );
+
+}
+
+
+requestAnimationFrame(
+    animateOrbit
+);
+
 
 orbitRotate.addEventListener(
-    "mousedown",
-    () => {
-
-        dragging = true;
-
-    }
-);
-
-
-document.addEventListener(
-    "mouseup",
-    () => {
-
-        dragging = false;
-
-    }
-);
-
-
-document.addEventListener(
-    "mousemove",
+    "pointerdown",
     (e) => {
 
-        if (!dragging)
+        if (activePointerId !== null)
+            return;
+
+        activePointerId =
+            e.pointerId;
+
+        lastPointerX =
+            e.clientX;
+
+        orbitRotate.setPointerCapture(
+            activePointerId
+        );
+
+    }
+);
+
+
+orbitRotate.addEventListener(
+    "pointermove",
+    (e) => {
+
+        if (e.pointerId !== activePointerId)
             return;
 
         rotation +=
-            e.movementX * 0.45;
+            (e.clientX - lastPointerX) * dragRotateSpeed;
 
-          orbitRotate.style.transform =
+        lastPointerX =
+            e.clientX;
 
-          `
-        translate(-50%,-50%)
-          rotate(${rotation}deg)
-`;
+        renderOrbitRotation();
 
     }
+);
+
+
+function stopDrag(e){
+
+    if (e.pointerId !== activePointerId)
+        return;
+
+    if (
+        orbitRotate.hasPointerCapture(
+            activePointerId
+        )
+    ) {
+
+        orbitRotate.releasePointerCapture(
+            activePointerId
+        );
+
+    }
+
+    activePointerId =
+        null;
+
+}
+
+
+orbitRotate.addEventListener(
+    "pointerup",
+    stopDrag
+);
+
+
+orbitRotate.addEventListener(
+    "pointercancel",
+    stopDrag
 );
 
 
